@@ -256,13 +256,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const marginVal = document.getElementById('marginVal');
   const opexVal = document.getElementById('opexVal');
 
-  const resMonthlyRev = document.getElementById('resMonthlyRev');
-  const resAnnualRev = document.getElementById('resAnnualRev');
-  const resMonthlyNet = document.getElementById('resMonthlyNet');
-  const resAnnualNet = document.getElementById('resAnnualNet');
-  const resEquityPayout = document.getElementById('resEquityPayout');
-  const resRevSharePayout = document.getElementById('resRevSharePayout');
-  const resPaybackTerm = document.getElementById('resPaybackTerm');
+  const calcRevenue = document.getElementById('calcRevenue');
+  const calcGrossProfit = document.getElementById('calcGrossProfit');
+  const calcEbitda = document.getElementById('calcEbitda');
+  const calcPayback = document.getElementById('calcPayback');
 
   function calculateSimulator() {
     if (!ordersSlider || !aovSlider || !marginSlider || !opexSlider) return;
@@ -280,37 +277,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Calculation Engine
     const monthlyGrossRevenue = orders * aov * 30;
-    const annualGrossRevenue = monthlyGrossRevenue * 12;
-
     const monthlyCOGS = monthlyGrossRevenue * (1 - margin);
-    const monthlyNetEBITDA = monthlyGrossRevenue - monthlyCOGS - opex;
-    const annualNetEBITDA = monthlyNetEBITDA * 12;
+    const monthlyGrossProfit = monthlyGrossRevenue - monthlyCOGS;
+    const monthlyNetEBITDA = monthlyGrossProfit - opex;
+    const ebitdaPct = ((monthlyNetEBITDA / monthlyGrossRevenue) * 100).toFixed(1);
 
-    // Investor Payout Calculations (₹30L Raise)
-    const equityAnnualPayout = Math.max(0, annualNetEBITDA * 0.15);
-    const revShareMonthlyPayout = monthlyGrossRevenue * 0.05;
+    // Payback Months Estimate (Store #1 CAPEX ₹14.5L)
+    const storeCapex = 1450000;
+    const paybackMonths = monthlyNetEBITDA > 0 ? (storeCapex / monthlyNetEBITDA).toFixed(1) : "N/A";
 
-    // Payback Months Estimate
-    const seedAsk = 3000000;
-    const paybackMonths = monthlyNetEBITDA > 0 ? (seedAsk / monthlyNetEBITDA).toFixed(1) : "N/A";
-
-    // Format & Render Outputs
-    if (resMonthlyRev) resMonthlyRev.textContent = `₹${(monthlyGrossRevenue / 100000).toFixed(2)} Lakhs`;
-    if (resAnnualRev) resAnnualRev.textContent = `₹${(annualGrossRevenue / 10000000).toFixed(2)} Crores`;
-    
-    if (resMonthlyNet) {
-      resMonthlyNet.textContent = `₹${(monthlyNetEBITDA / 100000).toFixed(2)} Lakhs`;
-      resMonthlyNet.style.color = monthlyNetEBITDA < 0 ? '#EF4444' : '#F59E0B';
+    // Format & Render Website Outputs
+    if (calcRevenue) calcRevenue.textContent = `₹${(monthlyGrossRevenue / 100000).toFixed(2)} Lakhs`;
+    if (calcGrossProfit) calcGrossProfit.textContent = `₹${(monthlyGrossProfit / 100000).toFixed(2)} Lakhs`;
+    if (calcEbitda) {
+      calcEbitda.textContent = `₹${(monthlyNetEBITDA / 100000).toFixed(2)} Lakhs (${ebitdaPct}%)`;
+      calcEbitda.style.color = monthlyNetEBITDA < 0 ? '#DC2626' : '#059669';
     }
-
-    if (resAnnualNet) {
-      resAnnualNet.textContent = `₹${(annualNetEBITDA / 100000).toFixed(2)} Lakhs`;
-      resAnnualNet.style.color = annualNetEBITDA < 0 ? '#EF4444' : '#F59E0B';
-    }
-
-    if (resEquityPayout) resEquityPayout.textContent = `₹${(equityAnnualPayout / 100000).toFixed(2)} Lakhs / year`;
-    if (resRevSharePayout) resRevSharePayout.textContent = `₹${Math.round(revShareMonthlyPayout).toLocaleString('en-IN')} / month`;
-    if (resPaybackTerm) resPaybackTerm.textContent = `Estimated Payback Period: ~${paybackMonths} months`;
+    if (calcPayback) calcPayback.textContent = `${paybackMonths} Months`;
   }
 
   // Attach slider event listeners
@@ -319,9 +302,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   calculateSimulator();
 
+  const calcModal = document.getElementById('calcModal');
+  const closeCalcModalBtn = document.getElementById('closeCalcModalBtn');
+
   if (calcToggleBtn) {
     calcToggleBtn.addEventListener('click', () => {
-      goToSlide(13); // Go to ROI Simulator (0-indexed 13, Slide 14)
+      if (calcModal) calcModal.classList.add('open');
+    });
+  }
+
+  if (closeCalcModalBtn) {
+    closeCalcModalBtn.addEventListener('click', () => {
+      if (calcModal) calcModal.classList.remove('open');
     });
   }
 
