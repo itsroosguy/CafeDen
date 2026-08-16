@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — MASTER EDITORIAL PRESENTATION & P&L ENGINE
+   CAFÉ DEN — 14-SLIDE PRESENTATION & FINANCIAL SIMULATION ENGINE
    ========================================================================== */
 
 // 1. AIRTIGHT SIMULATOR MATH ENGINE AS SPECIFIED IN PROMPT
@@ -11,11 +11,11 @@ function calculatePayback() {
 
   if (!inputOrders || !inputAov || !inputMargin || !inputOpex) return;
 
-  const dailyOrders = parseFloat(inputOrders.value) || 220;
-  const blendedAOV = parseFloat(inputAov.value) || 195;
-  const grossMargin = (parseFloat(inputMargin.value) || 65) / 100;
-  const monthlyOpex = (parseFloat(inputOpex.value) || 2.2) * 100000;
-  const capitalExpenditure = 3000000; // ₹30 Lakhs
+  const orders = parseFloat(inputOrders.value) || 220;
+  const aov = parseFloat(inputAov.value) || 195;
+  const margin = (parseFloat(inputMargin.value) || 65) / 100;
+  const opex = (parseFloat(inputOpex.value) || 2.2) * 100000;
+  const capex = 3000000; // ₹30 Lakhs
 
   // Update slider label displays
   const labelOrders = document.getElementById('label-orders');
@@ -23,40 +23,34 @@ function calculatePayback() {
   const labelMargin = document.getElementById('label-margin');
   const labelOpex = document.getElementById('label-opex');
 
-  if (labelOrders) labelOrders.textContent = `${dailyOrders} / day`;
-  if (labelAov) labelAov.textContent = `₹${blendedAOV}`;
-  if (labelMargin) labelMargin.textContent = `${Math.round(grossMargin * 100)}%`;
-  if (labelOpex) labelOpex.textContent = `₹${(monthlyOpex / 100000).toFixed(2)} L`;
+  if (labelOrders) labelOrders.textContent = `${orders} / day`;
+  if (labelAov) labelAov.textContent = `₹${aov}`;
+  if (labelMargin) labelMargin.textContent = `${Math.round(margin * 100)}%`;
+  if (labelOpex) labelOpex.textContent = `₹${(opex / 100000).toFixed(2)} L`;
 
-  const monthlyRevenue = dailyOrders * blendedAOV * 30;
-  const monthlyGrossProfit = monthlyRevenue * grossMargin;
-  const monthlyNetContribution = monthlyGrossProfit - monthlyOpex;
+  const monthlyRev = orders * aov * 30;
+  const monthlyGrossProfit = monthlyRev * margin;
+  const monthlyNet = monthlyGrossProfit - opex;
 
-  let paybackMonths = 0;
-  let statusText = "";
-
-  if (monthlyNetContribution <= 0) {
-    statusText = "Operating Loss (Adjust Inputs)";
-  } else {
-    paybackMonths = (capitalExpenditure / monthlyNetContribution).toFixed(1);
-    statusText = `${paybackMonths} Months`;
-  }
-
-  // Update DOM elements dynamically
   const displayRevenue = document.getElementById('display-revenue');
-  const displayGrossProfit = document.getElementById('display-grossprofit');
   const displayNetProfit = document.getElementById('display-netprofit');
   const displayPayback = document.getElementById('display-payback');
 
-  if (displayRevenue) displayRevenue.innerText = `₹${(monthlyRevenue / 100000).toFixed(2)}L`;
-  if (displayGrossProfit) displayGrossProfit.innerText = `₹${(monthlyGrossProfit / 100000).toFixed(2)}L`;
+  if (displayRevenue) displayRevenue.innerText = `₹${(monthlyRev / 100000).toFixed(2)}L`;
   if (displayNetProfit) {
-    displayNetProfit.innerText = `₹${(monthlyNetContribution / 100000).toFixed(2)}L`;
-    displayNetProfit.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#059669';
+    displayNetProfit.innerText = `₹${(monthlyNet / 100000).toFixed(2)}L`;
+    displayNetProfit.style.color = monthlyNet <= 0 ? '#DC2626' : '#059669';
   }
+
   if (displayPayback) {
-    displayPayback.innerText = statusText;
-    displayPayback.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#C86D27';
+    if (monthlyNet <= 0) {
+      displayPayback.innerText = "Operating Loss";
+      displayPayback.style.color = '#DC2626';
+    } else {
+      const months = (capex / monthlyNet).toFixed(1);
+      displayPayback.innerText = `${months} Months`;
+      displayPayback.style.color = '#A35833';
+    }
   }
 }
 
@@ -69,54 +63,49 @@ function calculateModalPayback() {
 
   if (!inputOrders || !inputAov || !inputMargin || !inputOpex) return;
 
-  const dailyOrders = parseFloat(inputOrders.value) || 220;
-  const blendedAOV = parseFloat(inputAov.value) || 195;
-  const grossMargin = (parseFloat(inputMargin.value) || 65) / 100;
-  const monthlyOpex = (parseFloat(inputOpex.value) || 2.2) * 100000;
-  const capitalExpenditure = 3000000;
+  const orders = parseFloat(inputOrders.value) || 220;
+  const aov = parseFloat(inputAov.value) || 195;
+  const margin = (parseFloat(inputMargin.value) || 65) / 100;
+  const opex = (parseFloat(inputOpex.value) || 2.2) * 100000;
+  const capex = 3000000;
 
   const labelOrders = document.getElementById('modal-label-orders');
   const labelAov = document.getElementById('modal-label-aov');
   const labelMargin = document.getElementById('modal-label-margin');
   const labelOpex = document.getElementById('modal-label-opex');
 
-  if (labelOrders) labelOrders.textContent = `${dailyOrders} / day`;
-  if (labelAov) labelAov.textContent = `₹${blendedAOV}`;
-  if (labelMargin) labelMargin.textContent = `${Math.round(grossMargin * 100)}%`;
-  if (labelOpex) labelOpex.textContent = `₹${(monthlyOpex / 100000).toFixed(2)} L`;
+  if (labelOrders) labelOrders.textContent = `${orders} / day`;
+  if (labelAov) labelAov.textContent = `₹${aov}`;
+  if (labelMargin) labelMargin.textContent = `${Math.round(margin * 100)}%`;
+  if (labelOpex) labelOpex.textContent = `₹${(opex / 100000).toFixed(2)} L`;
 
-  const monthlyRevenue = dailyOrders * blendedAOV * 30;
-  const monthlyGrossProfit = monthlyRevenue * grossMargin;
-  const monthlyNetContribution = monthlyGrossProfit - monthlyOpex;
-
-  let paybackMonths = 0;
-  let statusText = "";
-
-  if (monthlyNetContribution <= 0) {
-    statusText = "Operating Loss (Adjust Inputs)";
-  } else {
-    paybackMonths = (capitalExpenditure / monthlyNetContribution).toFixed(1);
-    statusText = `${paybackMonths} Months`;
-  }
+  const monthlyRev = orders * aov * 30;
+  const monthlyGrossProfit = monthlyRev * margin;
+  const monthlyNet = monthlyGrossProfit - opex;
 
   const displayRevenue = document.getElementById('modal-display-revenue');
-  const displayGrossProfit = document.getElementById('modal-display-grossprofit');
   const displayNetProfit = document.getElementById('modal-display-netprofit');
   const displayPayback = document.getElementById('modal-display-payback');
 
-  if (displayRevenue) displayRevenue.innerText = `₹${(monthlyRevenue / 100000).toFixed(2)}L`;
-  if (displayGrossProfit) displayGrossProfit.innerText = `₹${(monthlyGrossProfit / 100000).toFixed(2)}L`;
+  if (displayRevenue) displayRevenue.innerText = `₹${(monthlyRev / 100000).toFixed(2)}L`;
   if (displayNetProfit) {
-    displayNetProfit.innerText = `₹${(monthlyNetContribution / 100000).toFixed(2)}L`;
-    displayNetProfit.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#059669';
+    displayNetProfit.innerText = `₹${(monthlyNet / 100000).toFixed(2)}L`;
+    displayNetProfit.style.color = monthlyNet <= 0 ? '#DC2626' : '#059669';
   }
+
   if (displayPayback) {
-    displayPayback.innerText = statusText;
-    displayPayback.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#C86D27';
+    if (monthlyNet <= 0) {
+      displayPayback.innerText = "Operating Loss";
+      displayPayback.style.color = '#DC2626';
+    } else {
+      const months = (capex / monthlyNet).toFixed(1);
+      displayPayback.innerText = `${months} Months`;
+      displayPayback.style.color = '#A35833';
+    }
   }
 }
 
-// 2. SLIDE NAVIGATION & PRESENTATION CONTROLS
+// 2. SLIDE NAVIGATION & PRESENTATION CONTROLS (14 SLIDES)
 document.addEventListener('DOMContentLoaded', () => {
 
   const slides = document.querySelectorAll('.slide');
@@ -145,14 +134,16 @@ document.addEventListener('DOMContentLoaded', () => {
     "THE DAILY F&B OPPORTUNITY",
     "OPERATING FLYWHEEL",
     "AOV BARBELL ENGINE",
-    "PRODUCT GALLERY & BATCH MODEL",
-    "750 SQ. FT. STORE SCHEMATIC",
+    "PRODUCT ARCHITECTURE (99 UNITS)",
+    "750 SQ. FT. STORE BLUEPRINT",
+    "STORE AMBIENCE & EXPERIENCE",
     "EARLY GROUNDWORK SIGNALS",
+    "65% TARGET BLENDED MARGIN",
     "REAL-TIME P&L SIMULATOR",
     "USE OF FUNDS (₹30 LAKHS)",
-    "EXPANSION BLUEPRINT",
+    "EXPANSION ROADMAP",
     "FOUNDER PROFILE & VISION",
-    "TERM SHEET & CLOSE"
+    "TERM SHEET & INVESTMENT CLOSE"
   ];
 
   // Render Dots
