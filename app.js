@@ -282,8 +282,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const monthlyNetEBITDA = monthlyGrossProfit - opex;
     const ebitdaPct = ((monthlyNetEBITDA / monthlyGrossRevenue) * 100).toFixed(1);
 
-    // Payback Months Estimate (Store #1 CAPEX ₹14.5L)
-    const storeCapex = 1450000;
+    // Payback Months Estimate (Store #1 CAPEX ₹15.0L)
+    const storeCapex = 1500000;
     const paybackMonths = monthlyNetEBITDA > 0 ? (storeCapex / monthlyNetEBITDA).toFixed(1) : "N/A";
 
     // Format & Render Website Outputs
