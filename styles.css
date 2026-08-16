@@ -2542,20 +2542,43 @@ input[type="range"] {
   }
 }
 
-/* 4. Mobile Devices (Screen Width <= 768px) */
+/* 4. Mobile Devices (Screen Width <= 768px) - FULL FLUID DOCUMENT SCROLLING */
 @media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    height: auto !important;
+    min-height: 100% !important;
+  }
+
   :root {
-    --header-height: 56px;
-    --footer-height: 56px;
+    --header-height: 54px;
+    --footer-height: 54px;
   }
 
   .deck-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
     padding: 0 12px !important;
-    height: 56px !important;
+    height: 54px !important;
+    background: #080B11 !important;
+    border-bottom: 1px solid rgba(255, 82, 0, 0.2) !important;
+  }
+
+  .deck-controls {
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 1000 !important;
+    background: rgba(18, 14, 12, 0.96) !important;
+    border-top: 1.5px solid #FF5200 !important;
+    backdrop-filter: blur(16px) !important;
+    padding: 8px 14px !important;
+    height: 54px !important;
   }
 
   .logo-title {
-    font-size: 15px !important;
+    font-size: 14px !important;
   }
 
   .header-tagline, .header-right button span {
@@ -2567,16 +2590,48 @@ input[type="range"] {
     font-size: 11px !important;
   }
 
+  .deck-container {
+    height: auto !important;
+    min-height: calc(100vh - 108px) !important;
+    position: relative !important;
+    overflow: visible !important;
+  }
+
   .slide {
-    padding: 12px 14px !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: calc(100vh - 108px) !important;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    padding: 16px 14px 70px 14px !important;
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  .slide.active {
+    display: flex !important;
+    flex-direction: column !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .slide-header {
+    margin-bottom: 12px !important;
+    padding-bottom: 8px !important;
   }
 
   .slide-title {
     font-size: 20px !important;
+    line-height: 1.2 !important;
   }
 
   .slide-subtitle {
     font-size: 11.5px !important;
+    margin-top: 4px !important;
   }
 
   .editorial-index-row {
