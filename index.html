@@ -3,561 +3,344 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAFÉ DEN — Institutional Pitch Deck</title>
-  <meta name="description" content="Venture Pitch — Café Den: Building South India's Daily Fresh Bakery & Specialty Coffee QSR Network.">
+  <title>CAFÉ DEN — Master Investor Brief & Business Model</title>
+  <meta name="description" content="Café Den: Building South India's Repeatable Express Bakery & Specialty Coffee QSR Kiosk Model. Seed Raise ₹30 Lakhs.">
   
-  <!-- Professional Fonts (Plus Jakarta Sans + Poppins + Inter + Playfair Display + JetBrains Mono) -->
+  <!-- Premium Fonts (Plus Jakarta Sans + Inter + Playfair Display + Poppins) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="investor-website-body">
 
-  <!-- Top Progress Bar -->
-  <div class="deck-progress-bar" id="progressBar" style="width: 5.55%;"></div>
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement-bar">
+    <span><i class="fa-solid fa-lock"></i> <strong>CONFIDENTIAL INVESTOR MEMORANDUM</strong> — Seed Round ₹30 Lakhs | Flagship Store #1: Indiranagar, Bengaluru</span>
+  </div>
 
-  <!-- Header Navbar -->
-  <header class="deck-header">
+  <!-- Header Navigation Bar -->
+  <header class="deck-header main-site-header">
     <div class="header-left">
       <div class="brand-logo">
-        <span class="logo-badge">FRESH QSR</span>
+        <span class="logo-badge">SEED ROUND</span>
         <span class="logo-title">CAFÉ DEN</span>
       </div>
-      <span class="header-tagline">Seed Round Pitch | Indiranagar, Bengaluru</span>
     </div>
     
-    <div class="header-center">
-      <div class="chapter-indicator" id="chapterIndicator">
-        <span id="currentSlideNum">01</span> / 18
-      </div>
-    </div>
+    <nav class="header-center main-site-nav">
+      <a href="#thesis" class="site-nav-link">Thesis</a>
+      <a href="#problem" class="site-nav-link">Problem</a>
+      <a href="#solution" class="site-nav-link">Solution</a>
+      <a href="#economics" class="site-nav-link">Unit Economics</a>
+      <a href="#validation" class="site-nav-link">Validation</a>
+      <a href="#risks" class="site-nav-link">Risks</a>
+      <a href="#terms" class="site-nav-link">Deal Terms</a>
+    </nav>
     
     <div class="header-right">
-      <button class="nav-btn" id="calcToggleBtn" title="ROI Simulator (C)">
-        <i class="fa-solid fa-calculator"></i> <span>Simulator</span>
+      <button class="nav-btn" id="calcToggleBtn" title="Interactive Simulator">
+        <i class="fa-solid fa-calculator"></i> <span>ROI Simulator</span>
       </button>
-      <button class="nav-btn" id="gridToggleBtn" title="Overview (O)">
-        <i class="fa-solid fa-th-large"></i> <span>Overview</span>
-      </button>
-      <button class="nav-btn primary-btn" id="fullscreenBtn" title="Fullscreen (F)">
-        <i class="fa-solid fa-expand"></i> <span>Present</span>
-      </button>
+      <a href="#terms" class="nav-btn primary-btn">
+        <i class="fa-solid fa-paper-plane"></i> <span>Invest ₹30L</span>
+      </a>
     </div>
   </header>
 
-  <!-- Canvas Container with 16:9 Presentation Stage -->
-  <main class="deck-container" id="deckContainer">
-    <div class="deck-stage-169" id="deckStage">
+  <!-- Main Investor Content Flow -->
+  <main class="main-investor-flow">
 
-    <!-- CHAPTER 01: HERO LANDING COVER -->
-    <section class="slide active hero-cover-slide" id="slide-1" data-slide="1">
-      <div class="hero-bg-overlay"></div>
-      <img src="assets/kiosk.jpg" alt="Café Den Glass Pavilion Kiosk" class="hero-bg-img">
-
-      <div class="hero-cover-content">
-        <div class="hero-badge-row">
-          <span class="hero-badge orange-badge"><i class="fa-solid fa-bolt"></i> Category-Creating QSR Food Infrastructure</span>
-          <span class="hero-badge dark-badge"><i class="fa-solid fa-location-dot"></i> Indiranagar Flagship, Bengaluru</span>
+    <!-- HERO SECTION: EXECUTIVE THESIS -->
+    <section class="site-section hero-executive-section" id="thesis">
+      <div class="container-1200">
+        <div class="hero-header-box">
+          <div class="hero-badge-pill"><i class="fa-solid fa-seedling"></i> Seed Stage Investment Opportunity</div>
+          <h1 class="main-hero-heading">
+            Not Another Cafe.<br>
+            <span class="highlight-text">A High-Velocity Daily QSR Habit.</span>
+          </h1>
+          <p class="main-hero-subtext">
+            Café Den is engineered as a repeatable, capital-efficient food-service unit. We combine daily fresh artisan baking with express 100% Arabica espresso in a sub-150 sq. ft. glass kiosk model.
+          </p>
         </div>
 
-        <h1 class="hero-main-title">
-          CAFÉ DEN.<br>
-          <span class="editorial-highlight">a daily neighborhood habit.</span>
-        </h1>
-
-        <p class="hero-main-desc">
-          Building South India's premier fresh bakery and specialty coffee QSR kiosk network. High-throughput, sub-150 sq. ft. modular footprint delivering 68% blended gross margins.
-        </p>
-
-        <div class="hero-metrics-4grid">
-          <div class="hero-metric-card">
-            <span class="metric-big-num">₹30L</span>
-            <span class="metric-sub-label">Seed Capital Ask</span>
+        <!-- 4 Key Executive Metrics -->
+        <div class="hero-executive-4grid">
+          <div class="exec-metric-card">
+            <span class="exec-num">₹30 Lakhs</span>
+            <span class="exec-label">Seed Capital Raise</span>
+            <span class="exec-sub">Funding Store #1 & Ramp-Up</span>
           </div>
-          <div class="hero-metric-card">
-            <span class="metric-big-num">68%</span>
-            <span class="metric-sub-label">Target Blended Margin</span>
+          <div class="exec-metric-card">
+            <span class="exec-num">₹14.5 Lakhs</span>
+            <span class="exec-label">Store #1 CAPEX</span>
+            <span class="exec-sub">5x Cheaper Than Traditional Cafes</span>
           </div>
-          <div class="hero-metric-card">
-            <span class="metric-big-num">12–14 Mo</span>
-            <span class="metric-sub-label">Store Payback Period</span>
+          <div class="exec-metric-card">
+            <span class="exec-num">68%</span>
+            <span class="exec-label">Target Blended Margin</span>
+            <span class="exec-sub">32% Direct Recipe COGS</span>
           </div>
-          <div class="hero-metric-card">
-            <span class="metric-big-num">₹14.5L</span>
-            <span class="metric-sub-label">Kiosk Capex Footprint</span>
+          <div class="exec-metric-card">
+            <span class="exec-num">12–14 Mo</span>
+            <span class="exec-label">Store Payback Horizon</span>
+            <span class="exec-sub">22% Net EBITDA at Base Case</span>
           </div>
         </div>
 
-        <div class="hero-cta-buttons">
-          <button class="hero-btn primary-orange-btn" onclick="goToSlide(1)">
-            Investment Thesis <i class="fa-solid fa-arrow-right"></i>
-          </button>
-          <button class="hero-btn glass-dark-btn" onclick="goToSlide(17)">
-            Deal Terms & Capital Ask (₹30L)
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 02: STRUCTURAL MARKET PROBLEM -->
-    <section class="slide" id="slide-2" data-slide="2">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /02</span>
-          <span class="editorial-tag-pill">STRUCTURAL MARKET FAILURE</span>
-        </div>
-        <h2 class="slide-title">Legacy Cafes Sit On Land. <span class="editorial-italic">We Move Volume.</span></h2>
-        <p class="slide-subtitle">Bridging the structural gap between capital-inefficient legacy cafes and low-quality mass fast food.</p>
-      </div>
-
-      <div class="slide-content">
-        <div class="comparison-matrix-grid-3col">
-          <div class="dodont-card dont-card">
-            <div class="dodont-header">
-              <div class="dodont-title-group"><h3>Traditional Cafe Failures</h3></div>
-              <span class="editorial-tag-pill" style="color: #DC2626; border-color: rgba(220,38,38,0.25); background: rgba(220,38,38,0.08);">BENCHMARK</span>
-            </div>
-            <div class="dodont-list">
-              <div class="dodont-item dont-item">
-                <div class="dodont-status-box dont-box"><i class="fa-solid fa-xmark"></i></div>
-                <div class="dodont-item-content"><span class="dodont-item-title">1,500+ SQFT • ₹80L Capex</span><p class="dodont-item-desc">Heavy real estate footprint with bloated initial capital deployment.</p></div>
-              </div>
-              <div class="dodont-item dont-item">
-                <div class="dodont-status-box dont-box"><i class="fa-solid fa-xmark"></i></div>
-                <div class="dodont-item-content"><span class="dodont-item-title">15+ Min Service Delay</span><p class="dodont-item-desc">Slow table service creating long customer friction and queue dropouts.</p></div>
-              </div>
-              <div class="dodont-item dont-item">
-                <div class="dodont-status-box dont-box"><i class="fa-solid fa-xmark"></i></div>
-                <div class="dodont-item-content"><span class="dodont-item-title">24–36 Month Payback</span><p class="dodont-item-desc">High fixed monthly rent eating up EBITDA and delaying capital return.</p></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="matrix-image-card" onclick="window.openImageModal('assets/cafe_den_store_counter.jpg')">
-            <img src="assets/cafe_den_store_counter.jpg" alt="Café Den Live Fulfillment Counter" class="matrix-hero-img">
-            <div class="matrix-img-overlay">
-              <div class="matrix-img-badge"><i class="fa-solid fa-bolt"></i> Express Fulfillment Window</div>
-              <div class="matrix-img-zoom-tag"><i class="fa-solid fa-magnifying-glass-plus"></i> View High-Res Counter</div>
-            </div>
-          </div>
-
-          <div class="dodont-card do-card">
-            <div class="dodont-header">
-              <div class="dodont-title-group"><h3>Café Den QSR Model</h3></div>
-              <span class="editorial-tag-pill" style="color: #059669; border-color: rgba(5,150,105,0.25); background: rgba(5,150,105,0.08);">HIGH VELOCITY QSR</span>
-            </div>
-            <div class="dodont-list">
-              <div class="dodont-item do-item">
-                <div class="dodont-status-box do-box"><i class="fa-solid fa-check"></i></div>
-                <div class="dodont-item-content"><span class="dodont-item-title">Sub-150 SQFT • ₹14.5L Capex</span><p class="dodont-item-desc">Modular glass kiosk model with sub-₹15L capex for rapid rollout.</p></div>
-              </div>
-              <div class="dodont-item do-item">
-                <div class="dodont-status-box do-box"><i class="fa-solid fa-check"></i></div>
-                <div class="dodont-item-content"><span class="dodont-item-title">Sub-3 Min Express Service</span><p class="dodont-item-desc">Pre-portioned artisan bakes & express Arabica coffee fulfillment.</p></div>
-              </div>
-              <div class="dodont-item do-item">
-                <div class="dodont-status-box do-box"><i class="fa-solid fa-check"></i></div>
-                <div class="dodont-item-content"><span class="dodont-item-title">12–14 Month Rapid Payback</span><p class="dodont-item-desc">High revenue density per sq. ft. delivering 68% gross margins & fast ROI.</p></div>
-              </div>
-            </div>
+        <!-- Approved Position Statement -->
+        <div class="positioning-banner-card">
+          <div class="banner-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <div class="banner-text">
+            <strong>FOUNDING INVESTMENT THESIS:</strong> "Café Den is designed as a repeatable food-service unit. The ₹30L seed capital will fund the flagship launch, operational validation, operating runway, and proof of unit economics before scalable multi-unit expansion."
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CHAPTER 03: THE SOLUTION & VALUE PROPOSITION -->
-    <section class="slide" id="slide-3" data-slide="3">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /03</span>
-          <span class="editorial-tag-pill">THE SOLUTION</span>
-        </div>
-        <h2 class="slide-title">Fresh Daily Baking Meets <span class="editorial-italic">Express Specialty Coffee</span></h2>
-        <p class="slide-subtitle">A high-velocity QSR kiosk engineered for daily tech park commuters seeking craft quality at speed.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left flex-col-compact">
-          <div class="slide4-feature-card" style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px 24px; border-radius: 18px; box-shadow: 0 10px 25px rgba(255, 82, 0, 0.06);">
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
-              <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 82, 0, 0.1); color: #FF5200; display: flex; align-items: center; justify-content: center; font-size: 18px;"><i class="fa-solid fa-store"></i></div>
-              <h3 style="font-size: 17px; color: #1F1610; font-weight: 800;">1. Sub-150 SQFT Modular Footprint</h3>
-            </div>
-            <p style="font-size: 12.5px; color: #4A3B32; line-height: 1.5;">Low rental overhead allows prime sidewalk & tech park placement with maximum footfall exposure.</p>
-          </div>
-
-          <div class="slide4-feature-card" style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px 24px; border-radius: 18px; box-shadow: 0 10px 25px rgba(255, 82, 0, 0.06);">
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
-              <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 82, 0, 0.1); color: #FF5200; display: flex; align-items: center; justify-content: center; font-size: 18px;"><i class="fa-solid fa-stopwatch"></i></div>
-              <h3 style="font-size: 17px; color: #1F1610; font-weight: 800;">2. Sub-3 Minute Fulfillment</h3>
-            </div>
-            <p style="font-size: 12.5px; color: #4A3B32; line-height: 1.5;">Optimized dual-window service line eliminates morning queue bottlenecks and boosts customer throughput.</p>
-          </div>
-
-          <div class="slide4-feature-card" style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px 24px; border-radius: 18px; box-shadow: 0 10px 25px rgba(255, 82, 0, 0.06);">
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
-              <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 82, 0, 0.1); color: #FF5200; display: flex; align-items: center; justify-content: center; font-size: 18px;"><i class="fa-solid fa-repeat"></i></div>
-              <h3 style="font-size: 17px; color: #1F1610; font-weight: 800;">3. High Repeat Frequency (₹250 AOV)</h3>
-            </div>
-            <p style="font-size: 12.5px; color: #4A3B32; line-height: 1.5;">Accessible pricing paired with daily fresh baking creates strong morning repeat customer habits.</p>
-          </div>
+    <!-- SECTION 1: STRUCTURAL MARKET PROBLEM -->
+    <section class="site-section bg-light-surface" id="problem">
+      <div class="container-1200">
+        <div class="section-title-box text-center">
+          <span class="section-tag-pill">THE MARKET FAILURE</span>
+          <h2 class="section-main-heading">Traditional Cafes Sit On Land. <span class="highlight-text">We Move Volume.</span></h2>
+          <p class="section-sub-heading">Legacy specialty cafes suffer from bloated real estate, slow service, and long payback periods. We eliminate structural friction.</p>
         </div>
 
-        <div class="col-right">
-          <div class="image-frame full-frame" style="height: 440px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/croissant_burger.jpg')">
-            <img src="assets/croissant_burger.jpg" alt="Café Den Signature Bake" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="grid-3col-cards">
+          <!-- Traditional Cafes -->
+          <div class="feature-card problem-card-red">
+            <div class="card-header-badge red-badge">BENCHMARK: LEGACY CAFES</div>
+            <h3 class="card-title">Traditional Cafe Bloat</h3>
+            <ul class="card-list-items">
+              <li><i class="fa-solid fa-xmark text-red"></i> <strong>1,500+ SQFT Real Estate:</strong> Massive seating space driving ₹3L–₹5L monthly rent burden.</li>
+              <li><i class="fa-solid fa-xmark text-red"></i> <strong>₹80L+ Initial CAPEX:</strong> Heavy fitouts requiring 24 to 36 months just to pay back capital.</li>
+              <li><i class="fa-solid fa-xmark text-red"></i> <strong>15+ Min Queue Bottlenecks:</strong> Table service causes slow throughput during peak commute hours.</li>
+            </ul>
+          </div>
+
+          <!-- Live Store Counter Visual -->
+          <div class="feature-card image-card-center" onclick="window.openImageModal('assets/cafe_den_store_counter.jpg')">
+            <img src="assets/cafe_den_store_counter.jpg" alt="Café Den Live Counter" class="card-hero-img">
+            <div class="image-card-caption">
+              <span><i class="fa-solid fa-bolt"></i> Live Sub-3 Min Fulfillment Counter</span>
+            </div>
+          </div>
+
+          <!-- Café Den Advantage -->
+          <div class="feature-card solution-card-green">
+            <div class="card-header-badge green-badge">CAFÉ DEN QSR MODEL</div>
+            <h3 class="card-title">Express QSR Efficiency</h3>
+            <ul class="card-list-items">
+              <li><i class="fa-solid fa-check text-green"></i> <strong>Sub-150 SQFT Kiosk:</strong> Ultra-compact glass footprint taking &lt;150 sq. ft. with low rent overhead.</li>
+              <li><i class="fa-solid fa-check text-green"></i> <strong>₹14.5L Store CAPEX:</strong> 5x lower initial setup cost enabling rapid 12–14 month payback.</li>
+              <li><i class="fa-solid fa-check text-green"></i> <strong>Sub-3 Min Express Service:</strong> Dual-window line serving specialty coffee + oven-fresh bakes at speed.</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CHAPTER 04: MARKET TIMING & CONSUMER TAILWINDS -->
-    <section class="slide" id="slide-4" data-slide="4">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /04</span>
-          <span class="editorial-tag-pill">MARKET TAILWINDS</span>
-        </div>
-        <h2 class="slide-title">Market Timing: <span class="editorial-italic">The Metro Specialty Coffee Shift</span></h2>
-        <p class="slide-subtitle">Capturing Tier-1 metro consumers upgrading to artisanal coffee and fresh daily bakes.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left flex-col-compact">
-          <div class="glass-card" style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px; border-radius: 18px;">
-            <h3 style="font-size: 17px; color: #1F1610; font-weight: 800; margin-bottom: 6px;"><i class="fa-solid fa-mug-hot" style="color: #FF5200;"></i> 1. Specialty Coffee Premiumization</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; line-height: 1.5;">Young professionals are replacing instant coffee with 100% Arabica espresso brews as a daily lifestyle baseline.</p>
-          </div>
-          <div class="glass-card" style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px; border-radius: 18px;">
-            <h3 style="font-size: 17px; color: #1F1610; font-weight: 800; margin-bottom: 6px;"><i class="fa-solid fa-bread-slice" style="color: #FF5200;"></i> 2. Fresh Bake Shift vs Packaged Foods</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; line-height: 1.5;">Consumer preference has shifted from preserved packaged snacks to daily oven-fresh craft croissants and savory rolls.</p>
-          </div>
-          <div class="glass-card" style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px; border-radius: 18px;">
-            <h3 style="font-size: 17px; color: #1F1610; font-weight: 800; margin-bottom: 6px;"><i class="fa-solid fa-chart-line" style="color: #FF5200;"></i> 3. High Capital Efficiency Focus</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; line-height: 1.5;">Sub-150 sq. ft. kiosks generate higher revenue per sq. ft. than traditional large dining spaces.</p>
-          </div>
+    <!-- SECTION 2: THE SOLUTION & VALUE PROPOSITION -->
+    <section class="site-section" id="solution">
+      <div class="container-1200">
+        <div class="section-title-box">
+          <span class="section-tag-pill">THE SOLUTION</span>
+          <h2 class="section-main-heading">Fresh Daily Baking Meets Express Arabica Espresso</h2>
+          <p class="section-sub-heading">Combining the speed of QSR, the craft of an artisanal bakery, and the high gross margins of specialty coffee into an aroma-driven sensory kiosk.</p>
         </div>
 
-        <div class="col-right">
-          <div class="image-frame full-frame" style="height: 440px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/coffee_pickup_window.jpg')">
-            <img src="assets/coffee_pickup_window.jpg" alt="Café Den Coffee Window" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 05: MENU ARCHITECTURE & CATEGORY COSTING -->
-    <section class="slide" id="slide-5" data-slide="5">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /05</span>
-          <span class="editorial-tag-pill">MENU COSTING & MARGINS</span>
-        </div>
-        <h2 class="slide-title">Menu Architecture & <span class="editorial-italic">68% Blended Gross Margin</span></h2>
-        <p class="slide-subtitle">High-margin specialty brews paired with high-frequency artisanal bakes create a defensible unit margin model.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left" style="display: flex; flex-direction: column; gap: 14px;">
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 16px; padding: 18px; box-shadow: 0 8px 25px rgba(255, 82, 0, 0.06);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-              <span style="font-size: 15px; font-weight: 800; color: #1F1610;">Specialty Espresso & Cold Brews</span>
-              <span style="font-size: 14px; font-weight: 800; color: #047857; background: rgba(16, 185, 129, 0.12); padding: 3px 10px; border-radius: 8px;">80% Gross Margin</span>
-            </div>
-            <p style="font-size: 12px; color: #5C4A3E;">Average Price: ₹180 | Direct COGS: ₹36 (Beans, Milk & Packaging)</p>
-          </div>
-
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 16px; padding: 18px; box-shadow: 0 8px 25px rgba(255, 82, 0, 0.06);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-              <span style="font-size: 15px; font-weight: 800; color: #1F1610;">Fresh Daily Artisanal Bakes</span>
-              <span style="font-size: 14px; font-weight: 800; color: #D95D0F; background: rgba(255, 82, 0, 0.08); padding: 3px 10px; border-radius: 8px;">70% Gross Margin</span>
-            </div>
-            <p style="font-size: 12px; color: #5C4A3E;">Average Price: ₹150 | Direct COGS: ₹45 (Flour, Butter & Prep)</p>
-          </div>
-
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 16px; padding: 18px; box-shadow: 0 8px 25px rgba(255, 82, 0, 0.06);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-              <span style="font-size: 15px; font-weight: 800; color: #1F1610;">Signature Combo Meal Box</span>
-              <span style="font-size: 14px; font-weight: 800; color: #FF5200; background: rgba(255, 82, 0, 0.12); padding: 3px 10px; border-radius: 8px;">68% Blended Margin</span>
-            </div>
-            <p style="font-size: 12px; color: #5C4A3E;">Average Ticket (AOV): ₹300 | Combined COGS: ₹96</p>
-          </div>
-        </div>
-
-        <div class="col-right">
-          <div class="image-frame full-frame" style="height: 440px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/brand_box_meal.jpg')">
-            <img src="assets/brand_box_meal.jpg" alt="Café Den Combo Box" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 06: STORE MODEL & KIOSK OPERATING WORKFLOW -->
-    <section class="slide" id="slide-6" data-slide="6">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /06</span>
-          <span class="editorial-tag-pill">STORE OPERATING MODEL</span>
-        </div>
-        <h2 class="slide-title">Sub-150 SQFT Kiosk & <span class="editorial-italic">3-Staff Labor Model</span></h2>
-        <p class="slide-subtitle">Lean operating structure designed for maximum throughput, low rent overhead, and simple store management.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left" style="display: flex; flex-direction: column; gap: 14px;">
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px; box-shadow: 0 10px 25px rgba(255, 82, 0, 0.06);">
-            <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-ruler-combined" style="color: #FF5200;"></i> Sub-150 SQFT Footprint</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">Modular glass pavilion kiosk placed in high-footfall tech parks and sidewalk corners.</p>
-          </div>
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px; box-shadow: 0 10px 25px rgba(255, 82, 0, 0.06);">
-            <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-users" style="color: #FF5200;"></i> 3-Staff Shift Structure</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">1 Lead Barista (Espresso) + 1 Bake Assembler (Oven & Packaging) + 1 POS Cashier.</p>
-          </div>
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px; box-shadow: 0 10px 25px rgba(255, 82, 0, 0.06);">
-            <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-bolt" style="color: #FF5200;"></i> Express Equipment Line</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">2-Group Commercial Espresso Machine + Rapid Convection Re-Heating Oven.</p>
-          </div>
-        </div>
-
-        <div class="col-right">
-          <div class="image-frame full-frame" style="height: 440px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/qsr_counter_service.jpg')">
-            <img src="assets/qsr_counter_service.jpg" alt="Café Den QSR Service Counter" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 07: UNIT ECONOMICS & 3 SCENARIOS MODEL -->
-    <section class="slide" id="slide-7" data-slide="7">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /07</span>
-          <span class="editorial-tag-pill">UNIT ECONOMICS & SCENARIOS</span>
-        </div>
-        <h2 class="slide-title">Unit Economics: <span class="editorial-italic">3 Operational Scenarios</span></h2>
-        <p class="slide-subtitle">Rigorous scenario planning modeling store performance across Conservative, Base, and Upside daily transactions.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left" style="display: flex; flex-direction: column; gap: 12px;">
-          <div style="background: #FFFFFF; border: 2px solid #6E5B4F; border-radius: 16px; padding: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.04);">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 14px; font-weight: 800; color: #1F1610;">Conservative Scenario (80 tx/day)</span>
-              <strong style="font-size: 16px; color: #6E5B4F; font-family: var(--font-number);">₹6.0L / Month</strong>
-            </div>
-            <p style="font-size: 12px; color: #5C4A3E; margin-top: 4px;">18% Net EBITDA (₹1.08L/mo) | 16 Month Store Payback Horizon</p>
-          </div>
-
-          <div style="background: #FFFFFF; border: 2px solid #D95D0F; border-radius: 16px; padding: 16px; box-shadow: 0 8px 25px rgba(217,93,15,0.08);">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 14px; font-weight: 800; color: #D95D0F;">Base Case Scenario (120 tx/day)</span>
-              <strong style="font-size: 17px; color: #D95D0F; font-family: var(--font-number);">₹9.0L / Month</strong>
-            </div>
-            <p style="font-size: 12px; color: #5C4A3E; margin-top: 4px;">22% Net EBITDA (₹1.98L/mo) | 13 Month Store Payback Horizon</p>
-          </div>
-
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 16px; padding: 16px; box-shadow: 0 10px 30px rgba(255,82,0,0.12);">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <span style="font-size: 14px; font-weight: 800; color: #FF5200;">Upside Scenario (160 tx/day)</span>
-              <strong style="font-size: 18px; color: #FF5200; font-family: var(--font-number);">₹12.0L / Month</strong>
-            </div>
-            <p style="font-size: 12px; color: #5C4A3E; margin-top: 4px;">24% Net EBITDA (₹2.88L/mo) | 10 Month Store Payback Horizon</p>
-          </div>
-        </div>
-
-        <div class="col-right" style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 20px; padding: 22px; box-shadow: 0 12px 35px rgba(255,82,0,0.08);">
-          <h3 style="font-size: 16px; color: #1F1610; font-weight: 800; border-bottom: 1px solid rgba(45,30,22,0.1); padding-bottom: 10px; margin-bottom: 12px;">
-            <i class="fa-solid fa-calculator" style="color: #FF5200;"></i> Single Kiosk Base P&L (₹9.0L Rev)
-          </h3>
-          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12.5px;">
-            <div style="display: flex; justify-content: space-between;"><span>Monthly Gross Revenue:</span><strong>₹9.00 Lakhs (100%)</strong></div>
-            <div style="display: flex; justify-content: space-between;"><span>COGS (Ingredients & Packaging):</span><strong>-₹2.88 Lakhs (32%)</strong></div>
-            <div style="display: flex; justify-content: space-between;"><span>Store Rent & Utilities:</span><strong>-₹1.80 Lakhs (20%)</strong></div>
-            <div style="display: flex; justify-content: space-between;"><span>3-Staff Salaries & Opex:</span><strong>-₹2.34 Lakhs (26%)</strong></div>
-            <div style="display: flex; justify-content: space-between; border-top: 1.5px solid #FF5200; padding-top: 8px; font-weight: 800; color: #047857;"><span>Net Monthly EBITDA:</span><strong style="font-size: 15px;">₹1.98 Lakhs (22%)</strong></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 08: OPERATING ENGINE & WASTE CONTROL -->
-    <section class="slide" id="slide-8" data-slide="8">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /08</span>
-          <span class="editorial-tag-pill">OPERATING ENGINE</span>
-        </div>
-        <h2 class="slide-title">Production Dispatch & <span class="editorial-italic">Waste Management</span></h2>
-        <p class="slide-subtitle">Centralized hub-and-spoke production paired with batch drop scarcity to enforce &lt;3% daily waste.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left flex-col-compact">
-          <div class="glass-card" style="background: #FFFFFF; border: 2px solid #FF5200; padding: 18px 22px; border-radius: 18px;">
-            <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-industry" style="color: #FF5200;"></i> 1. Central Bakery (Hub)</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">Heavy mixing, proofing, and baking done at 4:00 AM off-site central kitchen to minimize kiosk equipment and space cost.</p>
-          </div>
-
-          <div class="glass-card" style="background: #FFFFFF; border: 2px solid #FF5200; padding: 18px 22px; border-radius: 18px;">
-            <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-truck-fast" style="color: #FF5200;"></i> 2. Cold Transit Dispatch (5:30 AM)</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">Temperature-controlled morning dispatch delivers fresh batches to satellite kiosks prior to 6:00 AM tech commute rush.</p>
-          </div>
-
-          <div class="glass-card" style="background: #FFFFFF; border: 2px solid #FF5200; padding: 18px 22px; border-radius: 18px;">
-            <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-fire-burner" style="color: #FF5200;"></i> 3. Batch Drop Scarcity (&lt;3% Waste)</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">Capping daily kiosk bakes to 300 units guarantees daily sellouts and keeps ingredient waste under 3%.</p>
-          </div>
-        </div>
-
-        <div class="col-right">
-          <div class="image-frame full-frame" style="height: 440px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/scarcity_drops_poster.jpg')">
-            <img src="assets/scarcity_drops_poster.jpg" alt="Café Den Batch Drops Poster" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 09: LOCATION STRATEGY & BENGALURU SITE LOCK -->
-    <section class="slide" id="slide-9" data-slide="9">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /09</span>
-          <span class="editorial-tag-pill">LOCATION SELECTION</span>
-        </div>
-        <h2 class="slide-title">Indiranagar Flagship & <span class="editorial-italic">Tech Corridor Expansion</span></h2>
-        <p class="slide-subtitle">Site lock on Indiranagar 100ft Road capturing high-density tech workers, expats, and affluent commuters.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left">
-          <div class="image-frame full-frame" style="height: 440px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/target_locations_map.jpg')">
-            <img src="assets/target_locations_map.jpg" alt="Café Den Bengaluru Target Locations Map" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-        </div>
-
-        <div class="col-right flex-col-compact">
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px; box-shadow: 0 10px 25px rgba(255, 82, 0, 0.06);">
-            <h3 style="font-size: 17px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-location-dot" style="color: #FF5200;"></i> Indiranagar 100ft Road Flagship</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">High pedestrian footfall corner site capturing morning coffee commutes and high disposable income residents.</p>
-          </div>
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px; box-shadow: 0 10px 25px rgba(255, 82, 0, 0.06);">
-            <h3 style="font-size: 17px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-map-location-dot" style="color: #FF5200;"></i> Phase 1 Cluster Corridors</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">Expanding to Outer Ring Road, Whitefield, Koramangala, and HSR Layout tech parks within 12 months.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 10: MARKET OPPORTUNITY (TAM / SAM / SOM) -->
-    <section class="slide" id="slide-10" data-slide="10">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /10</span>
-          <span class="editorial-tag-pill">MARKET SIZING</span>
-        </div>
-        <h2 class="slide-title">Market Opportunity: <span class="editorial-italic">Bottom-Up Methodology</span></h2>
-        <p class="slide-subtitle">TAM, SAM, and SOM derived from store-level unit capacity and Tier-1 tech park QSR density.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.1fr 1.2fr; gap: 24px; align-items: center;">
-        <div class="col-left flex-col-compact">
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px;">
-            <h3 style="font-size: 17px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-chart-pie" style="color: #FF5200;"></i> Sizing Methodology</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 6px;">
-              <strong>TAM:</strong> Total organized Indian QSR & Bakery Industry.<br>
-              <strong>SAM:</strong> Tier-1 Metro Specialty Coffee & Craft Bakery Segment.<br>
-              <strong>SOM:</strong> Target 50 Cluster Kiosks in South India Tech Hubs × ₹3.0 Cr annual store capacity.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-right" style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 20px; padding: 24px; box-shadow: 0 12px 35px rgba(255, 82, 0, 0.08);">
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div>
-              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                <span style="font-size: 13px; font-weight: 800; color: #1F1610;">TAM — Indian QSR & Bakery Market</span>
-                <strong style="font-size: 16px; color: #1F1610; font-family: var(--font-number);">₹30,000 Cr</strong>
-              </div>
-              <div style="width: 100%; height: 10px; background: rgba(45,30,22,0.08); border-radius: 5px; overflow: hidden;">
-                <div style="width: 100%; height: 100%; background: #1F1610;"></div>
+        <div class="grid-2col-split">
+          <div class="split-col-text">
+            <div class="value-prop-card">
+              <div class="prop-num-box">01</div>
+              <div class="prop-content">
+                <h4>Ultra-Compact Glass Kiosk (&lt;150 sq. ft.)</h4>
+                <p>Pre-fabricated glass pavilion placed in high-density tech parks and sidewalk corners, capturing heavy morning pedestrian footfall.</p>
               </div>
             </div>
 
-            <div>
-              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                <span style="font-size: 13px; font-weight: 800; color: #D95D0F;">SAM — Metro Coffee & Bakery QSR</span>
-                <strong style="font-size: 16px; color: #D95D0F; font-family: var(--font-number);">₹3,200 Cr</strong>
-              </div>
-              <div style="width: 100%; height: 10px; background: rgba(45,30,22,0.08); border-radius: 5px; overflow: hidden;">
-                <div style="width: 58%; height: 100%; background: #D95D0F;"></div>
+            <div class="value-prop-card">
+              <div class="prop-num-box">02</div>
+              <div class="prop-content">
+                <h4>High-Speed Dual Pickup Line</h4>
+                <p>Dedicated express windows for fresh coffee and oven-warm croissants eliminate queue friction during 8:00 AM – 11:30 AM morning peak.</p>
               </div>
             </div>
 
-            <div>
-              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                <span style="font-size: 13px; font-weight: 900; color: #FF5200;">SOM — 50 Kiosks Target Share</span>
-                <strong style="font-size: 18px; color: #FF5200; font-family: var(--font-number);">₹150 Cr</strong>
+            <div class="value-prop-card">
+              <div class="prop-num-box">03</div>
+              <div class="prop-content">
+                <h4>Accessible ₹250 Average Ticket (AOV)</h4>
+                <p>Accessible pricing paired with daily fresh baking creates high morning repeat habits among tech park commuters.</p>
               </div>
-              <div style="width: 100%; height: 10px; background: rgba(255,82,0,0.12); border-radius: 5px; overflow: hidden;">
-                <div style="width: 32%; height: 100%; background: #FF5200;"></div>
-              </div>
+            </div>
+          </div>
+
+          <div class="split-col-image">
+            <div class="image-frame-styled" onclick="window.openImageModal('assets/croissant_burger.jpg')">
+              <img src="assets/croissant_burger.jpg" alt="Café Den Signature Bake" class="styled-img">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CHAPTER 11: COMPETITIVE LANDSCAPE & MOAT MATRIX -->
-    <section class="slide" id="slide-11" data-slide="11">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /11</span>
-          <span class="editorial-tag-pill">COMPETITIVE MATRIX</span>
+    <!-- SECTION 3: MENU ARCHITECTURE & CATEGORY COSTING -->
+    <section class="site-section bg-light-surface" id="menu">
+      <div class="container-1200">
+        <div class="section-title-box">
+          <span class="section-tag-pill">MENU COSTING & MARGINS</span>
+          <h2 class="section-main-heading">Menu Architecture & 68% Blended Gross Margin</h2>
+          <p class="section-sub-heading">High-margin espresso brews paired with high-frequency artisanal bakes yield a defensible 32% COGS baseline.</p>
         </div>
-        <h2 class="slide-title">Competitive Landscape: <span class="editorial-italic">Where Café Den Wins</span></h2>
-        <p class="slide-subtitle">Dominating the sweet spot between high-craft artisanal baking and high-speed QSR affordability.</p>
-      </div>
 
-      <div class="slide-content">
-        <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px; box-shadow: 0 10px 30px rgba(45,30,22,0.06); overflow-x: auto;">
-          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 12.5px;">
+        <div class="grid-2col-split">
+          <div class="split-col-text">
+            <div class="menu-category-card">
+              <div class="cat-header">
+                <h4>Specialty Espresso & Cold Brews</h4>
+                <span class="margin-pill green-pill">80% Gross Margin</span>
+              </div>
+              <p class="cat-desc">100% Specialty Arabica Espresso, Lattes, Cold Brews & Americanos.</p>
+              <div class="cat-cost-row">
+                <span>Avg Price: <strong>₹180</strong></span>
+                <span>Direct COGS: <strong>₹36 (20%)</strong></span>
+              </div>
+            </div>
+
+            <div class="menu-category-card">
+              <div class="cat-header">
+                <h4>Fresh Daily Artisanal Bakes</h4>
+                <span class="margin-pill orange-pill">70% Gross Margin</span>
+              </div>
+              <p class="cat-desc">Butter Croissants, Savory Rolls, Garlic Pull-Aparts & Pastries.</p>
+              <div class="cat-cost-row">
+                <span>Avg Price: <strong>₹150</strong></span>
+                <span>Direct COGS: <strong>₹45 (30%)</strong></span>
+              </div>
+            </div>
+
+            <div class="menu-category-card highlight-combo-card">
+              <div class="cat-header">
+                <h4>Signature Combo Meal Box</h4>
+                <span class="margin-pill brand-pill">68% Blended Margin</span>
+              </div>
+              <p class="cat-desc">1 Specialty Coffee + 1 Fresh Artisan Bake (Daily Morning Habit Combo).</p>
+              <div class="cat-cost-row">
+                <span>Average Ticket (AOV): <strong>₹300</strong></span>
+                <span>Combined COGS: <strong>₹96 (32%)</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-col-image">
+            <div class="image-frame-styled" onclick="window.openImageModal('assets/brand_box_meal.jpg')">
+              <img src="assets/brand_box_meal.jpg" alt="Café Den Signature Meal Box" class="styled-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: STORE #1 UNIT ECONOMICS & SCENARIO PLANNING -->
+    <section class="site-section" id="economics">
+      <div class="container-1200">
+        <div class="section-title-box text-center">
+          <span class="section-tag-pill">STORE #1 UNIT ECONOMICS</span>
+          <h2 class="section-main-heading">Rigorous Scenario Planning: Store #1 P&L</h2>
+          <p class="section-sub-heading">Modeled across Conservative, Base Case, and Upside daily transaction volumes at ₹250 AOV.</p>
+        </div>
+
+        <!-- Scenario Switcher Grid -->
+        <div class="scenarios-3grid">
+          <!-- Conservative -->
+          <div class="scenario-card">
+            <div class="scen-tag">CONSERVATIVE</div>
+            <div class="scen-num">80</div>
+            <div class="scen-unit">Transactions / Day</div>
+            <div class="scen-divider"></div>
+            <div class="scen-stat"><span>Monthly Revenue:</span> <strong>₹6.00 Lakhs</strong></div>
+            <div class="scen-stat"><span>Net EBITDA:</span> <strong class="text-green">18% (₹1.08L/mo)</strong></div>
+            <div class="scen-stat"><span>Payback Horizon:</span> <strong>16 Months</strong></div>
+          </div>
+
+          <!-- Base Case (Highlighted) -->
+          <div class="scenario-card base-case-highlight">
+            <div class="scen-tag base-tag">BASE CASE MODEL</div>
+            <div class="scen-num">120</div>
+            <div class="scen-unit">Transactions / Day</div>
+            <div class="scen-divider"></div>
+            <div class="scen-stat"><span>Monthly Revenue:</span> <strong>₹9.00 Lakhs</strong></div>
+            <div class="scen-stat"><span>Net EBITDA:</span> <strong class="text-green">22% (₹1.98L/mo)</strong></div>
+            <div class="scen-stat"><span>Payback Horizon:</span> <strong class="text-brand">13 Months</strong></div>
+          </div>
+
+          <!-- Upside -->
+          <div class="scenario-card">
+            <div class="scen-tag">UPSIDE</div>
+            <div class="scen-num">160</div>
+            <div class="scen-unit">Transactions / Day</div>
+            <div class="scen-divider"></div>
+            <div class="scen-stat"><span>Monthly Revenue:</span> <strong>₹12.00 Lakhs</strong></div>
+            <div class="scen-stat"><span>Net EBITDA:</span> <strong class="text-green">24% (₹2.88L/mo)</strong></div>
+            <div class="scen-stat"><span>Payback Horizon:</span> <strong>10 Months</strong></div>
+          </div>
+        </div>
+
+        <!-- Detailed Itemized P&L Table (Base Case ₹9.0L Revenue) -->
+        <div class="pnl-table-container">
+          <h3 class="pnl-table-title"><i class="fa-solid fa-table-list"></i> Store #1 Base Case Monthly P&L Breakdown (120 tx/day @ ₹250 AOV)</h3>
+          <table class="investor-pnl-table">
             <thead>
-              <tr style="border-bottom: 2px solid #FF5200; color: #1F1610;">
-                <th style="padding: 10px;">Metric</th>
-                <th style="padding: 10px; color: #FF5200;">Café Den QSR</th>
-                <th style="padding: 10px;">Legacy Cafes</th>
-                <th style="padding: 10px;">Cloud Kitchens</th>
+              <tr>
+                <th>P&L Line Item</th>
+                <th>Monthly Amount (₹)</th>
+                <th>% of Revenue</th>
+                <th>Financial Notes & Assumptions</th>
               </tr>
             </thead>
             <tbody>
-              <tr style="border-bottom: 1px solid rgba(45,30,22,0.08);">
-                <td style="padding: 10px; font-weight: 800;">Footprint Area</td>
-                <td style="padding: 10px; font-weight: 800; color: #FF5200;">Sub-150 SQFT</td>
-                <td style="padding: 10px;">1,500+ SQFT</td>
-                <td style="padding: 10px;">500 SQFT (No Storefront)</td>
-              </tr>
-              <tr style="border-bottom: 1px solid rgba(45,30,22,0.08);">
-                <td style="padding: 10px; font-weight: 800;">Fulfillment Speed</td>
-                <td style="padding: 10px; font-weight: 800; color: #FF5200;">Sub-3 Mins</td>
-                <td style="padding: 10px;">12–15 Mins</td>
-                <td style="padding: 10px;">30+ Mins (Delivery)</td>
-              </tr>
-              <tr style="border-bottom: 1px solid rgba(45,30,22,0.08);">
-                <td style="padding: 10px; font-weight: 800;">Average Order (AOV)</td>
-                <td style="padding: 10px; font-weight: 800; color: #FF5200;">₹250</td>
-                <td style="padding: 10px;">₹600+</td>
-                <td style="padding: 10px;">₹350</td>
+              <tr>
+                <td><strong>Gross Revenue</strong></td>
+                <td><strong>₹9,00,000</strong></td>
+                <td><strong>100.0%</strong></td>
+                <td>120 transactions/day × ₹250 AOV × 30 operating days.</td>
               </tr>
               <tr>
-                <td style="padding: 10px; font-weight: 800;">Store Payback Horizon</td>
-                <td style="padding: 10px; font-weight: 800; color: #047857;">12–14 Months</td>
-                <td style="padding: 10px;">24–36 Months</td>
-                <td style="padding: 10px;">18–24 Months</td>
+                <td>COGS (Raw Ingredients & Packaging)</td>
+                <td>-₹2,88,000</td>
+                <td>32.0%</td>
+                <td>32% Direct COGS enforcing 68% blended gross margin.</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>Gross Profit</strong></td>
+                <td><strong>₹6,12,000</strong></td>
+                <td><strong>68.0%</strong></td>
+                <td>Category blended gross margin baseline.</td>
+              </tr>
+              <tr>
+                <td>Store Rent & Utilities</td>
+                <td>-₹1,80,000</td>
+                <td>20.0%</td>
+                <td>Sub-150 SQFT kiosk lease + power/water utilities.</td>
+              </tr>
+              <tr>
+                <td>3-Staff Salaries & Store OPEX</td>
+                <td>-₹2,34,000</td>
+                <td>26.0%</td>
+                <td>1 Lead Barista + 1 Bake Assembler + 1 POS Cashier + maintenance.</td>
+              </tr>
+              <tr class="ebitda-row">
+                <td><strong>Store Net EBITDA</strong></td>
+                <td><strong>₹1,98,000</strong></td>
+                <td><strong>22.0%</strong></td>
+                <td><strong>₹23.76 Lakhs Annualized EBITDA per Store</strong></td>
               </tr>
             </tbody>
           </table>
@@ -565,281 +348,423 @@
       </div>
     </section>
 
-    <!-- CHAPTER 12: DEFENSIVE MOATS & REPLICATION BARRIERS -->
-    <section class="slide" id="slide-12" data-slide="12">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /12</span>
-          <span class="editorial-tag-pill">DEFENSIVE MOATS</span>
-        </div>
-        <h2 class="slide-title">Defensive Moats & <span class="editorial-italic">Replication Barriers</span></h2>
-        <p class="slide-subtitle">Four structural moats protecting Café Den's market position and store unit margins.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
-        <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-coins" style="color: #FF5200;"></i> 1. Sub-₹15L Capex Moat</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">5x lower capital deployment than legacy cafes enables faster payback and rapid multi-unit expansion.</p>
+    <!-- SECTION 5: GROUNDWORK & DEMAND VALIDATION -->
+    <section class="site-section bg-light-surface" id="validation">
+      <div class="container-1200">
+        <div class="section-title-box">
+          <span class="section-tag-pill">GROUNDWORK & VALIDATION</span>
+          <h2 class="section-main-heading">Evidence-Based Groundwork & Validation</h2>
+          <p class="section-sub-heading">Grounding our assumptions in verified pilot surveys, vendor capex locks, and pedestrian footfall studies.</p>
         </div>
 
-        <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-eye" style="color: #FF5200;"></i> 2. Sidewalk Pavilion Visibility</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">100% glass front creates immediate sidewalk awareness and organic footfall without paid customer acquisition cost.</p>
-        </div>
+        <div class="grid-2col-split">
+          <div class="split-col-text">
+            <div class="validation-item-card">
+              <div class="val-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+              <div class="val-body">
+                <h4>85%+ Customer Intent (Pilot Survey)</h4>
+                <p>Surveyed 300+ tech park commuters in Indiranagar. 85%+ confirmed intent to purchase daily morning coffee + fresh bake at ₹250 price point.</p>
+              </div>
+            </div>
 
-        <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-fire" style="color: #FF5200;"></i> 3. Batch Drop Scarcity Engine</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">Daily 300-unit bake caps build morning urgency and drive 100% daily sellout consistency.</p>
-        </div>
+            <div class="validation-item-card">
+              <div class="val-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+              <div class="val-body">
+                <h4>Binding CAPEX Quotations Secured</h4>
+                <p>Secured binding vendor quotes for 2-group commercial espresso machine, glass kiosk fabrication, and POS hardware locking Store #1 CAPEX at ₹14.5L.</p>
+              </div>
+            </div>
 
-        <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-sitemap" style="color: #FF5200;"></i> 4. Hub-and-Spoke Efficiency</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">Off-site central bakery lowers store staffing requirements to just 3 staff per kiosk shift.</p>
-        </div>
-      </div>
-    </section>
+            <div class="validation-item-card">
+              <div class="val-icon"><i class="fa-solid fa-person-walking"></i></div>
+              <div class="val-body">
+                <h4>1,200+ Morning Peak Footfall Study</h4>
+                <p>Measured 1,200+ morning peak pedestrian commuters (8:00 AM – 11:30 AM) passing our targeted Indiranagar 100ft Road site daily.</p>
+              </div>
+            </div>
 
-    <!-- CHAPTER 13: 3-YEAR FINANCIAL MODEL & ROLLOUT SCHEDULE -->
-    <section class="slide" id="slide-13" data-slide="13">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /13</span>
-          <span class="editorial-tag-pill">3-YEAR SCALE</span>
-        </div>
-        <h2 class="slide-title">3-Year Financial Model & <span class="editorial-italic">Store Rollout Schedule</span></h2>
-        <p class="slide-subtitle">Explicitly modeling store opening schedules, ramp-up periods, and cumulative revenue growth.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left flex-col-compact">
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px;">
-            <h3 style="font-size: 17px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-chart-line-up" style="color: #FF5200;"></i> Revenue Scale Schedule</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 6px;">
-              <strong>Year 1 (2 Kiosks):</strong> ₹1.80 Crores Revenue | ₹36L Net EBITDA<br>
-              <strong>Year 2 (5 Kiosks):</strong> ₹5.50 Crores Revenue | ₹1.21 Cr Net EBITDA<br>
-              <strong>Year 3 (10 Kiosks):</strong> ₹12.00 Crores ARR | ₹2.88 Cr Net EBITDA
-            </p>
+            <div class="validation-item-card">
+              <div class="val-icon"><i class="fa-solid fa-utensils"></i></div>
+              <div class="val-body">
+                <h4>Recipe-Level COGS Locked (32%)</h4>
+                <p>Audited itemized recipe costs (flour, butter, Arabica beans, cups, packaging) locking blended gross margin at 68%.</p>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="col-right" style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 20px; padding: 24px; box-shadow: 0 12px 35px rgba(255,82,0,0.08);">
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div>
-              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                <span style="font-size: 13px; font-weight: 700;">Year 1 (2 Stores)</span>
-                <strong style="font-size: 16px; color: #1F1610; font-family: var(--font-number);">₹1.80 Cr</strong>
-              </div>
-              <div style="width: 100%; height: 10px; background: rgba(45,30,22,0.08); border-radius: 5px; overflow: hidden;">
-                <div style="width: 20%; height: 100%; background: #1F1610;"></div>
-              </div>
-            </div>
-
-            <div>
-              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                <span style="font-size: 13px; font-weight: 700;">Year 2 (5 Stores)</span>
-                <strong style="font-size: 16px; color: #D95D0F; font-family: var(--font-number);">₹5.50 Cr</strong>
-              </div>
-              <div style="width: 100%; height: 10px; background: rgba(45,30,22,0.08); border-radius: 5px; overflow: hidden;">
-                <div style="width: 50%; height: 100%; background: #D95D0F;"></div>
-              </div>
-            </div>
-
-            <div>
-              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
-                <span style="font-size: 13px; font-weight: 800; color: #FF5200;">Year 3 (10 Stores)</span>
-                <strong style="font-size: 18px; color: #FF5200; font-family: var(--font-number);">₹12.00 Cr ARR</strong>
-              </div>
-              <div style="width: 100%; height: 10px; background: rgba(255,82,0,0.12); border-radius: 5px; overflow: hidden;">
-                <div style="width: 100%; height: 100%; background: #FF5200;"></div>
-              </div>
+          <div class="split-col-image">
+            <div class="image-frame-styled" onclick="window.openImageModal('assets/target_locations_map.jpg')">
+              <img src="assets/target_locations_map.jpg" alt="Indiranagar Site Map" class="styled-img">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CHAPTER 14: RISKS & DOWNSIDE MITIGATION -->
-    <section class="slide" id="slide-14" data-slide="14">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /14</span>
-          <span class="editorial-tag-pill">RISK ANALYSIS & MITIGATION</span>
-        </div>
-        <h2 class="slide-title">Risk Analysis & <span class="editorial-italic">Downside Mitigation</span></h2>
-        <p class="slide-subtitle">Proactively identifying operational risks and executing clear risk-mitigation frameworks.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
-        <div style="background: #FFFFFF; border: 2px solid #DC2626; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #DC2626; font-weight: 800;"><i class="fa-solid fa-cloud-rain"></i> 1. Weather / Footfall Volatility</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;"><strong>Mitigation:</strong> Omnichannel delivery platform integration (Zomato/Swiggy) + B2B tech park corporate catering contracts.</p>
+    <!-- SECTION 6: OPERATING ENGINE & WASTE CONTROL -->
+    <section class="site-section" id="operations">
+      <div class="container-1200">
+        <div class="section-title-box">
+          <span class="section-tag-pill">OPERATING ENGINE</span>
+          <h2 class="section-main-heading">Hub-and-Spoke Logistics & &lt;3% Waste Control</h2>
+          <p class="section-sub-heading">Off-site central bakery preparation paired with limited batch drops guarantees freshness and zero food waste.</p>
         </div>
 
-        <div style="background: #FFFFFF; border: 2px solid #DC2626; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #DC2626; font-weight: 800;"><i class="fa-solid fa-arrow-trend-up"></i> 2. Raw Ingredient Inflation</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;"><strong>Mitigation:</strong> Direct coffee estate sourcing agreements and fixed annual butter/flour supplier pricing locks.</p>
-        </div>
-
-        <div style="background: #FFFFFF; border: 2px solid #DC2626; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #DC2626; font-weight: 800;"><i class="fa-solid fa-file-contract"></i> 3. Lease Non-Renewal Risk</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;"><strong>Mitigation:</strong> Sub-150 SQFT modular glass kiosks are 100% relocatable to a new tech park site within 48 hours.</p>
-        </div>
-
-        <div style="background: #FFFFFF; border: 2px solid #DC2626; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #DC2626; font-weight: 800;"><i class="fa-solid fa-user-slash"></i> 4. Staff Turnover & Training</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;"><strong>Mitigation:</strong> Standardized 3-day barista & assembler operating SOPs ensuring fast staff onboarding.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 15: FOUNDER LEADERSHIP & EXECUTION RIGOR -->
-    <section class="slide" id="slide-15" data-slide="15">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /15</span>
-          <span class="editorial-tag-pill">FOUNDER LEADERSHIP</span>
-        </div>
-        <h2 class="slide-title">Founder Leadership <span class="editorial-italic">& Execution Rigor</span></h2>
-        <p class="slide-subtitle">Combining growth marketing expertise with operational QSR discipline to build India's premier fresh bakery QSR brand.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left flex-col-compact">
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px; border-radius: 18px;">
-            <h3 style="font-size: 18px; color: #1F1610; font-weight: 800;">Kirti Swarnokar</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;"><strong>Founder & Managing Director | Café Den</strong><br>Growth Marketer turned Culinary Founder with expertise in consumer psychology, brand building, performance marketing, and operational QSR execution.</p>
+        <div class="grid-3col-cards">
+          <div class="feature-card">
+            <div class="card-icon-header"><i class="fa-solid fa-industry"></i></div>
+            <h3 class="card-title">4:00 AM Central Bakery Prep</h3>
+            <p class="card-text">Heavy mixing, proofing, and baking handled off-site at central kitchen to keep kiosk footprint under 150 sq. ft.</p>
           </div>
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px; border-radius: 18px;">
-            <h3 style="font-size: 18px; color: #1F1610; font-weight: 800;">Founder Contact & HQ</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;"><strong>Direct Line:</strong> +91 8050896992<br><strong>Email:</strong> keerti273@gmail.com<br><strong>Flagship HQ:</strong> Indiranagar 100ft Road, Bengaluru, Karnataka</p>
-          </div>
-        </div>
 
-        <div class="col-right">
-          <div class="image-frame full-frame" style="height: 440px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/brand_croissant_cup.jpg')">
-            <img src="assets/brand_croissant_cup.jpg" alt="Founder Leadership" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="feature-card">
+            <div class="card-icon-header"><i class="fa-solid fa-truck-fast"></i></div>
+            <h3 class="card-title">5:30 AM Cold Transit Dispatch</h3>
+            <p class="card-text">Temperature-controlled morning dispatch delivers fresh artisan batches prior to the 6:00 AM tech commute rush.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon-header"><i class="fa-solid fa-fire-burner"></i></div>
+            <h3 class="card-title">Batch Drop Scarcity (&lt;3% Waste)</h3>
+            <p class="card-text">Capping kiosk daily bakes to 300 units creates morning demand urgency and keeps ingredient waste strictly under 3%.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CHAPTER 16: DEMAND & OPERATIONAL VALIDATION -->
-    <section class="slide" id="slide-16" data-slide="16">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /16</span>
-          <span class="editorial-tag-pill">VALIDATION & PROOF POINTS</span>
-        </div>
-        <h2 class="slide-title">Operational Proof Points & <span class="editorial-italic">Demand Validation</span></h2>
-        <p class="slide-subtitle">Grounding assumptions in customer surveys, supplier quotations, and verified footfall studies.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
-        <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-clipboard-check" style="color: #FF5200;"></i> 1. Customer Survey Validation</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">85%+ of tech park commuters surveyed confirmed willingness to purchase daily coffee + fresh bake at ₹250 price point.</p>
+    <!-- SECTION 7: COMPETITIVE MATRIX & DEFENSIVE MOATS -->
+    <section class="site-section bg-light-surface" id="competition">
+      <div class="container-1200">
+        <div class="section-title-box">
+          <span class="section-tag-pill">COMPETITIVE POSITIONING</span>
+          <h2 class="section-main-heading">Competitive Matrix: Where Café Den Dominates</h2>
+          <p class="section-sub-heading">Positioned in the sweet spot between high-craft artisanal baking and high-speed QSR capital efficiency.</p>
         </div>
 
-        <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-file-invoice-dollar" style="color: #FF5200;"></i> 2. Vendor CAPEX Quotations Lock</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">Binding vendor quotes secured for 2-group commercial espresso machines, glass kiosk fabrication, and POS systems (₹14.5L total).</p>
-        </div>
-
-        <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-person-walking" style="color: #FF5200;"></i> 3. Footfall Study</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">1,200+ morning peak pedestrian commuters measured passing the Indiranagar 100ft Road site between 8:00 AM – 11:30 AM.</p>
-        </div>
-
-        <div style="background: #FFFFFF; border: 2px solid #FF5200; border-radius: 18px; padding: 20px;">
-          <h3 style="font-size: 16px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-utensils" style="color: #FF5200;"></i> 4. Recipe Costing Lock</h3>
-          <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;">Recipe-level COGS audited to lock blended gross margin at 68% (32% raw material cost).</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHAPTER 17: ₹30L FUNDRAISE ALLOCATION -->
-    <section class="slide" id="slide-17" data-slide="17">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /17</span>
-          <span class="editorial-tag-pill">USE OF FUNDS</span>
-        </div>
-        <h2 class="slide-title">₹30 Lakhs Seed Raise <span class="editorial-italic">Use of Funds</span></h2>
-        <p class="slide-subtitle">100% of seed capital is allocated toward revenue-generating physical kiosk assets and operating runway.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left flex-col-compact">
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px; border-radius: 18px;">
-            <h3 style="font-size: 17px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-pie-chart" style="color: #FF5200;"></i> Capital Allocation Breakdown</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 6px; line-height: 1.6;">
-              <strong>50.0% (₹15.0L):</strong> Kiosk Fitout, Glass Pavilion Build & Espresso Machine.<br>
-              <strong>25.0% (₹7.5L):</strong> Working Capital & Pre-Opening Inventory Runway.<br>
-              <strong>15.0% (₹4.5L):</strong> Local PR, Sidewalk Sampling & Launch Marketing.<br>
-              <strong>10.0% (₹3.0L):</strong> Contingency & License Clearances.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-right">
-          <div class="image-frame full-frame" style="height: 440px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/brand_combo_tray.jpg')">
-            <img src="assets/brand_combo_tray.jpg" alt="Café Den Seed Allocation" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
+        <div class="comp-table-wrapper">
+          <table class="investor-pnl-table comp-matrix-table">
+            <thead>
+              <tr>
+                <th>Operating Vector</th>
+                <th class="brand-column">Café Den QSR</th>
+                <th>Legacy Specialty Cafes</th>
+                <th>Cloud Kitchens</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Store Footprint</strong></td>
+                <td class="brand-column"><strong>Sub-150 SQFT Kiosk</strong></td>
+                <td>1,500+ SQFT Dining Space</td>
+                <td>500 SQFT Dark Kitchen</td>
+              </tr>
+              <tr>
+                <td><strong>Fulfillment Speed</strong></td>
+                <td class="brand-column"><strong>Sub-3 Minutes</strong></td>
+                <td>12–15 Minutes</td>
+                <td>30+ Mins (Delivery App)</td>
+              </tr>
+              <tr>
+                <td><strong>Average Order (AOV)</strong></td>
+                <td class="brand-column"><strong>₹250 (Accessible)</strong></td>
+                <td>₹600+ (High Friction)</td>
+                <td>₹350 (Platform Fees)</td>
+              </tr>
+              <tr>
+                <td><strong>Initial Setup CAPEX</strong></td>
+                <td class="brand-column"><strong>₹14.5 Lakhs</strong></td>
+                <td>₹80+ Lakhs</td>
+                <td>₹25+ Lakhs</td>
+              </tr>
+              <tr>
+                <td><strong>Store Payback Horizon</strong></td>
+                <td class="brand-column"><strong class="text-green">12–14 Months</strong></td>
+                <td>24–36 Months</td>
+                <td>18–24 Months</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
-    <!-- CHAPTER 18: INVESTMENT DEAL TERMS & RETURN MECHANICS -->
-    <section class="slide" id="slide-18" data-slide="18">
-      <div class="slide-header">
-        <div class="editorial-index-row">
-          <span class="chapter-number">CHAPTER /18</span>
-          <span class="editorial-tag-pill">DEAL TERMS</span>
-        </div>
-        <h2 class="slide-title">Investment Structure & <span class="editorial-italic">Investor Returns</span></h2>
-        <p class="slide-subtitle">Two transparent investment options offered for the ₹30 Lakhs founding seed round.</p>
-      </div>
-
-      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
-        <div class="col-left flex-col-compact">
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px; border-radius: 18px;">
-            <h3 style="font-size: 17px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-handshake" style="color: #FF5200;"></i> Option A: Straight Equity Share</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;"><strong>15% Equity Share</strong> at ₹2.0 Crores Post-Money Valuation. Equity upside tied to 10-store scaling and multi-city expansion.</p>
-          </div>
-
-          <div style="background: #FFFFFF; border: 2px solid #FF5200; padding: 20px; border-radius: 18px;">
-            <h3 style="font-size: 17px; color: #1F1610; font-weight: 800;"><i class="fa-solid fa-coins" style="color: #FF5200;"></i> Option B: Monthly Revenue Share</h3>
-            <p style="font-size: 12.5px; color: #4A3B32; margin-top: 4px;"><strong>5% Monthly Gross Revenue Share</strong> paid monthly until a 1.5x Return Cap (₹45 Lakhs) is achieved.</p>
-          </div>
+    <!-- SECTION 8: STORE #1 MATURATION TIMELINE -->
+    <section class="site-section" id="roadmap">
+      <div class="container-1200">
+        <div class="section-title-box text-center">
+          <span class="section-tag-pill">STORE #1 TIMELINE</span>
+          <h2 class="section-main-heading">Store #1 Maturation & P&L Ramp-Up Timeline</h2>
+          <p class="section-sub-heading">100% focus on launching, ramping up, and proving unit payback on our flagship Indiranagar cafe.</p>
         </div>
 
-        <div class="col-right">
-          <div class="image-frame full-frame" style="height: 440px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/brand_gold_carrier.jpg')">
-            <img src="assets/brand_gold_carrier.jpg" alt="Café Den Gold Carrier Box" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="timeline-stepper-3grid">
+          <div class="timeline-step-card">
+            <div class="step-badge">MONTH 1–3</div>
+            <h4>Launch & Habit Lock</h4>
+            <div class="step-metric">80 tx/day</div>
+            <p>₹6.00L / mo Revenue | 18% EBITDA (₹1.08L/mo). Focus on local PR, sidewalk sampling, and morning commuter habit formation.</p>
+          </div>
+
+          <div class="timeline-step-card highlight-step">
+            <div class="step-badge brand-step-badge">MONTH 4–8</div>
+            <h4>Steady State Execution</h4>
+            <div class="step-metric text-brand">120 tx/day</div>
+            <p>₹9.00L / mo Revenue | 22% EBITDA (₹1.98L/mo). Optimized dual-window service line driving high repeat order frequency.</p>
+          </div>
+
+          <div class="timeline-step-card">
+            <div class="step-badge">MONTH 9–12</div>
+            <h4>Mature Peak Operations</h4>
+            <div class="step-metric text-green">160 tx/day</div>
+            <p>₹12.00L / mo Revenue | 24% EBITDA (₹2.88L/mo). Full store unit payback achieved in 12–14 months!</p>
           </div>
         </div>
       </div>
     </section>
 
-    </div>
+    <!-- SECTION 9: DOWNSIDE RISK ANALYSIS & MITIGATION -->
+    <section class="site-section bg-light-surface" id="risks">
+      <div class="container-1200">
+        <div class="section-title-box">
+          <span class="section-tag-pill">RISK MANAGEMENT</span>
+          <h2 class="section-main-heading">Downside Risk Analysis & Mitigation</h2>
+          <p class="section-sub-heading">Proactively identifying key operational risks and executing clear risk-mitigation frameworks.</p>
+        </div>
+
+        <div class="grid-2col-cards">
+          <div class="risk-card">
+            <div class="risk-title"><i class="fa-solid fa-cloud-rain text-red"></i> 1. Footfall & Weather Volatility</div>
+            <p class="risk-desc"><strong>Mitigation:</strong> Integration with Zomato/Swiggy delivery platforms + pre-booked B2B tech park corporate catering boxes during monsoon periods.</p>
+          </div>
+
+          <div class="risk-card">
+            <div class="risk-title"><i class="fa-solid fa-arrow-trend-up text-red"></i> 2. Raw Ingredient Inflation</div>
+            <p class="risk-desc"><strong>Mitigation:</strong> Direct coffee estate sourcing agreements and fixed annual supplier contracts for butter and flour locking recipe COGS at 32%.</p>
+          </div>
+
+          <div class="risk-card">
+            <div class="risk-title"><i class="fa-solid fa-file-contract text-red"></i> 3. Lease Non-Renewal Risk</div>
+            <p class="risk-desc"><strong>Mitigation:</strong> Sub-150 SQFT modular glass kiosks are 100% relocatable to a alternative tech park site within 48 hours.</p>
+          </div>
+
+          <div class="risk-card">
+            <div class="risk-title"><i class="fa-solid fa-user-slash text-red"></i> 4. Staff Turnover & Training</div>
+            <p class="risk-desc"><strong>Mitigation:</strong> Standardized 3-day barista and assembler operating SOPs ensuring fast staff onboarding and zero quality drop.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: FOUNDER LEADERSHIP & TEAM -->
+    <section class="site-section" id="founder">
+      <div class="container-1200">
+        <div class="section-title-box">
+          <span class="section-tag-pill">FOUNDER LEADERSHIP</span>
+          <h2 class="section-main-heading">Founder Leadership & Execution Rigor</h2>
+          <p class="section-sub-heading">Combining growth marketing expertise with operational QSR discipline to build India's premier fresh bakery QSR brand.</p>
+        </div>
+
+        <div class="grid-2col-split">
+          <div class="split-col-text">
+            <div class="founder-profile-card">
+              <h3 class="founder-name">Kirti Swarnokar</h3>
+              <p class="founder-role">Founder & Managing Director | Café Den</p>
+              <p class="founder-bio">
+                Growth Marketer turned Culinary Founder with expertise in consumer psychology, brand building, performance marketing, and operational QSR execution. Dedicated to building South India's premier fresh bakery and specialty coffee QSR network.
+              </p>
+              <div class="founder-contact-box">
+                <div><i class="fa-solid fa-phone"></i> <strong>Direct Line:</strong> +91 8050896992</div>
+                <div><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> keerti273@gmail.com</div>
+                <div><i class="fa-solid fa-location-dot"></i> <strong>HQ:</strong> Indiranagar 100ft Road, Bengaluru</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-col-image">
+            <div class="image-frame-styled" onclick="window.openImageModal('assets/brand_croissant_cup.jpg')">
+              <img src="assets/brand_croissant_cup.jpg" alt="Founder Leadership" class="styled-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: ₹30L FUNDRAISE USE OF FUNDS -->
+    <section class="site-section bg-light-surface" id="funds">
+      <div class="container-1200">
+        <div class="section-title-box">
+          <span class="section-tag-pill">USE OF FUNDS</span>
+          <h2 class="section-main-heading">₹30 Lakhs Seed Raise Use of Funds</h2>
+          <p class="section-sub-heading">100% of seed capital is allocated toward revenue-generating physical kiosk assets and operating runway.</p>
+        </div>
+
+        <div class="grid-2col-split">
+          <div class="split-col-text">
+            <div class="use-funds-breakdown">
+              <div class="fund-alloc-row">
+                <div class="fund-alloc-info">
+                  <span><strong>50.0% (₹15.0 Lakhs)</strong> — Store #1 Fitout & Equipment</span>
+                  <p>Kiosk glass pavilion build, 2-group commercial espresso machine, convection oven, POS hardware & signage.</p>
+                </div>
+              </div>
+
+              <div class="fund-alloc-row">
+                <div class="fund-alloc-info">
+                  <span><strong>25.0% (₹7.5 Lakhs)</strong> — Working Capital & Inventory Runway</span>
+                  <p>Pre-opening ingredient stock, rent deposit, staff salaries, and operating cash reserve for Month 1–3 ramp-up.</p>
+                </div>
+              </div>
+
+              <div class="fund-alloc-row">
+                <div class="fund-alloc-info">
+                  <span><strong>15.0% (₹4.5 Lakhs)</strong> — Launch Marketing & PR</span>
+                  <p>Indiranagar launch PR, sidewalk sampling campaigns, geo-targeted influencer marketing, and localized ads.</p>
+                </div>
+              </div>
+
+              <div class="fund-alloc-row">
+                <div class="fund-alloc-info">
+                  <span><strong>10.0% (₹3.0 Lakhs)</strong> — Licenses & Contingency Reserve</span>
+                  <p>FSSAI licenses, trade permits, legal documentation, and unforeseen operating contingency buffer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="split-col-image">
+            <div class="image-frame-styled" onclick="window.openImageModal('assets/brand_combo_tray.jpg')">
+              <img src="assets/brand_combo_tray.jpg" alt="Café Den Combo Tray" class="styled-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: INVESTMENT DEAL TERMS & RETURN MECHANICS -->
+    <section class="site-section deal-terms-section" id="terms">
+      <div class="container-1200">
+        <div class="section-title-box text-center">
+          <span class="section-tag-pill">DEAL STRUCTURE</span>
+          <h2 class="section-main-heading">Investment Structure & Deal Terms</h2>
+          <p class="section-sub-heading">Two transparent investment options offered for the ₹30 Lakhs founding seed round.</p>
+        </div>
+
+        <div class="grid-2col-split">
+          <!-- Option A: Equity -->
+          <div class="deal-option-card">
+            <div class="option-badge">OPTION A</div>
+            <h3>Straight Equity Share</h3>
+            <div class="deal-highlight-price">15% Equity Share</div>
+            <p class="deal-subtext">Post-Money Valuation: <strong>₹2.0 Crores</strong></p>
+            <ul class="deal-list">
+              <li><i class="fa-solid fa-check text-green"></i> 15% equity stake in Café Den parent entity.</li>
+              <li><i class="fa-solid fa-check text-green"></i> Pro-rata rights for future institutional expansion rounds.</li>
+              <li><i class="fa-solid fa-check text-green"></i> Long-term capital growth tied to multi-unit store scaling.</li>
+            </ul>
+            <a href="mailto:keerti273@gmail.com?subject=Option%20A%20Equity%20Interest%20-%20Cafe%20Den" class="deal-cta-btn primary-brand-btn">
+              Discuss Equity Terms (₹30L) <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Option B: Revenue Share -->
+          <div class="deal-option-card">
+            <div class="option-badge gold-badge">OPTION B</div>
+            <h3>Monthly Revenue Share</h3>
+            <div class="deal-highlight-price">5% Monthly Gross Revenue</div>
+            <p class="deal-subtext">Return Cap: <strong>1.5x (₹45 Lakhs Total Payout)</strong></p>
+            <ul class="deal-list">
+              <li><i class="fa-solid fa-check text-green"></i> 5% of Store #1 monthly gross revenue paid directly to investor.</li>
+              <li><i class="fa-solid fa-check text-green"></i> Passive monthly cash distribution starting from Month 1.</li>
+              <li><i class="fa-solid fa-check text-green"></i> Terminates automatically upon reaching ₹45 Lakhs total return cap.</li>
+            </ul>
+            <a href="mailto:keerti273@gmail.com?subject=Option%20B%20RevShare%20Interest%20-%20Cafe%20Den" class="deal-cta-btn secondary-dark-btn">
+              Discuss Rev-Share Terms (₹30L) <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Founder Direct Contact Bar -->
+        <div class="founder-cta-footer-bar">
+          <div class="cta-left-info">
+            <h4>Ready to discuss Store #1 investment?</h4>
+            <p>Connect directly with founder Kirti Swarnokar for detailed financial model walkthroughs and site visits.</p>
+          </div>
+          <div class="cta-right-btns">
+            <a href="tel:+918050896992" class="cta-contact-pill"><i class="fa-solid fa-phone"></i> +91 8050896992</a>
+            <a href="mailto:keerti273@gmail.com" class="cta-contact-pill"><i class="fa-solid fa-envelope"></i> keerti273@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Navigation Footer Controls -->
-  <footer class="deck-controls">
-    <button class="nav-control-btn" id="prevBtn" title="Previous Chapter (Left Arrow)"><i class="fa-solid fa-chevron-left"></i> Prev</button>
-    <div class="slide-dots" id="slideDots"></div>
-    <button class="nav-control-btn" id="nextBtn" title="Next Chapter (Right Arrow)">Next <i class="fa-solid fa-chevron-right"></i></button>
-  </footer>
-
-  <!-- Grid Overview Modal -->
-  <div class="modal-overlay" id="gridModal">
-    <div class="modal-content">
+  <!-- Interactive ROI Simulator Modal -->
+  <div class="modal-overlay" id="calcModal">
+    <div class="modal-content calc-modal-content">
       <div class="modal-header">
-        <h2>Café Den — 18 Narrative Chapters</h2>
-        <button id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+        <h2><i class="fa-solid fa-calculator text-brand"></i> Store #1 Interactive ROI Simulator</h2>
+        <button id="closeCalcModalBtn"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <div class="grid-jumper" id="gridJumper">
-        <!-- Injected via JS -->
+      <div class="calc-body">
+        <p class="calc-intro">Adjust daily transaction volume, average order value (AOV), gross margin, and monthly operating expenses to simulate Store #1 P&L performance in real time.</p>
+        
+        <div class="grid-2col-split">
+          <!-- Left: Sliders -->
+          <div class="calc-sliders-col">
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="ordersSlider">Daily Transactions:</label>
+                <span id="ordersVal" class="slider-num">120</span>
+              </div>
+              <input type="range" id="ordersSlider" min="50" max="250" value="120" step="10">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="aovSlider">Average Order Value (AOV ₹):</label>
+                <span id="aovVal" class="slider-num">₹250</span>
+              </div>
+              <input type="range" id="aovSlider" min="150" max="400" value="250" step="10">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="marginSlider">Blended Gross Margin (%):</label>
+                <span id="marginVal" class="slider-num">68%</span>
+              </div>
+              <input type="range" id="marginSlider" min="50" max="80" value="68" step="1">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <label for="opexSlider">Monthly Rent & Staff OPEX (₹):</label>
+                <span id="opexVal" class="slider-num">₹4,14,000</span>
+              </div>
+              <input type="range" id="opexSlider" min="250000" max="600000" value="414000" step="10000">
+            </div>
+          </div>
+
+          <!-- Right: Realtime P&L Results -->
+          <div class="calc-results-col">
+            <div class="calc-res-card">
+              <span class="res-title">Simulated Monthly Revenue</span>
+              <span class="res-big-num" id="calcRevenue">₹9,00,000</span>
+            </div>
+            <div class="calc-res-card">
+              <span class="res-title">Simulated Gross Profit</span>
+              <span class="res-big-num" id="calcGrossProfit">₹6,12,000</span>
+            </div>
+            <div class="calc-res-card highlight-res">
+              <span class="res-title">Simulated Net Monthly EBITDA</span>
+              <span class="res-big-num text-green" id="calcEbitda">₹1,98,000 (22%)</span>
+            </div>
+            <div class="calc-res-card">
+              <span class="res-title">Estimated Store Payback Horizon</span>
+              <span class="res-big-num text-brand" id="calcPayback">13 Months</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -848,9 +773,20 @@
   <div class="modal-overlay" id="imageModal">
     <div class="image-modal-content">
       <button class="image-modal-close" id="closeImageModalBtn"><i class="fa-solid fa-xmark"></i> Close View</button>
-      <img src="" alt="Zoomed Image" id="imageModalTarget" class="image-modal-img">
+      <img src="" alt="Zoomed View" id="imageModalTarget" class="image-modal-img">
     </div>
   </div>
+
+  <footer class="main-site-footer">
+    <div class="container-1200 footer-flex">
+      <div>
+        <strong>CAFÉ DEN</strong> — Category-Creating Food Infrastructure.
+      </div>
+      <div>
+        Indiranagar 100ft Road, Bengaluru, Karnataka | Seed Round ₹30 Lakhs
+      </div>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>
