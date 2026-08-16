@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — LOCKED ~12 MONTH FINANCIAL SIMULATION ENGINE & DECK
+   CAFÉ DEN — 17-SLIDE MASTER INVESTOR PRESENTATION ENGINE
    ========================================================================== */
 
 function calculatePayback() {
@@ -114,9 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
     "STORE #1 ECONOMICS",
     "REAL-TIME P&L SIMULATOR",
     "FROM LAUNCH TO PAYBACK (~12M)",
+    "THE INVESTMENT OPPORTUNITY",
+    "WHAT THE CAPITAL PROVES",
+    "FOUNDING INVESTOR PARTICIPATION",
     "USE OF FUNDS (₹30 LAKHS)",
     "FOUNDER PROFILE & VISION",
-    "TERM SHEET & INVESTMENT CLOSE"
+    "FINAL TERM SHEET & MISSION"
   ];
 
   if (dotsContainer) {
@@ -242,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (closeCalcModalBtn) {
     closeCalcModalBtn.addEventListener('click', () => {
-      if (calcModal) calcModal.classList.remove('open');
+      if (calcModal) calcModal.remove('open');
     });
   }
 
