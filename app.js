@@ -56,7 +56,7 @@ function calculatePayback() {
   }
   if (displayPayback) {
     displayPayback.innerText = statusText;
-    displayPayback.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#8C5338';
+    displayPayback.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#C86D27';
   }
 }
 
@@ -112,7 +112,7 @@ function calculateModalPayback() {
   }
   if (displayPayback) {
     displayPayback.innerText = statusText;
-    displayPayback.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#8C5338';
+    displayPayback.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#C86D27';
   }
 }
 
