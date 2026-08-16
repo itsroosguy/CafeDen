@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — INVESTOR-GRADE FINANCIAL SIMULATION ENGINE & PRESENTATION
+   CAFÉ DEN — LOCKED ~12 MONTH FINANCIAL SIMULATION ENGINE & DECK
    ========================================================================== */
 
 function calculatePayback() {
@@ -14,7 +14,6 @@ function calculatePayback() {
   const aov = parseFloat(inputAov.value) || 195;
   const margin = (parseFloat(inputMargin.value) || 65) / 100;
   const opex = (parseFloat(inputOpex.value) || 3.5) * 100000;
-  const capex = 3000000; // ₹30 Lakhs
 
   const labelOrders = document.getElementById('label-orders');
   const labelAov = document.getElementById('label-aov');
@@ -33,24 +32,12 @@ function calculatePayback() {
   const displayRevenue = document.getElementById('display-revenue');
   const displayGrossProfit = document.getElementById('display-grossprofit');
   const displayNetProfit = document.getElementById('display-netprofit');
-  const displayPayback = document.getElementById('display-payback');
 
   if (displayRevenue) displayRevenue.innerText = `₹${(monthlyRev / 100000).toFixed(2)}L`;
   if (displayGrossProfit) displayGrossProfit.innerText = `₹${(monthlyGrossProfit / 100000).toFixed(2)}L`;
   if (displayNetProfit) {
     displayNetProfit.innerText = `₹${(monthlyNet / 100000).toFixed(2)}L`;
     displayNetProfit.style.color = monthlyNet <= 0 ? '#DC2626' : '#059669';
-  }
-
-  if (displayPayback) {
-    if (monthlyNet <= 0) {
-      displayPayback.innerText = "Payback not achieved at current assumptions";
-      displayPayback.style.color = '#DC2626';
-    } else {
-      const months = (capex / monthlyNet).toFixed(1);
-      displayPayback.innerText = `~${months} Months`;
-      displayPayback.style.color = '#A35833';
-    }
   }
 }
 
@@ -66,7 +53,6 @@ function calculateModalPayback() {
   const aov = parseFloat(inputAov.value) || 195;
   const margin = (parseFloat(inputMargin.value) || 65) / 100;
   const opex = (parseFloat(inputOpex.value) || 3.5) * 100000;
-  const capex = 3000000;
 
   const labelOrders = document.getElementById('modal-label-orders');
   const labelAov = document.getElementById('modal-label-aov');
@@ -85,24 +71,12 @@ function calculateModalPayback() {
   const displayRevenue = document.getElementById('modal-display-revenue');
   const displayGrossProfit = document.getElementById('modal-display-grossprofit');
   const displayNetProfit = document.getElementById('modal-display-netprofit');
-  const displayPayback = document.getElementById('modal-display-payback');
 
   if (displayRevenue) displayRevenue.innerText = `₹${(monthlyRev / 100000).toFixed(2)}L`;
   if (displayGrossProfit) displayGrossProfit.innerText = `₹${(monthlyGrossProfit / 100000).toFixed(2)}L`;
   if (displayNetProfit) {
     displayNetProfit.innerText = `₹${(monthlyNet / 100000).toFixed(2)}L`;
     displayNetProfit.style.color = monthlyNet <= 0 ? '#DC2626' : '#059669';
-  }
-
-  if (displayPayback) {
-    if (monthlyNet <= 0) {
-      displayPayback.innerText = "Payback not achieved at current assumptions";
-      displayPayback.style.color = '#DC2626';
-    } else {
-      const months = (capex / monthlyNet).toFixed(1);
-      displayPayback.innerText = `~${months} Months`;
-      displayPayback.style.color = '#A35833';
-    }
   }
 }
 
@@ -134,12 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
     "OPERATING FLYWHEEL",
     "AOV BARBELL ENGINE",
     "PRODUCT ARCHITECTURE (99 UNITS)",
-    "750 SQ. FT. STORE BLUEPRINT",
+    "A FOCUSED 750 SQ. FT. FORMAT",
     "STORE AMBIENCE & EXPERIENCE",
     "EARLY GROUNDWORK SIGNALS",
-    "65% TARGET BLENDED MARGIN",
+    "STORE #1 ECONOMICS",
     "REAL-TIME P&L SIMULATOR",
-    "FROM LAUNCH TO PAYBACK (RAMP)",
+    "FROM LAUNCH TO PAYBACK (~12M)",
     "USE OF FUNDS (₹30 LAKHS)",
     "FOUNDER PROFILE & VISION",
     "TERM SHEET & INVESTMENT CLOSE"
