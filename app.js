@@ -1,8 +1,8 @@
 /* ==========================================================================
-   CAFÉ DEN — 14-SLIDE PRESENTATION & FINANCIAL SIMULATION ENGINE
+   CAFÉ DEN — AIRTIGHT FINANCIAL SIMULATION ENGINE & 14 SLIDE PRESENTATION
    ========================================================================== */
 
-// 1. AIRTIGHT SIMULATOR MATH ENGINE AS SPECIFIED IN PROMPT
+// 1. AIRTIGHT SIMULATOR MATH ENGINE (INITIALIZED TO 12.5 MONTH BASE CASE)
 function calculatePayback() {
   const inputOrders = document.getElementById('input-orders');
   const inputAov = document.getElementById('input-aov');
@@ -11,10 +11,10 @@ function calculatePayback() {
 
   if (!inputOrders || !inputAov || !inputMargin || !inputOpex) return;
 
-  const orders = parseFloat(inputOrders.value) || 220;
-  const aov = parseFloat(inputAov.value) || 195;
+  const orders = parseFloat(inputOrders.value) || 180;
+  const aov = parseFloat(inputAov.value) || 225;
   const margin = (parseFloat(inputMargin.value) || 65) / 100;
-  const opex = (parseFloat(inputOpex.value) || 2.2) * 100000;
+  const opex = (parseFloat(inputOpex.value) || 5.5) * 100000;
   const capex = 3000000; // ₹30 Lakhs
 
   // Update slider label displays
@@ -33,10 +33,12 @@ function calculatePayback() {
   const monthlyNet = monthlyGrossProfit - opex;
 
   const displayRevenue = document.getElementById('display-revenue');
+  const displayGrossProfit = document.getElementById('display-grossprofit');
   const displayNetProfit = document.getElementById('display-netprofit');
   const displayPayback = document.getElementById('display-payback');
 
   if (displayRevenue) displayRevenue.innerText = `₹${(monthlyRev / 100000).toFixed(2)}L`;
+  if (displayGrossProfit) displayGrossProfit.innerText = `₹${(monthlyGrossProfit / 100000).toFixed(2)}L`;
   if (displayNetProfit) {
     displayNetProfit.innerText = `₹${(monthlyNet / 100000).toFixed(2)}L`;
     displayNetProfit.style.color = monthlyNet <= 0 ? '#DC2626' : '#059669';
@@ -63,10 +65,10 @@ function calculateModalPayback() {
 
   if (!inputOrders || !inputAov || !inputMargin || !inputOpex) return;
 
-  const orders = parseFloat(inputOrders.value) || 220;
-  const aov = parseFloat(inputAov.value) || 195;
+  const orders = parseFloat(inputOrders.value) || 180;
+  const aov = parseFloat(inputAov.value) || 225;
   const margin = (parseFloat(inputMargin.value) || 65) / 100;
-  const opex = (parseFloat(inputOpex.value) || 2.2) * 100000;
+  const opex = (parseFloat(inputOpex.value) || 5.5) * 100000;
   const capex = 3000000;
 
   const labelOrders = document.getElementById('modal-label-orders');
@@ -84,10 +86,12 @@ function calculateModalPayback() {
   const monthlyNet = monthlyGrossProfit - opex;
 
   const displayRevenue = document.getElementById('modal-display-revenue');
+  const displayGrossProfit = document.getElementById('modal-display-grossprofit');
   const displayNetProfit = document.getElementById('modal-display-netprofit');
   const displayPayback = document.getElementById('modal-display-payback');
 
   if (displayRevenue) displayRevenue.innerText = `₹${(monthlyRev / 100000).toFixed(2)}L`;
+  if (displayGrossProfit) displayGrossProfit.innerText = `₹${(monthlyGrossProfit / 100000).toFixed(2)}L`;
   if (displayNetProfit) {
     displayNetProfit.innerText = `₹${(monthlyNet / 100000).toFixed(2)}L`;
     displayNetProfit.style.color = monthlyNet <= 0 ? '#DC2626' : '#059669';
