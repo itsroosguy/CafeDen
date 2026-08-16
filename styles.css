@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — 14-SLIDE TONAL PALETTE MATRIX & EDITORIAL SYSTEM
+   CAFÉ DEN — AIRTIGHT FINANCIAL & EDITORIAL DESIGN SYSTEM
    ========================================================================== */
 
 :root {
@@ -728,7 +728,7 @@ body.editorial-deck-body {
 }
 
 .stat-giant-num {
-  font-size: clamp(4rem, 8vw, 7rem);
+  font-size: clamp(4.5rem, 8vw, 7.5rem);
   font-weight: 900;
   line-height: 1;
 }
@@ -826,7 +826,7 @@ body.editorial-deck-body {
   border: 1px solid var(--border-light);
   padding: 10px 18px;
   border-radius: 12px;
-  font-size: 12px;
+  font-size: 11.5px;
   color: var(--text-dark-muted);
 }
 
@@ -1189,7 +1189,7 @@ body.editorial-deck-body {
 
   .hero-headline { font-size: 30px !important; }
   .slide-title { font-size: 20px !important; }
-  .hero-split-layout, .asymmetric-3col, .flywheel-pipeline, .aov-barbell-split, .product-media-gallery, .schematic-layout-grid, .groundwork-layout-with-media, .simulator-layout-2col, .grid-2x2-alloc, .blueprint-milestones-grid, .founder-asymmetric-with-media {
+  .hero-split-layout, .asymmetric-3col, .flywheel-pipeline, .aov-barbell-split, .product-media-gallery, .schematic-layout-grid, .groundwork-layout-with-media, .simulator-layout-2col, .grid-2x2-alloc, .blueprint-milestones-grid, .founder-asymmetric-with-media, .ramp-up-callout-grid {
     grid-template-columns: 1fr !important;
     flex-direction: column !important;
   }
