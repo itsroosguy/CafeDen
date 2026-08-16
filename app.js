@@ -1,7 +1,122 @@
 /* ==========================================================================
-   CAFÉ DEN — WARM LATTE PRESENTATION & P&L ENGINE
+   CAFÉ DEN — MASTER EDITORIAL PRESENTATION & P&L ENGINE
    ========================================================================== */
 
+// 1. AIRTIGHT SIMULATOR MATH ENGINE AS SPECIFIED IN PROMPT
+function calculatePayback() {
+  const inputOrders = document.getElementById('input-orders');
+  const inputAov = document.getElementById('input-aov');
+  const inputMargin = document.getElementById('input-margin');
+  const inputOpex = document.getElementById('input-opex');
+
+  if (!inputOrders || !inputAov || !inputMargin || !inputOpex) return;
+
+  const dailyOrders = parseFloat(inputOrders.value) || 220;
+  const blendedAOV = parseFloat(inputAov.value) || 195;
+  const grossMargin = (parseFloat(inputMargin.value) || 65) / 100;
+  const monthlyOpex = (parseFloat(inputOpex.value) || 2.2) * 100000;
+  const capitalExpenditure = 3000000; // ₹30 Lakhs
+
+  // Update slider label displays
+  const labelOrders = document.getElementById('label-orders');
+  const labelAov = document.getElementById('label-aov');
+  const labelMargin = document.getElementById('label-margin');
+  const labelOpex = document.getElementById('label-opex');
+
+  if (labelOrders) labelOrders.textContent = `${dailyOrders} / day`;
+  if (labelAov) labelAov.textContent = `₹${blendedAOV}`;
+  if (labelMargin) labelMargin.textContent = `${Math.round(grossMargin * 100)}%`;
+  if (labelOpex) labelOpex.textContent = `₹${(monthlyOpex / 100000).toFixed(2)} L`;
+
+  const monthlyRevenue = dailyOrders * blendedAOV * 30;
+  const monthlyGrossProfit = monthlyRevenue * grossMargin;
+  const monthlyNetContribution = monthlyGrossProfit - monthlyOpex;
+
+  let paybackMonths = 0;
+  let statusText = "";
+
+  if (monthlyNetContribution <= 0) {
+    statusText = "Operating Loss (Adjust Inputs)";
+  } else {
+    paybackMonths = (capitalExpenditure / monthlyNetContribution).toFixed(1);
+    statusText = `${paybackMonths} Months`;
+  }
+
+  // Update DOM elements dynamically
+  const displayRevenue = document.getElementById('display-revenue');
+  const displayGrossProfit = document.getElementById('display-grossprofit');
+  const displayNetProfit = document.getElementById('display-netprofit');
+  const displayPayback = document.getElementById('display-payback');
+
+  if (displayRevenue) displayRevenue.innerText = `₹${(monthlyRevenue / 100000).toFixed(2)}L`;
+  if (displayGrossProfit) displayGrossProfit.innerText = `₹${(monthlyGrossProfit / 100000).toFixed(2)}L`;
+  if (displayNetProfit) {
+    displayNetProfit.innerText = `₹${(monthlyNetContribution / 100000).toFixed(2)}L`;
+    displayNetProfit.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#059669';
+  }
+  if (displayPayback) {
+    displayPayback.innerText = statusText;
+    displayPayback.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#8C5338';
+  }
+}
+
+// Modal Payback Engine
+function calculateModalPayback() {
+  const inputOrders = document.getElementById('modal-input-orders');
+  const inputAov = document.getElementById('modal-input-aov');
+  const inputMargin = document.getElementById('modal-input-margin');
+  const inputOpex = document.getElementById('modal-input-opex');
+
+  if (!inputOrders || !inputAov || !inputMargin || !inputOpex) return;
+
+  const dailyOrders = parseFloat(inputOrders.value) || 220;
+  const blendedAOV = parseFloat(inputAov.value) || 195;
+  const grossMargin = (parseFloat(inputMargin.value) || 65) / 100;
+  const monthlyOpex = (parseFloat(inputOpex.value) || 2.2) * 100000;
+  const capitalExpenditure = 3000000;
+
+  const labelOrders = document.getElementById('modal-label-orders');
+  const labelAov = document.getElementById('modal-label-aov');
+  const labelMargin = document.getElementById('modal-label-margin');
+  const labelOpex = document.getElementById('modal-label-opex');
+
+  if (labelOrders) labelOrders.textContent = `${dailyOrders} / day`;
+  if (labelAov) labelAov.textContent = `₹${blendedAOV}`;
+  if (labelMargin) labelMargin.textContent = `${Math.round(grossMargin * 100)}%`;
+  if (labelOpex) labelOpex.textContent = `₹${(monthlyOpex / 100000).toFixed(2)} L`;
+
+  const monthlyRevenue = dailyOrders * blendedAOV * 30;
+  const monthlyGrossProfit = monthlyRevenue * grossMargin;
+  const monthlyNetContribution = monthlyGrossProfit - monthlyOpex;
+
+  let paybackMonths = 0;
+  let statusText = "";
+
+  if (monthlyNetContribution <= 0) {
+    statusText = "Operating Loss (Adjust Inputs)";
+  } else {
+    paybackMonths = (capitalExpenditure / monthlyNetContribution).toFixed(1);
+    statusText = `${paybackMonths} Months`;
+  }
+
+  const displayRevenue = document.getElementById('modal-display-revenue');
+  const displayGrossProfit = document.getElementById('modal-display-grossprofit');
+  const displayNetProfit = document.getElementById('modal-display-netprofit');
+  const displayPayback = document.getElementById('modal-display-payback');
+
+  if (displayRevenue) displayRevenue.innerText = `₹${(monthlyRevenue / 100000).toFixed(2)}L`;
+  if (displayGrossProfit) displayGrossProfit.innerText = `₹${(monthlyGrossProfit / 100000).toFixed(2)}L`;
+  if (displayNetProfit) {
+    displayNetProfit.innerText = `₹${(monthlyNetContribution / 100000).toFixed(2)}L`;
+    displayNetProfit.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#059669';
+  }
+  if (displayPayback) {
+    displayPayback.innerText = statusText;
+    displayPayback.style.color = monthlyNetContribution <= 0 ? '#DC2626' : '#8C5338';
+  }
+}
+
+// 2. SLIDE NAVIGATION & PRESENTATION CONTROLS
 document.addEventListener('DOMContentLoaded', () => {
 
   const slides = document.querySelectorAll('.slide');
@@ -28,18 +143,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const chapterTitles = [
     "HERO / BRAND STATEMENT",
     "THE DAILY F&B OPPORTUNITY",
-    "THE OPERATING FLYWHEEL",
-    "CORE AOV SHIFT (DAYPARTS)",
-    "PRODUCT & BATCH ARCHITECTURE",
-    "CUSTOMER DAY-PARTS MATRIX",
-    "750 SQFT MODULAR LAYOUT",
-    "EARLY TRACTION & GROUNDWORK",
-    "LOW-PAID-MEDIA FOOTFALL ENGINE",
-    "P&L SIMULATOR & UNIT ECONOMICS",
+    "OPERATING FLYWHEEL",
+    "AOV BARBELL ENGINE",
+    "LIMITED DAILY BATCH MODEL",
+    "750 SQ. FT. STORE SCHEMATIC",
+    "EARLY GROUNDWORK SIGNALS",
+    "REAL-TIME P&L SIMULATOR",
     "USE OF FUNDS (₹30 LAKHS)",
-    "STRATEGIC ROADMAP",
-    "FOUNDER & EXECUTION TEAM",
-    "INVESTMENT TERM SHEET"
+    "EXPANSION BLUEPRINT",
+    "TERM SHEET & CLOSE"
   ];
 
   // Render Dots
@@ -49,12 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const dot = document.createElement('div');
       dot.classList.add('dot');
       if (i === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => goToSlide(i));
+      dot.addEventListener('click', () => navigateSlideTo(i));
       dotsContainer.appendChild(dot);
     });
   }
 
-  // Populate Grid Jumper
+  // Render Grid Overview
   if (gridJumper) {
     gridJumper.innerHTML = '';
     slides.forEach((_, index) => {
@@ -66,14 +178,14 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="grid-item-title">${title}</div>
       `;
       item.addEventListener('click', () => {
-        goToSlide(index);
+        navigateSlideTo(index);
         closeGridModal();
       });
       gridJumper.appendChild(item);
     });
   }
 
-  function updateUI() {
+  function updateDeckUI() {
     slides.forEach((slide, idx) => {
       slide.classList.toggle('active', idx === currentIndex);
     });
@@ -93,32 +205,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function goToSlide(index) {
+  function navigateSlideTo(index) {
     if (index >= 0 && index < totalSlides) {
       currentIndex = index;
-      updateUI();
+      updateDeckUI();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 
-  function nextSlide() {
-    if (currentIndex < totalSlides - 1) {
-      currentIndex++;
-      updateUI();
+  function navigateSlide(direction) {
+    const nextIdx = currentIndex + direction;
+    if (nextIdx >= 0 && nextIdx < totalSlides) {
+      currentIndex = nextIdx;
+      updateDeckUI();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 
-  function prevSlide() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateUI();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }
+  if (prevBtn) prevBtn.addEventListener('click', () => navigateSlide(-1));
+  if (nextBtn) nextBtn.addEventListener('click', () => navigateSlide(1));
 
-  if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-  if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+  // Keyboard Navigation Engine as specified in Prompt
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+      e.preventDefault();
+      navigateSlide(1);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      navigateSlide(-1);
+    } else if (e.key === 'c' || e.key === 'C') {
+      if (calcModal) {
+        calcModal.classList.contains('open') ? calcModal.classList.remove('open') : calcModal.classList.add('open');
+      }
+    } else if (e.key === 'o' || e.key === 'O') {
+      if (gridModal) {
+        gridModal.classList.contains('open') ? closeGridModal() : openGridModal();
+      }
+    } else if (e.key === 'f' || e.key === 'F') {
+      toggleFullscreen();
+    }
+  });
 
   // Touch Swipe Engine
   let startX = 0, startY = 0, endX = 0, endY = 0;
@@ -135,93 +261,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const diffX = endX - startX;
       const diffY = endY - startY;
       if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY) * 1.5) {
-        if (diffX < 0) nextSlide();
-        else prevSlide();
+        if (diffX < 0) navigateSlide(1);
+        else navigateSlide(-1);
       }
     }, { passive: true });
   }
 
-  // 100% AIRTIGHT P&L SIMULATOR MATH ENGINE
-  function runCalculationEngine(prefix) {
-    const ordersSlider = document.getElementById(prefix + 'OrdersSlider');
-    const aovSlider = document.getElementById(prefix + 'AovSlider');
-    const marginSlider = document.getElementById(prefix + 'MarginSlider');
-    const opexSlider = document.getElementById(prefix + 'OpexSlider');
-
-    if (!ordersSlider || !aovSlider || !marginSlider || !opexSlider) return;
-
-    const ordersVal = document.getElementById(prefix + 'OrdersVal');
-    const aovVal = document.getElementById(prefix + 'AovVal');
-    const marginVal = document.getElementById(prefix + 'MarginVal');
-    const opexVal = document.getElementById(prefix + 'OpexVal');
-
-    const calcRevenue = document.getElementById(prefix + 'CalcRevenue');
-    const calcGrossProfit = document.getElementById(prefix + 'CalcGrossProfit');
-    const calcEbitda = document.getElementById(prefix + 'CalcEbitda');
-    const calcPayback = document.getElementById(prefix + 'CalcPayback');
-
-    const orders = parseInt(ordersSlider.value);
-    const aov = parseInt(aovSlider.value);
-    const margin = parseInt(marginSlider.value) / 100;
-    const opex = parseInt(opexSlider.value);
-
-    // Update Slider Value Displays
-    if (ordersVal) ordersVal.textContent = `${orders} / day`;
-    if (aovVal) aovVal.textContent = `₹${aov}`;
-    if (marginVal) marginVal.textContent = `${Math.round(margin * 100)}%`;
-    if (opexVal) opexVal.textContent = `₹${(opex / 100000).toFixed(2)} L`;
-
-    // Calculation Logic
-    const monthlyGrossRevenue = orders * aov * 30;
-    const monthlyCOGS = monthlyGrossRevenue * (1 - margin);
-    const monthlyGrossProfit = monthlyGrossRevenue - monthlyCOGS;
-    const monthlyNetEBITDA = monthlyGrossProfit - opex;
-    const ebitdaPct = monthlyGrossRevenue > 0 ? ((monthlyNetEBITDA / monthlyGrossRevenue) * 100).toFixed(1) : "0.0";
-
-    // Payback Months (Seed Capital Ask = ₹30,00,000)
-    const seedCapitalAsk = 3000000;
-    let paybackMonthsText = "";
-
-    if (monthlyNetEBITDA <= 0) {
-      paybackMonthsText = "Cash Flow Negative";
-    } else {
-      const months = (seedCapitalAsk / monthlyNetEBITDA).toFixed(1);
-      paybackMonthsText = `${months} Months`;
-    }
-
-    // Update UI Elements
-    if (calcRevenue) calcRevenue.textContent = `₹${(monthlyGrossRevenue / 100000).toFixed(2)} Lakhs`;
-    if (calcGrossProfit) calcGrossProfit.textContent = `₹${(monthlyGrossProfit / 100000).toFixed(2)} Lakhs`;
-    if (calcEbitda) {
-      calcEbitda.textContent = `₹${(monthlyNetEBITDA / 100000).toFixed(2)} Lakhs (${ebitdaPct}%)`;
-      calcEbitda.style.color = monthlyNetEBITDA <= 0 ? '#DC2626' : '#059669';
-    }
-    if (calcPayback) {
-      calcPayback.textContent = paybackMonthsText;
-      calcPayback.style.color = monthlyNetEBITDA <= 0 ? '#DC2626' : '#8C5338';
-    }
-  }
-
-  function syncAllSimulators() {
-    runCalculationEngine('');
-    runCalculationEngine('modal');
-  }
-
-  // Attach Input Listeners for In-Page Simulator
-  ['ordersSlider', 'aovSlider', 'marginSlider', 'opexSlider'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('input', syncAllSimulators);
-  });
-
-  // Attach Input Listeners for Modal Simulator
-  ['modalOrdersSlider', 'modalAovSlider', 'modalMarginSlider', 'modalOpexSlider'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('input', syncAllSimulators);
-  });
-
-  syncAllSimulators();
-
-  // Modals Management
   function openGridModal() { if (gridModal) gridModal.classList.add('open'); }
   function closeGridModal() { if (gridModal) gridModal.classList.remove('open'); }
 
@@ -240,27 +285,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Keyboard Shortcuts
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight' || e.key === ' ') {
-      e.preventDefault();
-      nextSlide();
-    } else if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      prevSlide();
-    } else if (e.key === 'c' || e.key === 'C') {
-      if (calcModal) {
-        calcModal.classList.contains('open') ? calcModal.classList.remove('open') : calcModal.classList.add('open');
-      }
-    } else if (e.key === 'o' || e.key === 'O') {
-      if (gridModal) {
-        gridModal.classList.contains('open') ? closeGridModal() : openGridModal();
-      }
-    } else if (e.key === 'f' || e.key === 'F') {
-      toggleFullscreen();
-    }
-  });
-
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen().catch(err => console.log(err));
@@ -271,5 +295,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (fullscreenBtn) fullscreenBtn.addEventListener('click', toggleFullscreen);
 
-  updateUI();
+  // Initial Calculation Run
+  calculatePayback();
+  calculateModalPayback();
+  updateDeckUI();
 });
