@@ -54,54 +54,30 @@
   <main class="deck-container" id="deckContainer">
     <div class="deck-stage" id="deckStage">
 
-    <!-- SLIDE 01: HERO STATEMENT (Mood: Deep Espresso #1B1210) -->
-    <section class="slide active theme-espresso" id="slide-1" data-slide="1">
-      <div class="slide-content-wrapper">
-        <div class="micro-kicker text-gold">INVESTOR PRESENTATION 2026 • SEED ROUND</div>
+    <!-- SLIDE 01: HERO COVER — FULL-BLEED BACKGROUND WITH DARK ESPRESSO SCRIM -->
+    <section class="slide active hero-scrim-slide theme-espresso" id="slide-1" data-slide="1">
+      <!-- Background Image Layer -->
+      <img src="assets/kiosk.jpg" alt="Café Den Atmosphere" class="hero-bg-img" />
+      <!-- Deep Espresso Gradient Overlay (75%-85% Scrim) -->
+      <div class="hero-scrim-overlay"></div>
+      
+      <!-- Foreground Content (Left-Aligned Asymmetric Editorial) -->
+      <div class="hero-scrim-content">
+        <span class="micro-kicker text-gold border-pill">
+          INVESTOR PRESENTATION 2026 • SEED ROUND
+        </span>
+        <h1 class="hero-headline font-serif text-light-primary">
+          Fresh Food.<br>
+          <span class="italic-serif text-gold">Everyday Rituals.</span>
+        </h1>
+        <p class="hero-subheading text-light-muted">
+          Café Den is building the neighborhood's high-frequency daily F&B flagship—engineered for rapid fulfillment, high morning volume, and high-margin all-day basket growth.
+        </p>
         
-        <div class="hero-split-layout">
-          <div class="hero-text-col">
-            <h1 class="hero-headline font-serif text-light-primary">
-              Fresh Food.<br>
-              <span class="italic-serif text-gold">Everyday Rituals.</span>
-            </h1>
-            <p class="hero-subheading text-light-muted">
-              Café Den is building the neighborhood's high-frequency daily F&B flagship—engineered for speed, product integrity, and accessible unit economics.
-            </p>
-
-            <div class="hero-stats-4grid">
-              <div class="stat-cell dark-cell">
-                <span class="stat-val text-gold">₹30L</span>
-                <span class="stat-lbl text-light-muted">Seed Raise Ask</span>
-              </div>
-              <div class="stat-cell dark-cell">
-                <span class="stat-val text-gold">15%</span>
-                <span class="stat-lbl text-light-muted">Equity Share</span>
-              </div>
-              <div class="stat-cell dark-cell">
-                <span class="stat-val text-gold">65%</span>
-                <span class="stat-lbl text-light-muted">Target Margin</span>
-              </div>
-              <div class="stat-cell dark-cell">
-                <span class="stat-val text-gold">750 Sq. Ft.</span>
-                <span class="stat-lbl text-light-muted">Flagship Format</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-media-col">
-            <div class="editorial-image-frame shadow-dark">
-              <img src="assets/coffee_pickup_window.jpg" alt="Café Den Atmosphere & Extraction" class="editorial-img object-cover">
-              <div class="image-caption-pill dark-pill">Authentic Store Atmosphere & Extraction</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-quote-bar dark-quote">
-          <i class="fa-solid fa-quote-left text-gold"></i>
-          <div>
-            <strong>CORE THESIS:</strong> Raising <strong>₹30 Lakhs for 15% Equity</strong> to launch and validate Store #1 in Indiranagar, Bengaluru. Pre-Money Valuation: ~₹1.70 Cr | Post-Money: ₹2.00 Cr.
-          </div>
+        <div class="hero-footer-stats">
+          <div class="hf-stat-chip"><i class="fa-solid fa-store text-gold"></i> Flagship Footprint: <strong>750 Sq. Ft.</strong></div>
+          <div class="hf-stat-chip"><i class="fa-solid fa-coins text-gold"></i> Target Raise: <strong>₹30 Lakhs (15% Equity)</strong></div>
+          <div class="hf-stat-chip"><i class="fa-solid fa-chart-line text-gold"></i> Post-Money Valuation: <strong>₹2.00 Crore</strong></div>
         </div>
       </div>
     </section>
@@ -428,7 +404,6 @@
 
       <div class="slide-body">
         <div class="simulator-layout-2col">
-          <!-- Live Simulator Controls initialized to Base Case defaults (180 txns @ ₹225 AOV, 65% margin, ₹5.50L OpEx) -->
           <div class="sim-card controls-card light-card">
             <div class="input-group">
               <div class="input-label-row text-dark-primary">
@@ -463,7 +438,6 @@
             </div>
           </div>
 
-          <!-- Live Outputs -->
           <div class="sim-card outputs-card light-card">
             <div class="output-tile">
               <span class="out-lbl text-dark-muted">Simulated Monthly Revenue</span>
@@ -487,27 +461,10 @@
           </div>
         </div>
 
-        <!-- Mathematically Sound Scenario Reference Matrix Table -->
         <div class="static-ref-table">
           <div class="ref-cell"><span>Conservative:</span> ~18.2 Months (150 txns @ ₹200 AOV | ₹9.00L Rev | ₹4.20L OpEx)</div>
           <div class="ref-cell cell-base"><span>Base Case:</span> EXACTLY 12.5 Months (180 txns @ ₹225 AOV | ₹12.15L Rev | ₹5.50L OpEx)</div>
           <div class="ref-cell"><span>Upside:</span> ~10.1 Months (200 txns @ ₹230 AOV | ₹13.80L Rev | ₹6.00L OpEx)</div>
-        </div>
-
-        <!-- Three-Stage Volume Ramp-Up Model & What Has To Go Right Callout -->
-        <div class="ramp-up-callout-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px;">
-          <div class="ramp-card" style="background: var(--bg-cream); border: 1px solid var(--border-light); padding: 10px 14px; border-radius: 10px; font-size: 11.5px; color: var(--text-dark-muted);">
-            <strong style="color: var(--brand-terracotta);">3-STAGE VOLUME RAMP-UP:</strong><br>
-            • M1–3: 100–120 txns/day (Morning grab-and-go sampling)<br>
-            • M4–6: 140–160 txns/day (Growing afternoon basket size)<br>
-            • M7–12: 180+ txns/day (Target run-rate & 12.5M payback)
-          </div>
-          <div class="ramp-card" style="background: var(--bg-cream); border: 1px solid var(--border-light); padding: 10px 14px; border-radius: 10px; font-size: 11.5px; color: var(--text-dark-muted);">
-            <strong style="color: var(--brand-terracotta);">WHAT HAS TO GO RIGHT:</strong><br>
-            • Morning acquisition velocity (₹89 Coffee / ₹99 ABC)<br>
-            • Post-10 AM basket expansion (₹199 Ube & Fresh Bakes)<br>
-            • Kitchen shrinkage efficiency to maintain 65% target margin
-          </div>
         </div>
       </div>
     </section>
