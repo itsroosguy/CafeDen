@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAFÉ DEN — Master Investor Document & Pitch Brief</title>
-  <meta name="description" content="Café Den: Raising ₹30L to launch and validate the first 750 sq. ft. flagship cafe in Bengaluru.">
+  <title>CAFÉ DEN — Interactive Investor Pitch Deck</title>
+  <meta name="description" content="Café Den: Seed Round Pitch Brief — Raising ₹30L to launch and validate Store #1 (750 sq. ft. flagship) in Bengaluru.">
   
-  <!-- Premium Google Fonts: Plus Jakarta Sans + Inter + Playfair Display + JetBrains Mono -->
+  <!-- Premium Fonts: Plus Jakarta Sans + Inter + Playfair Display + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -16,588 +16,690 @@
   
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="editorial-investor-body">
+<body class="deck-presentation-body">
 
-  <!-- Top Announcement Bar -->
-  <div class="top-announcement-bar">
-    <span><i class="fa-solid fa-seedling"></i> <strong>CONFIDENTIAL INVESTOR BRIEF</strong> — Raising ₹30 Lakhs for 15% Equity | Launching Flagship Store #1 (750 sq. ft.), Bengaluru</span>
-  </div>
+  <!-- Top Progress Bar -->
+  <div class="deck-progress-bar" id="progressBar" style="width: 5.88%;"></div>
 
-  <!-- Header Navigation Bar -->
-  <header class="deck-header main-site-header">
+  <!-- Header Navbar -->
+  <header class="deck-header">
     <div class="header-left">
       <div class="brand-logo">
-        <span class="logo-badge">FLAGSHIP #1</span>
+        <span class="logo-badge">SEED ROUND</span>
         <span class="logo-title">CAFÉ DEN</span>
+      </div>
+      <span class="header-tagline">Store #1 Flagship (750 sq. ft.) | Bengaluru</span>
+    </div>
+    
+    <div class="header-center">
+      <div class="chapter-indicator" id="chapterIndicator">
+        <span id="currentSlideNum">01</span> / 17
       </div>
     </div>
     
-    <nav class="header-center main-site-nav">
-      <a href="#thesis" class="site-nav-link">Thesis</a>
-      <a href="#strategy" class="site-nav-link">Strategy</a>
-      <a href="#flagship" class="site-nav-link">Flagship</a>
-      <a href="#groundwork" class="site-nav-link">Groundwork</a>
-      <a href="#economics" class="site-nav-link">Economics</a>
-      <a href="#roadmap" class="site-nav-link">Roadmap</a>
-      <a href="#investment" class="site-nav-link">Investment</a>
-    </nav>
-    
     <div class="header-right">
-      <button class="nav-btn" id="calcToggleBtn" title="Interactive Simulator">
+      <button class="nav-btn" id="calcToggleBtn" title="Interactive Payback Simulator (C)">
         <i class="fa-solid fa-calculator"></i> <span>Payback Model</span>
       </button>
-      <a href="#investment" class="nav-btn primary-btn">
-        <i class="fa-solid fa-paper-plane"></i> <span>Invest ₹30L</span>
-      </a>
+      <button class="nav-btn" id="gridToggleBtn" title="Slide Overview (O)">
+        <i class="fa-solid fa-th-large"></i> <span>Overview</span>
+      </button>
+      <button class="nav-btn primary-btn" id="fullscreenBtn" title="Present Mode (F)">
+        <i class="fa-solid fa-expand"></i> <span>Present</span>
+      </button>
     </div>
   </header>
 
-  <!-- Editorial Main Story Container -->
-  <main class="editorial-main-flow">
+  <!-- Presentation Viewport Container -->
+  <main class="deck-container" id="deckContainer">
+    <div class="deck-stage-169" id="deckStage">
 
-    <!-- 01 — HERO / INVESTMENT THESIS -->
-    <section class="editorial-section hero-section-editorial" id="thesis">
-      <div class="content-container">
-        <div class="hero-kicker"><i class="fa-solid fa-gem"></i> SEED INVESTMENT MEMORANDUM</div>
-        <h1 class="hero-title-huge">
-          Building India’s Next Everyday Food & Beverage Ritual.
+    <!-- SLIDE 01 / INTRO -->
+    <section class="slide active hero-slide-theme" id="slide-1" data-slide="1">
+      <div class="slide-content-wrapper">
+        <div class="kicker-pill"><i class="fa-solid fa-seedling"></i> SEED INVESTMENT MEMORANDUM</div>
+        <h1 class="hero-deck-title">
+          CAFÉ DEN.<br>
+          <span class="accent-highlight">Fresh Food. Everyday Rituals.</span>
         </h1>
-        <p class="hero-lead-text">
-          Café Den is raising <strong>₹30 Lakhs for 15% Equity</strong> to launch, validate, and optimize our first <strong>750 sq. ft. flagship store</strong> in Bengaluru. We combine accessible daily coffee habits with high-margin fresh bakes and artisanal food.
+        <p class="hero-deck-lead">
+          Café Den is raising <strong>₹30 Lakhs for 15% Equity</strong> to launch and validate Store #1 — a <strong>750 sq. ft. flagship</strong> built around accessible morning habits, fresh food, bakery, and basket expansion throughout the day.
         </p>
 
-        <!-- 4 Key Numbers (Compact Grid) -->
-        <div class="key-metrics-4grid">
-          <div class="metric-compact-tile">
-            <span class="tile-number">₹30L</span>
-            <span class="tile-label">Seed Investment Ask</span>
-            <span class="tile-desc">Funding Flagship Store #1 Launch</span>
+        <div class="deck-hero-4grid">
+          <div class="hero-stat-card">
+            <span class="h-stat-num">₹30L</span>
+            <span class="h-stat-lbl">Seed Capital Ask</span>
+            <span class="h-stat-sub">Store #1 Validation</span>
           </div>
-          <div class="metric-compact-tile">
-            <span class="tile-number">15%</span>
-            <span class="tile-label">Equity Share</span>
-            <span class="tile-desc">₹2.0 Cr Post-Money Valuation</span>
+          <div class="hero-stat-card">
+            <span class="h-stat-num">15%</span>
+            <span class="h-stat-lbl">Equity Share</span>
+            <span class="h-stat-sub">₹2.0 Cr Valuation</span>
           </div>
-          <div class="metric-compact-tile">
-            <span class="tile-number">65%</span>
-            <span class="tile-label">Target Blended Margin</span>
-            <span class="tile-desc">Balanced Entry & Food Mix</span>
+          <div class="hero-stat-card">
+            <span class="h-stat-num">65%</span>
+            <span class="h-stat-lbl">Target Blended Margin</span>
+            <span class="h-stat-sub">Intended Product Mix</span>
           </div>
-          <div class="metric-compact-tile">
-            <span class="tile-number">750 sq. ft.</span>
-            <span class="tile-label">Flagship Format</span>
-            <span class="tile-desc">Single Store Model Focus</span>
+          <div class="hero-stat-card">
+            <span class="hero-stat-num">750 sq. ft.</span>
+            <span class="hero-stat-lbl">Flagship Format</span>
+            <span class="hero-stat-sub">Indiranagar, Bengaluru</span>
           </div>
         </div>
 
-        <!-- Position Box -->
-        <div class="core-position-quote">
-          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-          <div class="quote-content">
-            <p><strong>OUR INVESTMENT THESIS:</strong> "Café Den is being designed as a repeatable food-service unit. Capital will fund store launch, operational validation, runway, and proof of unit economics before scalable expansion."</p>
+        <div class="thesis-quote-banner">
+          <i class="fa-solid fa-quote-left quote-ico"></i>
+          <div>
+            <strong>CORE THESIS:</strong> "Café Den is raising ₹30L to launch and validate Store #1. The strategy is <strong>LAUNCH → VALIDATE → OPTIMISE → THEN EXPAND</strong>. The investor is primarily investing in Store #1 and the validation of the operating model."
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 02 — THE CUSTOMER OPPORTUNITY -->
-    <section class="editorial-section bg-surface" id="opportunity">
-      <div class="content-container">
-        <div class="section-label">02 / THE OPPORTUNITY</div>
-        <h2 class="section-heading-large">People Already Have the Habit. <br><span class="accent-text">We Provide the Quality and Convenience.</span></h2>
-        <p class="section-subtitle">Urban professionals consume coffee and snacks daily. Yet most options force a trade-off between overpriced cafe seating or low-quality commercial fast food.</p>
+    <!-- SLIDE 02 / THE OPPORTUNITY -->
+    <section class="slide" id="slide-2" data-slide="2">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /02</span>
+          <span class="editorial-tag-pill">THE OPPORTUNITY</span>
+        </div>
+        <h2 class="slide-title">Daily Food & Beverage Habits <span class="editorial-italic">Matter.</span></h2>
+        <p class="slide-subtitle">Urban consumers buy coffee and food daily. Yet current options force a choice between overpriced sit-down cafes or low-quality commercial fast food.</p>
+      </div>
 
-        <div class="split-comparison-2col">
-          <div class="comp-card-editorial">
-            <div class="comp-badge badge-muted">TRADITIONAL CAFES</div>
-            <h3>Designed for Long Sitting</h3>
-            <p>Built around 1,500+ sq. ft. spaces, slow table turnover, high rent overhead, and high friction prices that discourage daily visits.</p>
+      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;">
+        <div class="deck-card card-muted">
+          <div class="card-tag tag-dark">TRADITIONAL CAFES</div>
+          <h3>Built for Long Sitting</h3>
+          <p>1,500+ sq. ft. buildouts with slow table turnaround, heavy rent overhead, and high ticket friction that hinders daily frequency.</p>
+        </div>
+
+        <div class="deck-card card-highlight">
+          <div class="card-tag tag-brand">CAFÉ DEN APPROACH</div>
+          <h3>Built for Daily Rituals</h3>
+          <p>Designed for fast everyday consumption moments — morning espresso, takeaway bakes, quick lunch rolls, and afternoon refreshers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 03 / THE MODEL -->
+    <section class="slide" id="slide-3" data-slide="3">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /03</span>
+          <span class="editorial-tag-pill">THE MODEL</span>
+        </div>
+        <h2 class="slide-title">Built Around <span class="editorial-italic">Everyday Customer Moments</span></h2>
+        <p class="slide-subtitle">Connecting high-frequency morning coffee with high-margin fresh bakery and meal moments.</p>
+      </div>
+
+      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
+        <div class="col-left flex-col-compact">
+          <div class="feature-item-row">
+            <div class="item-num">01</div>
+            <div>
+              <h4>Specialty Arabica Coffee</h4>
+              <p>Ethically sourced 100% Arabica espresso and milk brews prepared for consistent taste and everyday speed.</p>
+            </div>
           </div>
-          <div class="comp-card-editorial comp-card-active">
-            <div class="comp-badge badge-brand">CAFÉ DEN APPROACH</div>
-            <h3>Designed for Daily Rituals</h3>
-            <p>Built around fast everyday consumption moments — morning espresso, takeaway bakes, quick meals, and afternoon refreshers.</p>
+          <div class="feature-item-row">
+            <div class="item-num">02</div>
+            <div>
+              <h4>Daily Fresh Baking</h4>
+              <p>Oven-warm croissants, sourdough, savory rolls, and pastries prepared fresh daily with zero compromise.</p>
+            </div>
+          </div>
+          <div class="feature-item-row">
+            <div class="item-num">03</div>
+            <div>
+              <h4>Warm Neighborhood Format</h4>
+              <p>A welcoming 750 sq. ft. store layout crafted for fast counter service, pleasant aromas, and sidewalk presence.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-right">
+          <div class="image-frame full-frame" style="height: 400px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/croissant_burger.jpg')">
+            <img src="assets/croissant_burger.jpg" alt="Café Den Signature Bake" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 03 — FRESH FOOD. EVERYDAY RITUALS. -->
-    <section class="editorial-section" id="positioning">
-      <div class="content-container">
-        <div class="section-label">03 / BRAND POSITIONING</div>
-        <h2 class="section-heading-large">Fresh Food. Everyday Rituals.</h2>
-        <p class="section-subtitle">A warm, modern neighborhood sanctuary serving 100% Arabica coffee alongside fresh, oven-warm baking.</p>
-
-        <div class="grid-2col-visual">
-          <div class="visual-text-block">
-            <div class="pillar-row">
-              <div class="pillar-num">01</div>
-              <div>
-                <h4>Specialty Arabica Coffee</h4>
-                <p>Ethically sourced 100% Arabica beans roasted for consistency, delivering rich flavor across espresso and milk beverages.</p>
-              </div>
-            </div>
-            <div class="pillar-row">
-              <div class="pillar-num">02</div>
-              <div>
-                <h4>Daily Fresh Baking</h4>
-                <p>Oven-warm croissants, sourdough, savory rolls, and pastries prepared fresh daily with zero compromise on ingredients.</p>
-              </div>
-            </div>
-            <div class="pillar-row">
-              <div class="pillar-num">03</div>
-              <div>
-                <h4>Warm, Minimalist Design</h4>
-                <p>A 750 sq. ft. warm-toned sanctuary crafted for fast service, pleasant aromas, and welcoming sidewalk presence.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="visual-image-block" onclick="window.openImageModal('assets/croissant_burger.jpg')">
-            <img src="assets/croissant_burger.jpg" alt="Café Den Artisanal Product" class="visual-img">
-            <div class="image-overlay-caption">
-              <span><i class="fa-solid fa-magnifying-glass-plus"></i> View Fresh Product Quality</span>
-            </div>
-          </div>
+    <!-- SLIDE 04 / MORNING → DAYPART STRATEGY -->
+    <section class="slide" id="slide-4" data-slide="4">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /04</span>
+          <span class="editorial-tag-pill">DAYPART STRATEGY</span>
         </div>
+        <h2 class="slide-title">Start the Habit. <span class="editorial-italic">Then Grow the Basket.</span></h2>
+        <p class="slide-subtitle">We don't depend on a high-ticket first purchase. We create an accessible reason to visit, build trust through quality, and expand basket size throughout the day.</p>
       </div>
-    </section>
 
-    <!-- 04 — START THE HABIT. THEN GROW THE BASKET. (DAYPART STRATEGY) -->
-    <section class="editorial-section bg-surface" id="strategy">
-      <div class="content-container">
-        <div class="section-label">04 / CUSTOMER STRATEGY</div>
-        <h2 class="section-heading-large">Start the Habit. <span class="accent-text">Then Grow the Basket.</span></h2>
-        <p class="section-subtitle">We don't depend on a high-ticket first purchase. We create an accessible reason to visit, build trust through product quality, and expand basket size throughout the day.</p>
-
-        <!-- Daypart Visual Timeline -->
-        <div class="daypart-journey-container">
-          <!-- Morning Stage -->
-          <div class="daypart-card morning-card">
-            <div class="daypart-header">
-              <span class="time-pill"><i class="fa-solid fa-sun"></i> MORNING (8:00 AM – 10:30 AM)</span>
-              <h3>Build the Habit</h3>
+      <div class="slide-content">
+        <div class="daypart-deck-visual">
+          <div class="daypart-box morning-box">
+            <div class="dp-tag"><i class="fa-solid fa-sun"></i> MORNING (8:00 AM – 10:30 AM)</div>
+            <h3>Build the Habit</h3>
+            <p>Accessible entry pricing to build daily frequency:</p>
+            <div class="price-chips-row">
+              <span class="chip">Coffee from <strong>₹89</strong></span>
+              <span class="chip">ABC Juice / Bake <strong>₹99</strong></span>
             </div>
-            <p class="daypart-goal">Drive trial and frequency with low-friction entry products.</p>
-            <div class="entry-pricing-list">
-              <div class="price-chip">Coffee from <strong>₹89</strong></div>
-              <div class="price-chip">ABC Juice / Bake at <strong>₹99</strong></div>
-            </div>
-            <div class="aov-target-banner">
+            <div class="aov-banner">
               <span>Target Morning AOV:</span> <strong>₹150</strong>
             </div>
-            <p class="tagline-italic">"Premium Quality. Everyday Accessible."</p>
+            <p class="dp-italic">"Premium Quality. Everyday Accessible."</p>
           </div>
 
-          <div class="daypart-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="dp-connector"><i class="fa-solid fa-arrow-right"></i></div>
 
-          <!-- Post-10 AM Stage -->
-          <div class="daypart-card post10-card">
-            <div class="daypart-header">
-              <span class="time-pill post-pill"><i class="fa-solid fa-cloud-sun"></i> AFTER 10:00 AM</span>
-              <h3>Expand the Basket</h3>
+          <div class="daypart-box post10-box">
+            <div class="dp-tag post-tag"><i class="fa-solid fa-cloud-sun"></i> AFTER 10:00 AM</div>
+            <h3>Expand the Basket</h3>
+            <p>Full menu choice as customer trust is established:</p>
+            <div class="price-chips-row">
+              <span class="chip">Fresh Sandwiches</span>
+              <span class="chip">Ube Brew <strong>₹199</strong></span>
+              <span class="chip">Sourdough & Croissants</span>
             </div>
-            <p class="daypart-goal">Introduce fresh bakery, gourmet sandwiches, and specialty drinks as trust is established.</p>
-            <div class="entry-pricing-list">
-              <div class="price-chip">Fresh Sandwiches</div>
-              <div class="price-chip">Ube Brew at <strong>₹199</strong></div>
-              <div class="price-chip">Sourdough & Croissants</div>
-            </div>
-            <div class="aov-target-banner post-aov">
+            <div class="aov-banner post-banner">
               <span>Target Post-10 AM AOV:</span> <strong>₹250</strong>
             </div>
-            <p class="tagline-italic">"High Trust. Higher Basket Value."</p>
+            <p class="dp-italic">"High Trust. Higher Basket Value."</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 05 — THE PRODUCT STRATEGY -->
-    <section class="editorial-section" id="product">
-      <div class="content-container">
-        <div class="section-label">05 / PRODUCT MIX</div>
-        <h2 class="section-heading-large">Balanced Menu Architecture</h2>
-        <p class="section-subtitle">Combining high-volume beverage drivers with margin-expanding fresh food items.</p>
+    <!-- SLIDE 05 / PRODUCT STRATEGY -->
+    <section class="slide" id="slide-5" data-slide="5">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /05</span>
+          <span class="editorial-tag-pill">PRODUCT ARCHITECTURE</span>
+        </div>
+        <h2 class="slide-title">Accessible Entry + <span class="editorial-italic">Fresh Food & Bakery</span></h2>
+        <p class="slide-subtitle">Combining high-volume beverage drivers with margin-expanding fresh food items.</p>
+      </div>
 
-        <div class="grid-3col-cards">
-          <div class="product-cat-box">
-            <span class="cat-tag">ENTRY BEVERAGES</span>
-            <h3>Espresso & Filter Brews</h3>
-            <p>Accessible black & milk coffees priced from ₹89 to build daily morning footfall.</p>
+      <div class="slide-content grid-layout-3col" style="grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div class="deck-card">
+          <span class="card-tag tag-brand">ENTRY BEVERAGES</span>
+          <h3>Espresso & Filter Brews</h3>
+          <p>Accessible black & milk coffees priced from ₹89 to build daily morning trial and repeat footfall.</p>
+        </div>
+
+        <div class="deck-card">
+          <span class="card-tag tag-brand">SIGNATURE BEVERAGES</span>
+          <h3>Specialty & Cold Drinks</h3>
+          <p>Ube lattes, cold brews, and seasonal specialty iced drinks priced up to ₹199.</p>
+        </div>
+
+        <div class="deck-card">
+          <span class="card-tag tag-brand">FRESH FOOD & BAKERY</span>
+          <h3>Artisanal Bakes & Food</h3>
+          <p>Butter croissants, sourdough loaves, savory bakery rolls, and gourmet fresh sandwiches.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 06 / DAILY CONSUMPTION -->
+    <section class="slide" id="slide-6" data-slide="6">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /06</span>
+          <span class="editorial-tag-pill">DAILY CONSUMPTION</span>
+        </div>
+        <h2 class="slide-title">Built Around <span class="editorial-italic">Everyday Consumption Moments</span></h2>
+        <p class="slide-subtitle">Traditional cafes rely on slow table turnover. Café Den is designed for faster everyday consumption moments.</p>
+      </div>
+
+      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
+        <div class="col-left flex-col-compact">
+          <div class="feature-item-row">
+            <i class="fa-solid fa-clock text-brand" style="font-size: 20px;"></i>
+            <div>
+              <h4>Sub-3-Minute Fulfillment Target</h4>
+              <p>Store #1 workflow is designed to reduce unnecessary movement and support fast fulfillment for selected fast-moving orders.</p>
+            </div>
           </div>
-          <div class="product-cat-box">
-            <span class="cat-tag">SIGNATURE BEVERAGES</span>
-            <h3>Specialty Brews & Cold Drinks</h3>
-            <p>Ube lattes, cold brews, and seasonal specialty iced drinks priced up to ₹199.</p>
+          <div class="feature-item-row">
+            <i class="fa-solid fa-bag-shopping text-brand" style="font-size: 20px;"></i>
+            <div>
+              <h4>Takeaway & Express Ordering</h4>
+              <p>Designed for friction-free takeaway, sidewalk pickup, and quick counter orders.</p>
+            </div>
           </div>
-          <div class="product-cat-box">
-            <span class="cat-tag">FRESH FOOD & BAKERY</span>
-            <h3>Artisanal Food & Bakes</h3>
-            <p>Butter croissants, sourdough loaves, savory bakery rolls, and fresh sandwiches.</p>
+          <div class="feature-item-row">
+            <i class="fa-solid fa-mug-saucer text-brand" style="font-size: 20px;"></i>
+            <div>
+              <h4>Quick Rest & Refresh Breaks</h4>
+              <p>Short 10-minute breaks for neighborhood residents and office employees seeking fresh food and quality caffeine.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-right">
+          <div class="image-frame full-frame" style="height: 400px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/qsr_counter_service.jpg')">
+            <img src="assets/qsr_counter_service.jpg" alt="Express Fulfillment Counter" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 06 — BUILT AROUND DAILY CONSUMPTION -->
-    <section class="editorial-section bg-surface" id="consumption">
-      <div class="content-container">
-        <div class="section-label">06 / OPERATIONAL SPEED</div>
-        <h2 class="section-heading-large">Built Around Daily Consumption.</h2>
-        <p class="section-subtitle">Traditional cafes rely on slow table turnover. Café Den is optimized for fast everyday consumption moments.</p>
-
-        <div class="grid-2col-visual">
-          <div class="visual-text-block">
-            <div class="moment-row">
-              <i class="fa-solid fa-clock text-brand"></i>
-              <div>
-                <h4>Sub-3 Minute Fulfillment</h4>
-                <p>Express counter workflow ensures customers get their morning coffee and fresh bakes without missing work commutes.</p>
-              </div>
-            </div>
-            <div class="moment-row">
-              <i class="fa-solid fa-bag-shopping text-brand"></i>
-              <div>
-                <h4>Takeaway & Express Ordering</h4>
-                <p>Designed for friction-free takeaway, sidewalk pickup, and quick counter orders.</p>
-              </div>
-            </div>
-            <div class="moment-row">
-              <i class="fa-solid fa-mug-saucer text-brand"></i>
-              <div>
-                <h4>Quick Rest & Refresh Moments</h4>
-                <p>Short 10-minute breaks for tech park employees seeking fresh food and quality caffeine.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="visual-image-block" onclick="window.openImageModal('assets/qsr_counter_service.jpg')">
-            <img src="assets/qsr_counter_service.jpg" alt="Express Fulfillment Counter" class="visual-img">
-          </div>
+    <!-- SLIDE 07 / STORE #1 -->
+    <section class="slide" id="slide-7" data-slide="7">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /07</span>
+          <span class="editorial-tag-pill">FLAGSHIP CONCEPT</span>
         </div>
+        <h2 class="slide-title">The First <span class="editorial-italic">750 sq. ft. Flagship Store</span></h2>
+        <p class="slide-subtitle">A focused, single-store investment to validate full-store unit economics in Indiranagar, Bengaluru.</p>
       </div>
-    </section>
 
-    <!-- 07 — THE FIRST 750 SQ. FT. FLAGSHIP -->
-    <section class="editorial-section" id="flagship">
-      <div class="content-container">
-        <div class="section-label">07 / THE FLAGSHIP FORMAT</div>
-        <h2 class="section-heading-large">The First 750 sq. ft. Flagship Store</h2>
-        <p class="section-subtitle">A focused, single-store investment to validate full-store unit economics in Indiranagar, Bengaluru.</p>
-
-        <div class="flagship-details-box">
-          <div class="flagship-spec-grid">
-            <div class="spec-card">
-              <span class="spec-val">750 sq. ft.</span>
-              <span class="spec-lbl">Carpet Area</span>
+      <div class="slide-content">
+        <div class="flagship-deck-card">
+          <div class="flagship-grid-4col">
+            <div class="f-spec">
+              <span class="f-val">750 sq. ft.</span>
+              <span class="f-lbl">Carpet Area Format</span>
             </div>
-            <div class="spec-card">
-              <span class="spec-val">Indiranagar</span>
-              <span class="spec-lbl">Target Neighborhood</span>
+            <div class="f-spec">
+              <span class="f-val">Indiranagar</span>
+              <span class="f-lbl">Target Neighborhood</span>
             </div>
-            <div class="spec-card">
-              <span class="spec-val">₹15.0 Lakhs</span>
-              <span class="spec-lbl">Fit-Out & Equipment</span>
+            <div class="f-spec">
+              <span class="f-val">₹15.0 Lakhs</span>
+              <span class="f-lbl">Fit-Out & Equipment</span>
             </div>
-            <div class="spec-card">
-              <span class="spec-val">Full Store</span>
-              <span class="spec-lbl">Operating Validation</span>
+            <div class="f-spec">
+              <span class="f-val">Full Store</span>
+              <span class="f-lbl">Model Validation</span>
             </div>
           </div>
-          <p class="flagship-note">
-            *This 750 sq. ft. flagship is the single business format we are asking investors to fund and validate. We do not introduce complex multi-store formats until unit economics are proven.
+          <p class="f-disclaimer">
+            *This 750 sq. ft. flagship is the single business format we are asking investors to fund and validate. We do not introduce complex multi-store formats until store unit economics are proven.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- 08 — THE GROUNDWORK (ACTUAL TEST SALES) -->
-    <section class="editorial-section bg-surface" id="groundwork">
-      <div class="content-container">
-        <div class="section-label">08 / EARLY DEMAND SIGNALS</div>
-        <h2 class="section-heading-large">The Groundwork: Early Product Validation</h2>
-        <p class="section-subtitle">Before building the full Café Den format, selected dessert products were tested through direct and window-style sales to measure initial customer response.</p>
+    <!-- SLIDE 08 / THE 750 SQFT MODULAR QSR LAYOUT (CRITICAL VISUAL SLIDE) -->
+    <section class="slide" id="slide-8" data-slide="8">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /08</span>
+          <span class="editorial-tag-pill">ARCHITECTURAL BLUEPRINT</span>
+        </div>
+        <h2 class="slide-title">CAFÉ DEN — <span class="editorial-italic">750 SQFT MODULAR QSR LAYOUT</span></h2>
+        <p class="slide-subtitle">100% Glass Front • Open Kitchen Workflow • Maximum Visibility • Sub-3-Minute Fulfillment Target</p>
+      </div>
 
-        <div class="groundwork-data-grid">
-          <div class="groundwork-card">
-            <div class="gw-number">~50</div>
-            <div class="gw-title">Cakes & Desserts Sold / Test Day</div>
-            <p class="gw-desc">Average daily sales achieved during early direct product testing.</p>
+      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
+        <div class="col-left" style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="blueprint-feature-box">
+            <h4><i class="fa-solid fa-store text-brand"></i> 100% Glass Frontage</h4>
+            <p>Designed to maximize street-level visibility, product discovery, and sidewalk awareness.</p>
           </div>
-          <div class="groundwork-card">
-            <div class="gw-number">50+</div>
-            <div class="gw-title">Brownies Sold / Weekend Test</div>
-            <p class="gw-desc">Strong customer pickup during weekend window sales tests.</p>
+          <div class="blueprint-feature-box">
+            <h4><i class="fa-solid fa-diagram-project text-brand"></i> Open Kitchen Workflow</h4>
+            <p><strong>Order → Prep → Assembly → Finishing → Pickup.</strong> Clear operational flow reducing staff movement.</p>
+          </div>
+          <div class="blueprint-feature-box">
+            <h4><i class="fa-solid fa-eye text-brand"></i> Maximum Product Visibility</h4>
+            <p>Customer line-of-sight prioritizes espresso bar, warm bakery cases, and fresh sandwiches.</p>
+          </div>
+          <div class="blueprint-feature-box">
+            <h4><i class="fa-solid fa-gauge-high text-brand"></i> Sub-3-Minute Fulfillment Target</h4>
+            <p>Layout designed to support fast fulfillment for selected high-volume morning items.</p>
           </div>
         </div>
 
-        <div class="groundwork-disclaimer">
-          <i class="fa-solid fa-triangle-exclamation text-brand"></i>
+        <div class="col-right">
+          <div class="image-frame full-frame" style="height: 380px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/brand_gold_carrier.jpg')">
+            <img src="assets/brand_gold_carrier.jpg" alt="750 SQFT Store Architecture Concept" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 09 / THE GROUNDWORK -->
+    <section class="slide" id="slide-9" data-slide="9">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /09</span>
+          <span class="editorial-tag-pill">EARLY VALIDATION</span>
+        </div>
+        <h2 class="slide-title">The Groundwork: <span class="editorial-italic">Early Demand Signals</span></h2>
+        <p class="slide-subtitle">Before building the complete Café Den format, selected dessert products were tested through direct and window-style sales to measure initial customer response.</p>
+      </div>
+
+      <div class="slide-content">
+        <div class="groundwork-deck-grid">
+          <div class="gw-tile">
+            <span class="gw-num">~50</span>
+            <h4>Cakes & Desserts Sold / Test Day</h4>
+            <p>Average daily sales achieved during early direct product testing.</p>
+          </div>
+
+          <div class="gw-tile">
+            <span class="gw-num">50+</span>
+            <h4>Brownies Sold / Weekend Test</h4>
+            <p>Strong customer pickup during weekend window sales tests.</p>
+          </div>
+        </div>
+
+        <div class="groundwork-banner-disclaimer">
+          <i class="fa-solid fa-triangle-exclamation text-brand" style="font-size: 20px;"></i>
           <div>
-            <strong>IMPORTANT INVESTOR TRANSPARENCY:</strong> "These early tests are product-level demand signals, not proof of full-store economics. The purpose of the first Café Den flagship is to validate the complete operating model at store scale."
+            <strong>EARLY PRODUCT-LEVEL DEMAND SIGNALS:</strong> "These early tests are product-level demand signals, not proof of full-store economics. The purpose of Store #1 is to validate the complete Café Den operating model at store scale."
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 09 — LOW-PAID-MEDIA FOOTFALL ENGINE -->
-    <section class="editorial-section" id="footfall">
-      <div class="content-container">
-        <div class="section-label">09 / CUSTOMER ACQUISITION</div>
-        <h2 class="section-heading-large">Low-Paid-Media Footfall Engine</h2>
-        <p class="section-subtitle">We reduce long-term dependence on paid advertising by combining prime physical location, accessible entry pricing, and repeat habit formation.</p>
+    <!-- SLIDE 10 / FOOTFALL ENGINE -->
+    <section class="slide" id="slide-10" data-slide="10">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /10</span>
+          <span class="editorial-tag-pill">CUSTOMER ACQUISITION</span>
+        </div>
+        <h2 class="slide-title">Low-Paid-Media <span class="editorial-italic">Footfall Engine</span></h2>
+        <p class="slide-subtitle">Combining prime location, accessible entry pricing, and repeat habit formation to reduce long-term marketing reliance.</p>
+      </div>
 
-        <!-- Stepper Chain Visual -->
-        <div class="footfall-chain-stepper">
-          <div class="chain-step"><span>01</span> Prime Location</div>
-          <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-          <div class="chain-step"><span>02</span> Entry Products (₹89)</div>
-          <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-          <div class="chain-step"><span>03</span> Product Discovery</div>
-          <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-          <div class="chain-step"><span>04</span> Product Quality</div>
-          <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-          <div class="chain-step"><span>05</span> Repeat Behaviour</div>
+      <div class="slide-content">
+        <div class="footfall-visual-stepper">
+          <div class="f-step"><span>01</span> Location</div>
+          <div class="f-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="f-step"><span>02</span> Entry Products (₹89)</div>
+          <div class="f-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="f-step"><span>03</span> Discovery</div>
+          <div class="f-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="f-step"><span>04</span> Quality</div>
+          <div class="f-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="f-step"><span>05</span> Repeat</div>
+          <div class="f-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="f-step"><span>06</span> Local Ads</div>
         </div>
 
-        <p class="footfall-note">
-          "The goal is not zero marketing spend. The goal is to reduce long-term dependence on paid customer acquisition through organic repeat visits and hyper-local neighborhood marketing."
+        <div class="footfall-summary-quote">
+          "The goal is not zero marketing spend. The goal is to reduce long-term dependence on paid customer acquisition by combining location, accessible entry products, product quality, repeat behaviour and local marketing."
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 11 / FRESHNESS MODEL -->
+    <section class="slide" id="slide-11" data-slide="11">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /11</span>
+          <span class="editorial-tag-pill">OPERATIONAL DISCIPLINE</span>
+        </div>
+        <h2 class="slide-title">Limited Daily Batch Model</h2>
+        <p class="slide-subtitle">Up to 99 units per selected fresh batch to manage freshness, understand demand, and control food waste.</p>
+      </div>
+
+      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
+        <div class="col-left flex-col-compact">
+          <div class="batch-benefit-card"><i class="fa-solid fa-leaf text-green"></i> <strong>Better Freshness:</strong> Baking in smaller batches ensures customers receive oven-fresh items.</div>
+          <div class="batch-benefit-card"><i class="fa-solid fa-chart-line text-brand"></i> <strong>Demand Testing:</strong> Measures real-time daily popularity across menu categories.</div>
+          <div class="batch-benefit-card"><i class="fa-solid fa-shield text-brand"></i> <strong>Lower Overproduction:</strong> Controls kitchen prep and prevents inventory bloat.</div>
+          <div class="batch-benefit-card"><i class="fa-solid fa-box text-brand"></i> <strong>Better Waste Management:</strong> Reduces unnecessary food waste and protects margins.</div>
+        </div>
+
+        <div class="col-right">
+          <div class="image-frame full-frame" style="height: 380px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/scarcity_drops_poster.jpg')">
+            <img src="assets/scarcity_drops_poster.jpg" alt="Limited Daily Batch Model" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 12 / UNIT ECONOMICS -->
+    <section class="slide" id="slide-12" data-slide="12">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /12</span>
+          <span class="editorial-tag-pill">UNIT ECONOMICS</span>
+        </div>
+        <h2 class="slide-title">65% Target Blended <span class="editorial-italic">Gross Margin</span></h2>
+        <p class="slide-subtitle">Balancing accessible coffee trial with higher-margin bakery and fresh food sales.</p>
+      </div>
+
+      <div class="slide-content">
+        <div class="margin-deck-flow">
+          <div class="m-step">
+            <span class="m-tag">ENTRY COFFEE (₹89)</span>
+            <span class="m-lbl">Builds Daily Trial</span>
+          </div>
+          <div class="m-sign">+</div>
+          <div class="m-step">
+            <span class="m-tag">SIGNATURE BEVERAGES</span>
+            <span class="m-lbl">Increases Value</span>
+          </div>
+          <div class="m-sign">+</div>
+          <div class="m-step">
+            <span class="m-tag">FRESH FOOD & BAKERY</span>
+            <span class="m-lbl">Expands Basket</span>
+          </div>
+          <div class="m-sign">=</div>
+          <div class="m-result">
+            <span class="m-res-num">65%</span>
+            <span class="m-res-lbl">Target Blended Margin</span>
+          </div>
+        </div>
+        <p class="margin-deck-disclaimer">*The 65% target represents a financial planning assumption for Store #1 based on the intended product mix.</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 13 / PAYBACK & P&L (100% WORKING SIMULATOR) -->
+    <section class="slide" id="slide-13" data-slide="13">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /13</span>
+          <span class="editorial-tag-pill">PAYBACK SCENARIOS</span>
+        </div>
+        <h2 class="slide-title">Store Payback & <span class="editorial-italic">P&L Simulator</span></h2>
+        <p class="slide-subtitle">Modeling store payback performance across Conservative, Base Case, and Upside operating scenarios.</p>
+      </div>
+
+      <div class="slide-content">
+        <div class="payback-3scenarios">
+          <div class="scen-tile">
+            <span class="s-badge">CONSERVATIVE</span>
+            <div class="s-months">16–20</div>
+            <span class="s-lbl">Months Target Payback</span>
+          </div>
+
+          <div class="scen-tile scen-base-active">
+            <span class="s-badge base-b">BASE CASE MODEL</span>
+            <div class="s-months text-brand">12–14</div>
+            <span class="s-lbl">Months Target Payback</span>
+          </div>
+
+          <div class="scen-tile">
+            <span class="s-badge">UPSIDE</span>
+            <div class="s-months">9–11</div>
+            <span class="s-lbl">Months Target Payback</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 16px;">
+          <button class="nav-btn primary-btn" id="openCalcInSlideBtn" style="padding: 12px 28px; font-size: 14px;">
+            <i class="fa-solid fa-calculator"></i> Launch Interactive Payback Simulator
+          </button>
+        </div>
+
+        <p class="payback-disclaimer-text">
+          *Illustrative estimates based on store ramp-up, transaction assumptions, product mix and operating performance. Actual results may vary.
         </p>
       </div>
     </section>
 
-    <!-- 10 — LIMITED DAILY BATCH MODEL -->
-    <section class="editorial-section bg-surface" id="batch">
-      <div class="content-container">
-        <div class="section-label">10 / OPERATIONAL DISCIPLINE</div>
-        <h2 class="section-heading-large">Limited Daily Batch Model</h2>
-        <p class="section-subtitle">Up to 99 units per selected fresh batch to enforce quality, manage freshness, and control food waste.</p>
+    <!-- SLIDE 14 / USE OF FUNDS -->
+    <section class="slide" id="slide-14" data-slide="14">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /14</span>
+          <span class="editorial-tag-pill">USE OF FUNDS</span>
+        </div>
+        <h2 class="slide-title">₹30L to Launch and <span class="editorial-italic">Validate Store #1</span></h2>
+        <p class="slide-subtitle">Itemized capital allocation to fund store launch, interior fit-out, operating runway, and local marketing.</p>
+      </div>
 
-        <div class="grid-2col-split">
-          <div class="split-col-text">
-            <div class="batch-benefit-list">
-              <div class="b-item"><i class="fa-solid fa-leaf text-green"></i> <strong>Better Freshness Control:</strong> Baking in smaller batches ensures customers receive oven-fresh items.</div>
-              <div class="b-item"><i class="fa-solid fa-chart-line text-brand"></i> <strong>Demand Testing:</strong> Helps measure real-time daily popularity across menu categories.</div>
-              <div class="b-item"><i class="fa-solid fa-shield text-brand"></i> <strong>Waste Reduction:</strong> Minimizes unnecessary food waste and protects gross margins.</div>
-              <div class="b-item"><i class="fa-solid fa-box text-brand"></i> <strong>Controlled Production:</strong> Prevents inventory bloat and keeps kitchen staffing lean.</div>
-            </div>
-          </div>
+      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="fund-card">
+          <div class="fund-num">₹15.0 Lakhs (50%)</div>
+          <h4>Store Fit-Out & Equipment</h4>
+          <p>750 sq. ft. interior civil work, glass counter, 2-group commercial espresso machine, convection oven, POS & signage.</p>
+        </div>
 
-          <div class="split-col-image">
-            <div class="image-frame-styled" onclick="window.openImageModal('assets/scarcity_drops_poster.jpg')">
-              <img src="assets/scarcity_drops_poster.jpg" alt="Controlled Daily Batches" class="styled-img">
-            </div>
-          </div>
+        <div class="fund-card">
+          <div class="fund-num">₹7.5 Lakhs (25%)</div>
+          <h4>Working Capital & Inventory</h4>
+          <p>Pre-opening ingredient stock, rent deposit, staff salaries, and operating runway for initial month ramp-up.</p>
+        </div>
+
+        <div class="fund-card">
+          <div class="fund-num">₹4.5 Lakhs (15%)</div>
+          <h4>Launch & Local Marketing</h4>
+          <p>Indiranagar neighborhood launch campaigns, sidewalk sampling, localized digital ads, and PR.</p>
+        </div>
+
+        <div class="fund-card">
+          <div class="fund-num">₹3.0 Lakhs (10%)</div>
+          <h4>Contingency, Licences & Setup</h4>
+          <p>FSSAI licences, trade clearances, legal setup, and unforeseen operational contingency buffer.</p>
         </div>
       </div>
     </section>
 
-    <!-- 11 — UNIT ECONOMICS (65% TARGET MARGIN) -->
-    <section class="editorial-section" id="economics">
-      <div class="content-container">
-        <div class="section-label">11 / UNIT ECONOMICS</div>
-        <h2 class="section-heading-large">65% Target Blended Gross Margin</h2>
-        <p class="section-subtitle">Our financial model targets a 65% blended gross margin across product categories, balancing accessible coffee with higher-margin bakery items.</p>
-
-        <div class="margin-logic-box">
-          <div class="logic-flow">
-            <div class="logic-step">
-              <span class="l-tag">ACCESSIBLE COFFEE</span>
-              <span class="l-val">Builds Daily Trial</span>
-            </div>
-            <div class="logic-plus">+</div>
-            <div class="logic-step">
-              <span class="l-tag">SPECIALTY BEVERAGES</span>
-              <span class="l-val">Increases Ticket</span>
-            </div>
-            <div class="logic-plus">+</div>
-            <div class="logic-step">
-              <span class="l-tag">FRESH FOOD & BAKERY</span>
-              <span class="l-val">Expands Basket</span>
-            </div>
-            <div class="logic-equals">=</div>
-            <div class="logic-result">
-              <span class="l-res-num">65%</span>
-              <span class="l-res-lbl">Target Blended Gross Margin</span>
-            </div>
-          </div>
-          <p class="margin-note">*The 65% target is a financial planning assumption for the flagship store P&L, balancing entry items with fresh food sales.</p>
+    <!-- SLIDE 15 / WHAT HAPPENS NEXT -->
+    <section class="slide" id="slide-15" data-slide="15">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /15</span>
+          <span class="editorial-tag-pill">EXPANSION ROADMAP</span>
         </div>
+        <h2 class="slide-title">Prove. Optimise. <span class="editorial-italic">Then Expand.</span></h2>
+        <p class="slide-subtitle">We focus entirely on Store #1 first. Multi-unit expansion will only be evaluated after operating targets are proven.</p>
       </div>
-    </section>
 
-    <!-- 12 — PAYBACK SCENARIOS -->
-    <section class="editorial-section bg-surface" id="payback">
-      <div class="content-container">
-        <div class="section-label">12 / SCENARIO PLANNING</div>
-        <h2 class="section-heading-large">Store Payback Scenarios</h2>
-        <p class="section-subtitle">Modeling store payback performance across Conservative, Base Case, and Upside operating scenarios.</p>
-
-        <div class="scenarios-3grid">
-          <!-- Conservative -->
-          <div class="scen-card-new">
-            <span class="scen-badge">CONSERVATIVE</span>
-            <div class="scen-months">16–20</div>
-            <span class="scen-unit-lbl">Months Target Payback</span>
-            <p class="scen-desc">Lower daily transaction volume during initial neighborhood ramp-up period.</p>
-          </div>
-
-          <!-- Base Case (Highlighted) -->
-          <div class="scen-card-new base-highlight">
-            <span class="scen-badge base-badge">BASE CASE MODEL</span>
-            <div class="scen-months text-brand">12–14</div>
-            <span class="scen-unit-lbl">Months Target Payback</span>
-            <p class="scen-desc">Target daily transactions with steady morning & post-10 AM basket expansion.</p>
-          </div>
-
-          <!-- Upside -->
-          <div class="scen-card-new">
-            <span class="scen-badge">UPSIDE</span>
-            <div class="scen-months">9–11</div>
-            <span class="scen-unit-lbl">Months Target Payback</span>
-            <p class="scen-desc">High-volume daily sales during mature peak operating periods.</p>
-          </div>
-        </div>
-
-        <p class="payback-disclaimer">
-          *Illustrative payback ranges are based on store ramp-up, transaction assumptions, operating performance and mature-state unit economics. Actual performance may vary.
-        </p>
-      </div>
-    </section>
-
-    <!-- 13 — ₹30L USE OF FUNDS -->
-    <section class="editorial-section" id="funds">
-      <div class="content-container">
-        <div class="section-label">13 / CAPITAL ALLOCATION</div>
-        <h2 class="section-heading-large">₹30L Use of Funds</h2>
-        <p class="section-subtitle">Itemized capital allocation to fund store launch, interior fit-out, operating runway, and local marketing.</p>
-
-        <div class="use-of-funds-layout">
-          <div class="fund-item-box">
-            <div class="fund-amount">₹15.0 Lakhs (50%)</div>
-            <h4>Store Fit-Out & Equipment</h4>
-            <p>750 sq. ft. interior civil work, glass counter, 2-group commercial espresso machine, convection oven, POS & signage.</p>
-          </div>
-
-          <div class="fund-item-box">
-            <div class="fund-amount">₹7.5 Lakhs (25%)</div>
-            <h4>Working Capital & Inventory</h4>
-            <p>Pre-opening ingredient stock, rent deposit, staff salaries, and operating runway for initial month ramp-up.</p>
-          </div>
-
-          <div class="fund-item-box">
-            <div class="fund-amount">₹4.5 Lakhs (15%)</div>
-            <h4>Launch & Local Marketing</h4>
-            <p>Indiranagar neighborhood launch campaigns, sidewalk sampling, localized digital ads, and PR.</p>
-          </div>
-
-          <div class="fund-item-box">
-            <div class="fund-amount">₹3.0 Lakhs (10%)</div>
-            <h4>Contingency, Licences & Setup</h4>
-            <p>FSSAI licences, trade clearances, legal setup, and unforeseen operational contingency buffer.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 14 — PROVE. OPTIMISE. THEN EXPAND. -->
-    <section class="editorial-section bg-surface" id="roadmap">
-      <div class="content-container">
-        <div class="section-label">14 / EXPANSION ROADMAP</div>
-        <h2 class="section-heading-large">Prove. Optimise. Then Expand.</h2>
-        <p class="section-subtitle">We focus entirely on Store #1 first. Multi-unit expansion will only be evaluated after operating targets are proven.</p>
-
-        <div class="expansion-3steps">
-          <div class="exp-step-card">
-            <div class="step-num-pill">01</div>
+      <div class="slide-content">
+        <div class="roadmap-3steps">
+          <div class="road-card">
+            <span class="r-num">01</span>
             <h3>Launch Flagship</h3>
             <p>Open the first 750 sq. ft. Café Den flagship store in Indiranagar, Bengaluru.</p>
           </div>
 
-          <div class="exp-step-card highlight-exp">
-            <div class="step-num-pill brand-pill-step">02</div>
+          <div class="road-card road-active">
+            <span class="r-num r-active-num">02</span>
             <h3>Validate Metrics</h3>
             <p>Measure daily transactions, Morning vs Post-10 AM AOV, repeat rate, margins, and store profitability.</p>
           </div>
 
-          <div class="exp-step-card">
-            <div class="step-num-pill">03</div>
-            <h3>Evaluate Next Location</h3>
+          <div class="road-card">
+            <span class="r-num">03</span>
+            <h3>Evaluate Next Site</h3>
             <p>If target store unit economics are met, evaluate a second site approximately 8–12 months post-launch.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 15 — FOUNDER PROFILE -->
-    <section class="editorial-section" id="founder">
-      <div class="content-container">
-        <div class="section-label">15 / FOUNDER & TEAM</div>
-        <h2 class="section-heading-large">Built From Consumer Understanding & Hands-On Validation</h2>
-        <p class="section-subtitle">Led by brand strategy and growth marketing expertise, focused on building a disciplined food & beverage brand.</p>
+    <!-- SLIDE 16 / FOUNDER -->
+    <section class="slide" id="slide-16" data-slide="16">
+      <div class="slide-header">
+        <div class="editorial-index-row">
+          <span class="chapter-number">SLIDE /16</span>
+          <span class="editorial-tag-pill">FOUNDER PROFILE</span>
+        </div>
+        <h2 class="slide-title">Built From Consumer Understanding <span class="editorial-italic">& Hands-On Validation</span></h2>
+        <p class="slide-subtitle">Combining growth marketing expertise with hands-on product testing and brand discipline.</p>
+      </div>
 
-        <div class="grid-2col-split">
-          <div class="split-col-text">
-            <div class="founder-card-styled">
-              <h3>Kirti Swarnokar</h3>
-              <span class="founder-title">Founder & Managing Director | Café Den</span>
-              <p class="founder-summary">
-                Growth marketer turned culinary founder with background in digital marketing, consumer psychology, brand building, and hands-on product testing. Dedicated to building a scalable, high-quality bakery and coffee concept.
-              </p>
-              <div class="founder-contact-info">
-                <div><i class="fa-solid fa-phone text-brand"></i> +91 8050896992</div>
-                <div><i class="fa-solid fa-envelope text-brand"></i> keerti273@gmail.com</div>
-              </div>
+      <div class="slide-content grid-layout-2col" style="grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: center;">
+        <div class="col-left flex-col-compact">
+          <div class="founder-card-deck">
+            <h3>Kirti Swarnokar</h3>
+            <span class="f-role">Founder & Managing Director | Café Den</span>
+            <p class="f-bio">
+              Growth marketer turned culinary founder with background in digital marketing, consumer psychology, brand building, and hands-on product testing. Dedicated to building a scalable, high-quality bakery and coffee concept.
+            </p>
+            <div class="f-contacts">
+              <div><i class="fa-solid fa-phone text-brand"></i> +91 8050896992</div>
+              <div><i class="fa-solid fa-envelope text-brand"></i> keerti273@gmail.com</div>
             </div>
           </div>
+        </div>
 
-          <div class="split-col-image">
-            <div class="image-frame-styled" onclick="window.openImageModal('assets/brand_croissant_cup.jpg')">
-              <img src="assets/brand_croissant_cup.jpg" alt="Founder" class="styled-img">
-            </div>
+        <div class="col-right">
+          <div class="image-frame full-frame" style="height: 380px; border-radius: 20px; border: 2.5px solid #FF5200; overflow: hidden; cursor: pointer;" onclick="window.openImageModal('assets/brand_croissant_cup.jpg')">
+            <img src="assets/brand_croissant_cup.jpg" alt="Founder Leadership" class="full-size-img" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 16 — THE INVESTMENT (DEAL TERMS) -->
-    <section class="editorial-section investment-dark-section" id="investment">
-      <div class="content-container">
-        <div class="section-label text-brand">16 / THE INVESTMENT</div>
-        <h2 class="section-heading-large text-white">Seed Investment Terms</h2>
-        <p class="section-subtitle text-muted-dark">Participate in the founding seed round to launch and validate Café Den Store #1.</p>
+    <!-- SLIDE 17 / THE INVESTMENT (DEAL TERMS & FINAL CTA) -->
+    <section class="slide hero-slide-theme" id="slide-17" data-slide="17">
+      <div class="slide-content-wrapper text-center">
+        <div class="kicker-pill"><i class="fa-solid fa-paper-plane"></i> SEED INVESTMENT OFFERING</div>
+        <h2 class="hero-deck-title" style="font-size: 38px;">₹30 Lakhs for 15% Equity Share</h2>
+        <p class="hero-deck-lead" style="margin: 0 auto 24px auto;">
+          Post-Money Valuation: <strong>₹2.0 Crores</strong> | Pre-Money Valuation: <strong>~₹1.70 Crores</strong>
+        </p>
 
-        <div class="deal-terms-single-box">
-          <div class="deal-amount-badge">₹30 LAKHS SEED ROUND</div>
-          <div class="deal-equity-price">15% Equity Share</div>
-          <div class="deal-valuation-row">
-            <span>Post-Money Valuation: <strong>₹2.0 Crores</strong></span>
-            <span>Pre-Money Valuation: <strong>~₹1.70 Crores</strong></span>
-          </div>
-
-          <ul class="deal-bullets">
-            <li><i class="fa-solid fa-check text-brand"></i> Funds 100% of Store #1 launch, fit-out, operating runway, and marketing.</li>
-            <li><i class="fa-solid fa-check text-brand"></i> Straight 15% equity holding in Café Den parent entity.</li>
-            <li><i class="fa-solid fa-check text-brand"></i> Pro-rata participation rights for future expansion capital rounds.</li>
-          </ul>
-
-          <div class="deal-cta-row">
-            <a href="mailto:keerti273@gmail.com?subject=Cafe%20Den%20Seed%20Investment%20-%20₹30L" class="btn-invest-main">
-              Discuss Seed Investment (₹30L) <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <p class="alt-struct-note">
-            *Alternative investment structures may be discussed with strategic investors.
-          </p>
+        <div class="deal-bullets-card">
+          <div class="d-bullet"><i class="fa-solid fa-check text-brand"></i> Funds 100% of Store #1 launch, fit-out, operating runway, and local marketing.</div>
+          <div class="d-bullet"><i class="fa-solid fa-check text-brand"></i> Straight 15% equity holding in Café Den parent entity.</div>
+          <div class="d-bullet"><i class="fa-solid fa-check text-brand"></i> Pro-rata participation rights for future expansion capital rounds.</div>
         </div>
+
+        <div style="margin-top: 24px;">
+          <a href="mailto:keerti273@gmail.com?subject=Cafe%20Den%20Seed%20Investment%20-%20₹30L" class="nav-btn primary-btn" style="padding: 16px 40px; font-size: 16px;">
+            Discuss Seed Investment (₹30L) <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <p style="font-size: 12px; color: #9CA3AF; margin-top: 16px;">
+          *Alternative investment structures may be discussed with strategic investors.
+        </p>
       </div>
     </section>
 
+    </div>
   </main>
 
-  <!-- Interactive Payback Simulator Modal -->
+  <!-- Navigation Footer Controls -->
+  <footer class="deck-controls">
+    <button class="nav-control-btn" id="prevBtn" title="Previous Slide (Left Arrow)"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+    <div class="slide-dots" id="slideDots"></div>
+    <button class="nav-control-btn" id="nextBtn" title="Next Slide (Right Arrow)">Next <i class="fa-solid fa-chevron-right"></i></button>
+  </footer>
+
+  <!-- Grid Overview Modal -->
+  <div class="modal-overlay" id="gridModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Café Den — 17 Presentation Slides</h2>
+        <button id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="grid-jumper" id="gridJumper">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive ROI & Payback Simulator Modal -->
   <div class="modal-overlay" id="calcModal">
     <div class="modal-content calc-modal-content">
       <div class="modal-header">
@@ -605,21 +707,22 @@
         <button id="closeCalcModalBtn"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="calc-body">
-        <p class="calc-intro">Simulate Flagship Store #1 monthly revenue, gross margin, and payback timeline based on daily transaction inputs.</p>
+        <p class="calc-intro">Illustrative planning tool: Adjust daily transactions, AOV, gross margin, and OPEX to simulate Store #1 monthly P&L and payback period.</p>
         
-        <div class="grid-2col-split">
+        <div class="grid-layout-2col" style="grid-template-columns: 1fr 1fr; gap: 24px; align-items: flex-start;">
+          <!-- Sliders -->
           <div class="calc-sliders-col">
             <div class="slider-group">
               <div class="slider-header">
                 <label for="ordersSlider">Daily Transactions:</label>
-                <span id="ordersVal" class="slider-num">120</span>
+                <span id="ordersVal" class="slider-num">120 / day</span>
               </div>
               <input type="range" id="ordersSlider" min="60" max="220" value="120" step="10">
             </div>
 
             <div class="slider-group">
               <div class="slider-header">
-                <label for="aovSlider">Average Ticket (AOV ₹):</label>
+                <label for="aovSlider">Average Ticket (AOV):</label>
                 <span id="aovVal" class="slider-num">₹200</span>
               </div>
               <input type="range" id="aovSlider" min="120" max="300" value="200" step="10">
@@ -635,13 +738,14 @@
 
             <div class="slider-group">
               <div class="slider-header">
-                <label for="opexSlider">Monthly Rent & OPEX (₹):</label>
-                <span id="opexVal" class="slider-num">₹3,50,000</span>
+                <label for="opexSlider">Monthly Rent & OPEX:</label>
+                <span id="opexVal" class="slider-num">₹3.50 L</span>
               </div>
               <input type="range" id="opexSlider" min="200000" max="500000" value="350000" step="10000">
             </div>
           </div>
 
+          <!-- Realtime Outputs -->
           <div class="calc-results-col">
             <div class="calc-res-card">
               <span class="res-title">Simulated Monthly Revenue</span>
@@ -653,11 +757,11 @@
             </div>
             <div class="calc-res-card highlight-res">
               <span class="res-title">Simulated Monthly EBITDA</span>
-              <span class="res-big-num text-green" id="calcEbitda">₹1,18,000</span>
+              <span class="res-big-num text-green" id="calcEbitda">₹1,18,000 (16.4%)</span>
             </div>
             <div class="calc-res-card">
-              <span class="res-title">Target Store Payback</span>
-              <span class="res-big-num text-brand" id="calcPayback">12–14 Months</span>
+              <span class="res-title">Estimated Payback Period (₹30L Ask)</span>
+              <span class="res-big-num text-brand" id="calcPayback">25.4 Months</span>
             </div>
           </div>
         </div>
@@ -672,17 +776,6 @@
       <img src="" alt="Zoomed Product View" id="imageModalTarget" class="image-modal-img">
     </div>
   </div>
-
-  <footer class="main-site-footer">
-    <div class="content-container footer-flex">
-      <div>
-        <strong>CAFÉ DEN</strong> — 750 sq. ft. Flagship Launch | Indiranagar, Bengaluru
-      </div>
-      <div>
-        Seed Round ₹30 Lakhs for 15% Equity
-      </div>
-    </div>
-  </footer>
 
   <script src="app.js"></script>
 </body>

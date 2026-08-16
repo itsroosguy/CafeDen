@@ -1,58 +1,23 @@
 /* ==========================================================================
-   CAFÉ DEN — DARK ATMOSPHERIC DIGITAL COLLATERAL JAVASCRIPT ENGINE
+   CAFÉ DEN — INTERACTIVE 17-SLIDE PITCH DECK ENGINE
    ========================================================================== */
 
-/* GLOBAL LIGHTBOX MODAL HANDLERS (DEFINED IMMEDIATELY AT TOP SCOPE) */
+/* GLOBAL LIGHTBOX MODAL HANDLERS */
 window.openImageModal = function(src) {
   const modal = document.getElementById('imageModal');
   const target = document.getElementById('imageModalTarget');
   if (modal && target) {
     if (src) target.src = src;
     modal.classList.add('open');
-    modal.style.display = 'flex';
-    modal.style.opacity = '1';
-    modal.style.visibility = 'visible';
   }
 };
 
 window.closeImageModal = function() {
   const modal = document.getElementById('imageModal');
-  if (modal) {
-    modal.classList.remove('open');
-    modal.style.display = 'none';
-    modal.style.opacity = '0';
-    modal.style.visibility = 'hidden';
-  }
+  if (modal) modal.classList.remove('open');
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  /* ---------------------------------------------------------------------
-     Cursor Spotlight (subtle neon orange glow tracking pointer)
-  --------------------------------------------------------------------- */
-  const spotlight = document.createElement('div');
-  spotlight.className = 'cursor-spotlight';
-  document.body.appendChild(spotlight);
-  let spotlightRAF = null;
-  window.addEventListener('pointermove', (e) => {
-    spotlight.classList.add('active');
-    if (spotlightRAF) cancelAnimationFrame(spotlightRAF);
-    spotlightRAF = requestAnimationFrame(() => {
-      spotlight.style.setProperty('--mx', `${e.clientX}px`);
-      spotlight.style.setProperty('--my', `${e.clientY}px`);
-    });
-  });
-  window.addEventListener('pointerleave', () => spotlight.classList.remove('active'));
-
-  /* Parallax Hero Image Tilt */
-  const heroImg = document.querySelector('.hero-bg-img');
-  if (heroImg) {
-    document.addEventListener('mousemove', (e) => {
-      const xPct = (e.clientX / window.innerWidth - 0.5) * 2;
-      const yPct = (e.clientY / window.innerHeight - 0.5) * 2;
-      heroImg.style.transform = `scale(1.06) translate(${xPct * -8}px, ${yPct * -6}px)`;
-    });
-  }
 
   const slides = document.querySelectorAll('.slide');
   const dotsContainer = document.getElementById('slideDots');
@@ -65,8 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const gridJumper = document.getElementById('gridJumper');
   const gridToggleBtn = document.getElementById('gridToggleBtn');
   const closeModalBtn = document.getElementById('closeModalBtn');
-  const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+  const calcModal = document.getElementById('calcModal');
   const calcToggleBtn = document.getElementById('calcToggleBtn');
+  const closeCalcModalBtn = document.getElementById('closeCalcModalBtn');
+  const openCalcInSlideBtn = document.getElementById('openCalcInSlideBtn');
+
+  const fullscreenBtn = document.getElementById('fullscreenBtn');
   const closeImageModalBtn = document.getElementById('closeImageModalBtn');
   const imageModal = document.getElementById('imageModal');
 
@@ -74,27 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const totalSlides = slides.length;
 
   const chapterTitles = [
-    "INVESTMENT THESIS",
-    "THE MARKET FAILURE",
-    "THE SOLUTION",
-    "MARKET TAILWINDS",
-    "MENU & COSTING MARGINS",
-    "STORE OPERATING MODEL",
-    "UNIT ECONOMICS & SCENARIOS",
-    "OPERATING ENGINE & WASTE",
-    "LOCATION STRATEGY",
-    "MARKET OPPORTUNITY",
-    "COMPETITIVE MATRIX",
-    "DEFENSIVE MOATS",
-    "3-YEAR FINANCIAL MODEL",
-    "RISK ANALYSIS & MITIGATION",
-    "FOUNDER LEADERSHIP",
-    "DEMAND VALIDATION",
+    "INTRO & SEED THESIS",
+    "THE OPPORTUNITY",
+    "THE MODEL",
+    "DAYPART STRATEGY",
+    "PRODUCT ARCHITECTURE",
+    "DAILY CONSUMPTION",
+    "STORE #1 FLAGSHIP",
+    "750 SQFT STORE BLUEPRINT",
+    "THE GROUNDWORK",
+    "FOOTFALL ENGINE",
+    "FRESHNESS MODEL",
+    "UNIT ECONOMICS",
+    "PAYBACK SIMULATOR",
     "USE OF FUNDS",
-    "INVESTMENT DEAL TERMS"
+    "EXPANSION ROADMAP",
+    "FOUNDER PROFILE",
+    "THE INVESTMENT"
   ];
 
-  // Initialize Dots
+  // Initialize Slide Dots
   if (dotsContainer) {
     dotsContainer.innerHTML = '';
     for (let i = 0; i < totalSlides; i++) {
@@ -106,61 +75,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Initialize Grid Jumper
+  // Populate Grid Jumper Overview
   if (gridJumper) {
     gridJumper.innerHTML = '';
-    chapterTitles.forEach((title, index) => {
-      const card = document.createElement('div');
-      card.classList.add('jump-card');
-      card.innerHTML = `
-        <div class="jump-card-num">CHAPTER /${String(index + 1).padStart(2, '0')}</div>
-        <div class="jump-card-title">${title}</div>
+    slides.forEach((slide, index) => {
+      const title = chapterTitles[index] || `SLIDE ${index + 1}`;
+      const item = document.createElement('div');
+      item.classList.add('grid-item');
+      item.innerHTML = `
+        <span class="grid-item-num">SLIDE /${String(index + 1).padStart(2, '0')}</span>
+        <div class="grid-item-title">${title}</div>
       `;
-      card.addEventListener('click', () => {
+      item.addEventListener('click', () => {
         goToSlide(index);
         closeGridModal();
       });
-      gridJumper.appendChild(card);
-    });
-  }
-
-  // Animated Number Counter Engine (Massive Prominent Numbers)
-  function triggerCounters(currentSlide) {
-    if (!currentSlide) return;
-    const counters = currentSlide.querySelectorAll('[data-count]');
-    counters.forEach(counter => {
-      const target = parseFloat(counter.getAttribute('data-count'));
-      const prefix = counter.getAttribute('data-prefix') || '';
-      const suffix = counter.getAttribute('data-suffix') || '';
-      
-      let start = 0;
-      const duration = 900; // ms
-      const stepTime = 20;
-      const steps = duration / stepTime;
-      const increment = target / steps;
-
-      if (counter._counterTimer) clearInterval(counter._counterTimer);
-
-      counter._counterTimer = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-          counter.textContent = `${prefix}${target}${suffix}`;
-          clearInterval(counter._counterTimer);
-        } else {
-          let displayVal = start.toFixed(target % 1 === 0 ? 0 : 1);
-          counter.textContent = `${prefix}${displayVal}${suffix}`;
-        }
-      }, stepTime);
-    });
-
-    // Animate Bar Charts on Slide Active
-    const barFills = currentSlide.querySelectorAll('.bar-fill-glow');
-    barFills.forEach(bar => {
-      const targetWidth = bar.style.width;
-      bar.style.width = '0%';
-      setTimeout(() => {
-        bar.style.width = targetWidth;
-      }, 100);
+      gridJumper.appendChild(item);
     });
   }
 
@@ -169,13 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
       slide.classList.toggle('active', index === currentIndex);
     });
 
-    // Update Dots
     const dots = document.querySelectorAll('.dot');
     dots.forEach((dot, index) => {
       dot.classList.toggle('active', index === currentIndex);
     });
 
-    // Update Progress Bar & Counter Indicator
     if (currentSlideNum) {
       currentSlideNum.textContent = String(currentIndex + 1).padStart(2, '0');
     }
@@ -184,10 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const pct = ((currentIndex + 1) / totalSlides) * 100;
       progressBar.style.width = `${pct}%`;
     }
-
-    // Trigger Animations for Active Slide
-    const activeSlide = slides[currentIndex];
-    triggerCounters(activeSlide);
   }
 
   function goToSlide(index) {
@@ -220,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (prevBtn) prevBtn.addEventListener('click', prevSlide);
   if (nextBtn) nextBtn.addEventListener('click', nextSlide);
 
-  // Touch Swipe Gesture Support for Mobile Devices
+  // Touch Swipe Support
   let touchStartX = 0;
   let touchStartY = 0;
   let touchEndX = 0;
@@ -245,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // INTERACTIVE ROI SIMULATOR SLIDERS MATH
+  // 100% WORKING INTERACTIVE PAYBACK & P&L SIMULATOR MATH
   const ordersSlider = document.getElementById('ordersSlider');
   const aovSlider = document.getElementById('aovSlider');
   const marginSlider = document.getElementById('marginSlider');
@@ -269,44 +193,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const margin = parseInt(marginSlider.value) / 100;
     const opex = parseInt(opexSlider.value);
 
-    // Update Slider Value Labels
+    // Update Slider Labels
     if (ordersVal) ordersVal.textContent = `${orders} / day`;
     if (aovVal) aovVal.textContent = `₹${aov}`;
     if (marginVal) marginVal.textContent = `${Math.round(margin * 100)}%`;
     if (opexVal) opexVal.textContent = `₹${(opex / 100000).toFixed(2)} L`;
 
-    // Calculation Engine
+    // Calculation Logic
     const monthlyGrossRevenue = orders * aov * 30;
     const monthlyCOGS = monthlyGrossRevenue * (1 - margin);
     const monthlyGrossProfit = monthlyGrossRevenue - monthlyCOGS;
     const monthlyNetEBITDA = monthlyGrossProfit - opex;
-    const ebitdaPct = ((monthlyNetEBITDA / monthlyGrossRevenue) * 100).toFixed(1);
+    const ebitdaPct = monthlyGrossRevenue > 0 ? ((monthlyNetEBITDA / monthlyGrossRevenue) * 100).toFixed(1) : "0.0";
 
-    // Payback Months Estimate (Store #1 CAPEX ₹15.0L)
-    const storeCapex = 1500000;
-    const paybackMonths = monthlyNetEBITDA > 0 ? (storeCapex / monthlyNetEBITDA).toFixed(1) : "N/A";
+    // Payback Months (Initial Investment Ask ₹30.0L)
+    const seedCapitalAsk = 3000000;
+    const paybackMonths = monthlyNetEBITDA > 0 ? (seedCapitalAsk / monthlyNetEBITDA).toFixed(1) : "N/A";
 
-    // Format & Render Website Outputs
+    // Render Outputs
     if (calcRevenue) calcRevenue.textContent = `₹${(monthlyGrossRevenue / 100000).toFixed(2)} Lakhs`;
     if (calcGrossProfit) calcGrossProfit.textContent = `₹${(monthlyGrossProfit / 100000).toFixed(2)} Lakhs`;
     if (calcEbitda) {
       calcEbitda.textContent = `₹${(monthlyNetEBITDA / 100000).toFixed(2)} Lakhs (${ebitdaPct}%)`;
       calcEbitda.style.color = monthlyNetEBITDA < 0 ? '#DC2626' : '#059669';
     }
-    if (calcPayback) calcPayback.textContent = `${paybackMonths} Months`;
+    if (calcPayback) {
+      calcPayback.textContent = paybackMonths !== "N/A" ? `${paybackMonths} Months` : "Negative EBITDA";
+    }
   }
 
-  // Attach slider event listeners
   [ordersSlider, aovSlider, marginSlider, opexSlider].forEach(slider => {
     if (slider) slider.addEventListener('input', calculateSimulator);
   });
   calculateSimulator();
 
-  const calcModal = document.getElementById('calcModal');
-  const closeCalcModalBtn = document.getElementById('closeCalcModalBtn');
-
+  // Modal Open/Close Listeners
   if (calcToggleBtn) {
     calcToggleBtn.addEventListener('click', () => {
+      if (calcModal) calcModal.classList.add('open');
+    });
+  }
+
+  if (openCalcInSlideBtn) {
+    openCalcInSlideBtn.addEventListener('click', () => {
       if (calcModal) calcModal.classList.add('open');
     });
   }
@@ -317,24 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Keyboard Shortcuts
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight' || e.key === ' ') {
-      e.preventDefault();
-      nextSlide();
-    } else if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      prevSlide();
-    } else if (e.key === 'c' || e.key === 'C') {
-      goToSlide(13);
-    } else if (e.key === 'o' || e.key === 'O') {
-      gridModal.classList.contains('open') ? closeGridModal() : openGridModal();
-    } else if (e.key === 'f' || e.key === 'F') {
-      toggleFullscreen();
-    }
-  });
-
-  // Modal Handlers
   function openGridModal() {
     if (gridModal) gridModal.classList.add('open');
   }
@@ -358,14 +269,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Automatically attach click listeners to all image frames & blueprint containers
-  document.querySelectorAll('.image-frame, .blueprint-main-card, .product-item-card').forEach(container => {
-    container.addEventListener('click', () => {
-      const img = container.querySelector('img');
-      if (img && img.src) {
-        window.openImageModal(img.src);
+  // Keyboard Shortcuts
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') {
+      e.preventDefault();
+      nextSlide();
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      prevSlide();
+    } else if (e.key === 'c' || e.key === 'C') {
+      if (calcModal) {
+        calcModal.classList.contains('open') ? calcModal.classList.remove('open') : calcModal.classList.add('open');
       }
-    });
+    } else if (e.key === 'o' || e.key === 'O') {
+      if (gridModal) {
+        gridModal.classList.contains('open') ? closeGridModal() : openGridModal();
+      }
+    } else if (e.key === 'f' || e.key === 'F') {
+      toggleFullscreen();
+    }
   });
 
   function toggleFullscreen() {
