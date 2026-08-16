@@ -19,7 +19,7 @@
 <body class="editorial-deck-body">
 
   <!-- Top 2px Progress Line -->
-  <div class="deck-progress-bar" id="progressBar" style="width: 8.33%;"></div>
+  <div class="deck-progress-bar" id="progressBar" style="width: 7.69%;"></div>
 
   <!-- Header Navigation Navbar -->
   <header class="editorial-header">
@@ -33,7 +33,7 @@
     
     <div class="header-center">
       <div class="chapter-indicator" id="chapterIndicator">
-        <span id="currentSlideNum">01</span> / 12
+        <span id="currentSlideNum">01</span> / 13
       </div>
     </div>
     
@@ -54,34 +54,47 @@
   <main class="deck-container" id="deckContainer">
     <div class="deck-stage" id="deckStage">
 
-    <!-- SLIDE 01: HERO / BRAND STATEMENT -->
+    <!-- SLIDE 01: HERO / BRAND STATEMENT (WITH RE-INTEGRATED MOOD ASSET) -->
     <section class="slide active hero-slide-editorial" id="slide-1" data-slide="1">
       <div class="slide-content-wrapper">
         <div class="micro-kicker">INVESTOR PRESENTATION 2026 • SEED ROUND</div>
-        <h1 class="hero-headline font-serif">
-          Fresh Food.<br>
-          <span class="italic-serif text-terracotta">Everyday Rituals.</span>
-        </h1>
-        <p class="hero-subheading">
-          Café Den is building the neighborhood's high-frequency daily F&B flagship—engineered for speed, product integrity, and accessible unit economics.
-        </p>
+        
+        <div class="hero-split-layout">
+          <div class="hero-text-col">
+            <h1 class="hero-headline font-serif">
+              Fresh Food.<br>
+              <span class="italic-serif text-terracotta">Everyday Rituals.</span>
+            </h1>
+            <p class="hero-subheading">
+              Café Den is building the neighborhood's high-frequency daily F&B flagship—engineered for speed, product integrity, and accessible unit economics.
+            </p>
 
-        <div class="hero-stats-4grid">
-          <div class="stat-cell">
-            <span class="stat-val">₹30L</span>
-            <span class="stat-lbl">Seed Raise Ask</span>
+            <div class="hero-stats-4grid">
+              <div class="stat-cell">
+                <span class="stat-val">₹30L</span>
+                <span class="stat-lbl">Seed Raise Ask</span>
+              </div>
+              <div class="stat-cell">
+                <span class="stat-val">15%</span>
+                <span class="stat-lbl">Equity Share</span>
+              </div>
+              <div class="stat-cell">
+                <span class="stat-val">65%</span>
+                <span class="stat-lbl">Target Margin</span>
+              </div>
+              <div class="stat-cell">
+                <span class="stat-val">750 Sq. Ft.</span>
+                <span class="stat-lbl">Flagship Format</span>
+              </div>
+            </div>
           </div>
-          <div class="stat-cell">
-            <span class="stat-val">15%</span>
-            <span class="stat-lbl">Equity Share</span>
-          </div>
-          <div class="stat-cell">
-            <span class="stat-val">65%</span>
-            <span class="stat-lbl">Target Margin</span>
-          </div>
-          <div class="stat-cell">
-            <span class="stat-val">750 Sq. Ft.</span>
-            <span class="stat-lbl">Flagship Format</span>
+
+          <!-- Hero Local Visual Re-integration -->
+          <div class="hero-media-col">
+            <div class="editorial-image-frame shadow-warm">
+              <img src="assets/coffee_pickup_window.jpg" alt="Café Den Espresso Extraction & Pickup" class="editorial-img object-cover">
+              <div class="image-caption-pill">Authentic Store Atmosphere & Extraction</div>
+            </div>
           </div>
         </div>
 
@@ -218,49 +231,74 @@
       </div>
     </section>
 
-    <!-- SLIDE 05: LIMITED DAILY BATCH MODEL (THE "99 UNITS" ASSET) -->
+    <!-- SLIDE 05: EDITORIAL PRODUCT STRATEGY & BATCH SHOWCASE (WITH RE-INTEGRATED PRODUCT GALLERY) -->
     <section class="slide" id="slide-5" data-slide="5">
       <div class="slide-header">
-        <span class="micro-kicker">SLIDE /05 • OPERATIONAL DISCIPLINE</span>
-        <h2 class="slide-title font-serif">Limited Daily Batch Model</h2>
-        <p class="slide-sub">Up to 99 units per selected fresh batch to enforce freshness, manage demand, and eliminate unnecessary food waste.</p>
+        <span class="micro-kicker">SLIDE /05 • PRODUCT ARCHITECTURE</span>
+        <h2 class="slide-title font-serif">Product Strategy & Batch Architecture</h2>
+        <p class="slide-sub">Re-integrated local product photography showing signature coffees, fresh bakes, and specialty cold drinks.</p>
       </div>
 
       <div class="slide-body">
+        <!-- Hero Stat Banner -->
         <div class="batch-hero-display">
           <div class="stat-giant font-serif">Up to 99 Units</div>
-          <div class="stat-giant-lbl">Per Selected Fresh Batch</div>
+          <div class="stat-giant-lbl">Per Selected Fresh Batch • Ensures Freshness & Zero Stagnant Inventory</div>
         </div>
 
-        <div class="grid-4col-benefits">
-          <div class="benefit-card">
-            <i class="fa-solid fa-leaf text-terracotta"></i>
-            <h4>Better Freshness</h4>
-            <p>Baking in smaller controlled batches ensures customers receive oven-fresh bakes.</p>
+        <!-- Asymmetrical Product Media Gallery -->
+        <div class="product-media-gallery">
+          <div class="product-gallery-card">
+            <div class="p-img-box">
+              <img src="assets/croissant_burger.jpg" alt="Artisan Croissants & Sandwiches" class="product-img">
+            </div>
+            <div class="p-info">
+              <span class="p-tag">FRESH BAKERY</span>
+              <h4>Sourdough & Bakes</h4>
+              <p>Oven-warm butter croissants & artisanal sourdough sandwiches.</p>
+            </div>
           </div>
-          <div class="benefit-card">
-            <i class="fa-solid fa-chart-line text-terracotta"></i>
-            <h4>Real Demand Testing</h4>
-            <p>Measures real-time popularity across coffee and bakery menu categories.</p>
+
+          <div class="product-gallery-card">
+            <div class="p-img-box">
+              <img src="assets/brand_combo_tray.jpg" alt="Cold-Pressed ABC & Specialty Drinks" class="product-img">
+            </div>
+            <div class="p-info">
+              <span class="p-tag">ENTRY HOOK</span>
+              <h4>Cold-Pressed ABC</h4>
+              <p>Apple-Beetroot-Carrot juices from <strong>₹99</strong>.</p>
+            </div>
           </div>
-          <div class="benefit-card">
-            <i class="fa-solid fa-shield text-terracotta"></i>
-            <h4>Zero Stagnant Inventory</h4>
-            <p>Prevents inventory bloat and keeps kitchen prep aligned with daily volume.</p>
+
+          <div class="product-gallery-card">
+            <div class="p-img-box">
+              <img src="assets/signature_menu_poster.jpg" alt="Signature Ube Latte Series" class="product-img">
+            </div>
+            <div class="p-info">
+              <span class="p-tag">SIGNATURE</span>
+              <h4>Ube Latte Series</h4>
+              <p>Artisanal Ube brews & seasonal specialty drinks at <strong>₹199</strong>.</p>
+            </div>
           </div>
-          <div class="benefit-card">
-            <i class="fa-solid fa-box text-terracotta"></i>
-            <h4>Tight Waste Control</h4>
-            <p>Reduces unnecessary food waste and protects gross margins.</p>
+
+          <div class="product-gallery-card">
+            <div class="p-img-box">
+              <img src="assets/scarcity_drops_poster.jpg" alt="Limited Daily Batch Model" class="product-img">
+            </div>
+            <div class="p-info">
+              <span class="p-tag">CONTROLLED PREP</span>
+              <h4>Daily Batch Drops</h4>
+              <p>Controlled batch drops for freshness & waste control.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 06 & 07: 750 SQ. FT. MODULAR QSR LAYOUT & WORKFLOW (CUSTOM SVG SCHEMATIC) -->
+    <!-- SLIDE 06: 750 SQ. FT. MODULAR QSR LAYOUT & WORKFLOW (CUSTOM SVG SCHEMATIC + MOOD ASSET) -->
     <section class="slide" id="slide-6" data-slide="6">
       <div class="slide-header">
-        <span class="micro-kicker">SLIDE /06-07 • ARCHITECTURAL BLUEPRINT</span>
+        <span class="micro-kicker">SLIDE /06 • ARCHITECTURAL BLUEPRINT</span>
         <h2 class="slide-title font-serif">750 Sq. Ft. Modular QSR Layout & Workflow</h2>
         <p class="slide-sub">100% Floor-to-Ceiling Glass Façade • Open Assembly Kitchen • Expedited Pickup Bay • Sub-3-Minute Fulfillment Target</p>
       </div>
@@ -270,7 +308,6 @@
           <!-- Custom SVG Blueprint -->
           <div class="svg-blueprint-frame">
             <svg viewBox="0 0 800 360" class="store-svg-graphic">
-              <!-- Outer Boundary -->
               <rect x="10" y="10" width="780" height="340" rx="16" fill="#F3EDE4" stroke="#8C5338" stroke-width="2.5"/>
               
               <!-- Zone 1: Express Counter -->
@@ -300,26 +337,18 @@
             </svg>
           </div>
 
-          <!-- Feature Cards -->
-          <div class="blueprint-bullets flex-col-compact">
-            <div class="bp-card">
-              <h4>100% Glass Façade</h4>
-              <p>Maximizes street-level curb visibility, product discovery, and pedestrian awareness.</p>
-            </div>
-            <div class="bp-card">
-              <h4>Open Visual Kitchen</h4>
-              <p>Fresh baking aromas and espresso extraction build trust and sensory appeal.</p>
-            </div>
-            <div class="bp-card">
-              <h4>Sub-3-Minute Target</h4>
-              <p>Store #1 workflow designed to reduce movement and support fast fulfillment.</p>
+          <!-- Store Ambience Photo Re-integration -->
+          <div class="store-media-side">
+            <div class="editorial-image-frame shadow-warm" style="height: 280px;">
+              <img src="assets/brand_gold_carrier.jpg" alt="Café Den Store Concept & Branding" class="editorial-img object-cover">
+              <div class="image-caption-pill">Store Concept & Packaging System</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 08: EARLY GROUNDWORK & REAL SIGNALS (HONEST TRACTION) -->
+    <!-- SLIDE 07: EARLY GROUNDWORK & REAL SIGNALS (WITH RE-INTEGRATED PILOT PHOTOS) -->
     <section class="slide" id="slide-7-page" data-slide="7">
       <div class="slide-header">
         <span class="micro-kicker">SLIDE /07 • TRACTION SIGNALS</span>
@@ -328,17 +357,27 @@
       </div>
 
       <div class="slide-body">
-        <div class="groundwork-2col-stats">
-          <div class="stat-hero-card">
-            <span class="big-num font-serif">~50</span>
-            <span class="big-lbl">Units / Test Day</span>
-            <p>Direct pilot test sales of cakes & artisan desserts achieved during early window testing.</p>
+        <div class="groundwork-layout-with-media">
+          <div class="gw-stats-column">
+            <div class="stat-hero-card">
+              <span class="big-num font-serif">~50</span>
+              <span class="big-lbl">Units / Test Day</span>
+              <p>Direct pilot test sales of cakes & artisan desserts achieved during early window testing.</p>
+            </div>
+
+            <div class="stat-hero-card">
+              <span class="big-num font-serif">50+</span>
+              <span class="big-lbl">Units / Weekend Peak</span>
+              <p>Weekend peak customer demand achieved for brownie and fresh pastry drops.</p>
+            </div>
           </div>
 
-          <div class="stat-hero-card">
-            <span class="big-num font-serif">50+</span>
-            <span class="big-lbl">Units / Weekend Peak</span>
-            <p>Weekend peak customer demand achieved for brownie and fresh pastry drops.</p>
+          <!-- Re-integrated Real Pilot Testing Photos -->
+          <div class="gw-media-column">
+            <div class="editorial-image-frame shadow-warm" style="height: 240px;">
+              <img src="assets/cheesecake.jpg" alt="Pilot Sales Dessert Testing" class="editorial-img object-cover">
+              <div class="image-caption-pill">Actual Pilot Sales Test — Artisan Desserts</div>
+            </div>
           </div>
         </div>
 
@@ -351,7 +390,7 @@
       </div>
     </section>
 
-    <!-- SLIDE 09: REAL-TIME UNIT ECONOMICS & P&L SIMULATOR (AIRTIGHT MATH ENGINE) -->
+    <!-- SLIDE 08: REAL-TIME UNIT ECONOMICS & P&L SIMULATOR (AIRTIGHT MATH ENGINE) -->
     <section class="slide" id="slide-8-page" data-slide="8">
       <div class="slide-header">
         <span class="micro-kicker">SLIDE /08 • FINANCIAL ENGINE</span>
@@ -429,7 +468,7 @@
       </div>
     </section>
 
-    <!-- SLIDE 10: USE OF FUNDS (PROPORTIONAL ALLOCATION BAR) -->
+    <!-- SLIDE 09: USE OF FUNDS (PROPORTIONAL ALLOCATION BAR) -->
     <section class="slide" id="slide-9-page" data-slide="9">
       <div class="slide-header">
         <span class="micro-kicker">SLIDE /09 • CAPITAL ALLOCATION</span>
@@ -438,7 +477,6 @@
       </div>
 
       <div class="slide-body">
-        <!-- Proportional Bar -->
         <div class="alloc-bar-container">
           <div class="alloc-segment seg-50" style="width: 50%;">50.0% (₹15.0L)</div>
           <div class="alloc-segment seg-25" style="width: 25%;">25.0% (₹7.5L)</div>
@@ -470,7 +508,7 @@
       </div>
     </section>
 
-    <!-- SLIDE 11: EXPANSION BLUEPRINT (DISCIPLINED MILESTONES) -->
+    <!-- SLIDE 10: EXPANSION BLUEPRINT (DISCIPLINED MILESTONES) -->
     <section class="slide" id="slide-10-page" data-slide="10">
       <div class="slide-header">
         <span class="micro-kicker">SLIDE /10 • STRATEGIC MILESTONES</span>
@@ -507,10 +545,44 @@
       </div>
     </section>
 
+    <!-- SLIDE 11: FOUNDER PROFILE & VISION (WITH RE-INTEGRATED FOUNDER PORTRAIT) -->
+    <section class="slide" id="slide-11-page" data-slide="11">
+      <div class="slide-header">
+        <span class="micro-kicker">SLIDE /11 • LEADERSHIP</span>
+        <h2 class="slide-title font-serif">Founder Profile & Vision</h2>
+        <p class="slide-sub">Led by brand strategy, digital growth marketing, and hands-on recipe validation.</p>
+      </div>
+
+      <div class="slide-body">
+        <div class="founder-asymmetric-with-media">
+          <div class="founder-info-text">
+            <h3 class="font-serif">Kirti Swarnokar</h3>
+            <span class="f-role-title">Founder & Managing Director | Café Den</span>
+            <p class="f-narrative-text">
+              Growth marketer turned culinary founder with background in consumer psychology, brand positioning, digital marketing, and hands-on product testing. Dedicated to building a scalable, high-quality bakery & coffee concept.
+            </p>
+            <ul class="founder-strengths-list">
+              <li><i class="fa-solid fa-check text-terracotta"></i> Consumer brand positioning, consumer psychology & digital experience.</li>
+              <li><i class="fa-solid fa-check text-terracotta"></i> Hands-on F&B recipe testing, direct retail pilot validation & supply chain setup.</li>
+              <li><i class="fa-solid fa-check text-terracotta"></i> Lean operating focus: High speed, low wastage, zero corporate bloat.</li>
+            </ul>
+          </div>
+
+          <!-- Re-integrated Founder Media Asset -->
+          <div class="founder-media-box">
+            <div class="editorial-image-frame shadow-warm" style="height: 280px;">
+              <img src="assets/brand_croissant_cup.jpg" alt="Kirti Swarnokar Founder Portrait" class="editorial-img object-cover">
+              <div class="image-caption-pill">Kirti Swarnokar — Founder</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SLIDE 12: TERM SHEET & INVESTMENT CLOSE -->
-    <section class="slide hero-slide-editorial" id="slide-11-page" data-slide="11">
+    <section class="slide hero-slide-editorial" id="slide-12-page" data-slide="12">
       <div class="slide-content-wrapper text-center">
-        <div class="micro-kicker">SLIDE /11 • TERM SHEET SUMMARY</div>
+        <div class="micro-kicker">SLIDE /12 • TERM SHEET SUMMARY</div>
         <h2 class="hero-headline font-serif" style="font-size: 38px;">₹30 Lakhs for 15.0% Equity</h2>
         <p class="hero-subheading" style="margin: 0 auto 20px auto;">
           Post-Money Valuation: <strong>₹2.00 Crore</strong> | Pre-Money Valuation: <strong>~₹1.70 Crore</strong>
@@ -545,7 +617,7 @@
   <div class="modal-overlay" id="gridModal">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>Café Den — 12 Presentation Slides</h2>
+        <h2>Café Den — 13 Presentation Slides</h2>
         <button id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="grid-jumper" id="gridJumper"></div>
