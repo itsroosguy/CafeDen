@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — INVESTOR-GRADE FINANCIAL & EDITORIAL DESIGN SYSTEM
+   CAFÉ DEN — LOCKED ~12 MONTH FINANCIAL & EDITORIAL DESIGN SYSTEM
    ========================================================================== */
 
 :root {
@@ -132,6 +132,50 @@ body.editorial-deck-body {
   color: var(--brand-gold);
 }
 
+/* Store Econ Flow Grid */
+.store-econ-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.econ-box {
+  border-radius: 18px;
+  padding: 28px 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.econ-box-highlight {
+  border: 2px solid var(--brand-gold);
+  background: var(--bg-espresso);
+}
+
+.econ-step-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 0 auto 14px auto;
+}
+
+.econ-big-val {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.econ-sub-result {
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 14px;
+}
+
 /* Model Explainer Card */
 .model-explainer-card {
   background: var(--bg-latte);
@@ -154,7 +198,7 @@ body.editorial-deck-body {
 .ramp-journey-timeline {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   margin-bottom: 12px;
 }
 
@@ -162,32 +206,33 @@ body.editorial-deck-body {
   flex: 1;
   background: var(--bg-latte);
   border: 1.5px solid var(--border-light);
-  border-radius: 14px;
-  padding: 14px 12px;
+  border-radius: 12px;
+  padding: 10px 8px;
+  text-align: center;
 }
 
 .rj-step strong {
   display: block;
-  font-size: 13px;
+  font-size: 11.5px;
   color: var(--text-dark-primary);
   margin-top: 2px;
 }
 
 .rj-step p {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-dark-muted);
   margin-top: 2px;
 }
 
 .rj-num {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
   display: block;
 }
 
 .rj-arrow {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* Official Scenario Table */
@@ -387,12 +432,6 @@ body.editorial-deck-body {
 .stat-hero-card p { font-size: 12px; margin-top: 2px; }
 .groundwork-disclaimer-card { background: #FFFBEB; border: 1.5px solid #F59E0B; border-radius: 14px; padding: 12px 18px; display: flex; gap: 12px; align-items: center; font-size: 12px; color: #92400E; line-height: 1.45; }
 
-/* Slide 09: Giant Stat Box */
-.giant-stat-box { background: var(--bg-mocha); border: 2px solid var(--brand-gold); border-radius: 20px; padding: 36px 24px; max-width: 720px; margin: 0 auto; }
-.stat-giant-num { font-size: clamp(4.5rem, 8vw, 7.5rem); font-weight: 900; line-height: 1; }
-.stat-giant-lbl { font-size: 16px; font-weight: 800; letter-spacing: 1.5px; margin-top: 8px; margin-bottom: 12px; }
-.stat-giant-sub { font-size: 13px; line-height: 1.5; max-width: 540px; margin: 0 auto; }
-
 /* Slide 10: Simulator */
 .simulator-layout-2col { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: flex-start; margin-bottom: 12px; }
 .sim-card { border-radius: 16px; padding: 18px; }
@@ -466,7 +505,7 @@ body.editorial-deck-body {
   .slide.active { display: flex !important; flex-direction: column !important; opacity: 1 !important; visibility: visible !important; }
   .hero-headline { font-size: 30px !important; }
   .slide-title { font-size: 20px !important; }
-  .hero-split-layout, .asymmetric-3col, .flywheel-pipeline, .aov-barbell-split, .product-media-gallery, .schematic-layout-grid, .groundwork-layout-with-media, .simulator-layout-2col, .grid-2x2-alloc, .blueprint-milestones-grid, .founder-asymmetric-with-media, .ramp-journey-timeline { grid-template-columns: 1fr !important; flex-direction: column !important; }
+  .hero-split-layout, .asymmetric-3col, .flywheel-pipeline, .aov-barbell-split, .product-media-gallery, .schematic-layout-grid, .groundwork-layout-with-media, .simulator-layout-2col, .grid-2x2-alloc, .blueprint-milestones-grid, .founder-asymmetric-with-media, .ramp-journey-timeline, .store-econ-flow-grid { grid-template-columns: 1fr !important; flex-direction: column !important; }
   .pipeline-arrow, .barbell-divider, .rj-arrow { transform: rotate(90deg); margin: 4px auto; }
   .grid-jumper { grid-template-columns: 1fr 1fr !important; }
 }
