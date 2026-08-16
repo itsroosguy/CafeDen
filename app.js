@@ -191,6 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (index >= 0 && index < totalSlides) {
       currentIndex = index;
       updateDeckUI();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (slides[currentIndex]) slides[currentIndex].scrollTop = 0;
     }
   }
 
@@ -198,6 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentIndex < totalSlides - 1) {
       currentIndex++;
       updateDeckUI();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (slides[currentIndex]) slides[currentIndex].scrollTop = 0;
     }
   }
 
@@ -205,11 +209,38 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentIndex > 0) {
       currentIndex--;
       updateDeckUI();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (slides[currentIndex]) slides[currentIndex].scrollTop = 0;
     }
   }
 
   if (prevBtn) prevBtn.addEventListener('click', prevSlide);
   if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+  // Touch Swipe Gesture Support for Mobile Devices
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  const deckContainer = document.querySelector('.deck-container');
+  if (deckContainer) {
+    deckContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    deckContainer.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+      if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY) * 1.5) {
+        if (diffX < 0) nextSlide();
+        else prevSlide();
+      }
+    }, { passive: true });
+  }
 
   // INTERACTIVE ROI SIMULATOR SLIDERS MATH
   const ordersSlider = document.getElementById('ordersSlider');
