@@ -1,8 +1,7 @@
 /* ==========================================================================
-   CAFÉ DEN — AIRTIGHT FINANCIAL SIMULATION ENGINE & 14 SLIDE PRESENTATION
+   CAFÉ DEN — FULL-BLEED SCRIM DECK & FINANCIAL SIMULATION ENGINE
    ========================================================================== */
 
-// 1. AIRTIGHT SIMULATOR MATH ENGINE (INITIALIZED TO 12.5 MONTH BASE CASE)
 function calculatePayback() {
   const inputOrders = document.getElementById('input-orders');
   const inputAov = document.getElementById('input-aov');
@@ -15,9 +14,8 @@ function calculatePayback() {
   const aov = parseFloat(inputAov.value) || 225;
   const margin = (parseFloat(inputMargin.value) || 65) / 100;
   const opex = (parseFloat(inputOpex.value) || 5.5) * 100000;
-  const capex = 3000000; // ₹30 Lakhs
+  const capex = 3000000;
 
-  // Update slider label displays
   const labelOrders = document.getElementById('label-orders');
   const labelAov = document.getElementById('label-aov');
   const labelMargin = document.getElementById('label-margin');
@@ -56,7 +54,6 @@ function calculatePayback() {
   }
 }
 
-// Modal Payback Engine
 function calculateModalPayback() {
   const inputOrders = document.getElementById('modal-input-orders');
   const inputAov = document.getElementById('modal-input-aov');
@@ -109,9 +106,7 @@ function calculateModalPayback() {
   }
 }
 
-// 2. SLIDE NAVIGATION & PRESENTATION CONTROLS (14 SLIDES)
 document.addEventListener('DOMContentLoaded', () => {
-
   const slides = document.querySelectorAll('.slide');
   const dotsContainer = document.getElementById('slideDots');
   const currentSlideNum = document.getElementById('currentSlideNum');
@@ -134,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const totalSlides = slides.length;
 
   const chapterTitles = [
-    "HERO / BRAND STATEMENT",
+    "HERO COVER (FULL-BLEED SCRIM)",
     "THE DAILY F&B OPPORTUNITY",
     "OPERATING FLYWHEEL",
     "AOV BARBELL ENGINE",
@@ -150,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
     "TERM SHEET & INVESTMENT CLOSE"
   ];
 
-  // Render Dots
   if (dotsContainer) {
     dotsContainer.innerHTML = '';
     slides.forEach((_, i) => {
@@ -162,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Render Grid Overview
   if (gridJumper) {
     gridJumper.innerHTML = '';
     slides.forEach((_, index) => {
@@ -221,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (prevBtn) prevBtn.addEventListener('click', () => navigateSlide(-1));
   if (nextBtn) nextBtn.addEventListener('click', () => navigateSlide(1));
 
-  // Keyboard Navigation Engine as specified in Prompt
   window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
       e.preventDefault();
@@ -242,7 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Touch Swipe Engine
   let startX = 0, startY = 0, endX = 0, endY = 0;
   const container = document.getElementById('deckContainer');
   if (container) {
@@ -291,7 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (fullscreenBtn) fullscreenBtn.addEventListener('click', toggleFullscreen);
 
-  // Initial Calculation Run
   calculatePayback();
   calculateModalPayback();
   updateDeckUI();
