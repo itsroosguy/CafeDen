@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — 17-SLIDE MASTER PRESENTATION DESIGN SYSTEM WITH CIRCULAR FLYWHEEL
+   CAFÉ DEN — 17-SLIDE MASTER PRESENTATION DESIGN SYSTEM WITH UNCONTAINED FLYWHEEL
    ========================================================================== */
 
 :root {
@@ -146,25 +146,28 @@ body.editorial-deck-body {
   gap: 12px;
 }
 
-/* Slide 03 Circular Flywheel Layout */
+/* Slide 03 Circular Flywheel Layout (UNCONTAINED & ENLARGED) */
 .flywheel-grid-layout {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 24px;
   align-items: center;
 }
 
-.flywheel-visual-card {
-  border-radius: 18px;
-  padding: 16px;
+.flywheel-visual-standalone {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
-.flywheel-svg {
+.flywheel-svg-large {
   width: 100%;
-  max-height: 290px;
+  max-height: 360px;
 }
 
 .flywheel-details-column {
