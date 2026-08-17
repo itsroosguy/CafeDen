@@ -103,7 +103,7 @@ body.editorial-deck-body {
   height: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 36px;
+  padding: 56px 36px 40px 36px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -402,20 +402,20 @@ body.editorial-deck-body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* Slide Themes & SPACED SLIDE HEADERS */
+/* Slide Themes & SPACED SLIDE HEADERS (MOVED DOWN) */
 .slide {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  padding: 38px 48px 32px 48px;
+  padding: 56px 52px 36px 52px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px) scale(0.99);
   transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow: hidden;
 }
 
@@ -438,23 +438,24 @@ body.editorial-deck-body {
 
 /* SLIDE HEADER & TYPOGRAPHY HYGIENE */
 .slide-header {
-  margin-bottom: 24px;
+  margin-top: 6px;
+  margin-bottom: 28px;
 }
 
 .micro-kicker {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 11.5px;
   font-weight: 800;
   letter-spacing: 1.5px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .slide-title {
   font-size: clamp(2.1rem, 3.2vw, 2.7rem);
   font-weight: 800;
   line-height: 1.16;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .slide-sub {
