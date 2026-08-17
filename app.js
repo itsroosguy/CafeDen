@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeGridModal() { if (gridModal) gridModal.classList.remove('open'); }
 
   if (gridToggleBtn) gridToggleBtn.addEventListener('click', openGridModal);
-  if (closeModalBtn) closeModalBtn.addEventListener('click', closeGridModal);
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModalBtn);
 
   if (calcToggleBtn) {
     calcToggleBtn.addEventListener('click', () => {
