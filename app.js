@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const chapterTitles = [
     "HERO COVER (FULL-BLEED SCRIM)",
     "THE DAILY F&B OPPORTUNITY",
-    "OPERATING FLYWHEEL",
+    "THE COMPLETE DAY-PART FLYWHEEL",
     "AOV BARBELL ENGINE",
     "PRODUCT ARCHITECTURE (99 UNITS)",
     "A FOCUSED 750 SQ. FT. FORMAT",
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (fullscreenBtn) fullscreenBtn.addEventListener('click', toggleFullscreen);
+  if (fullscreenBtn) fullscreenBtn.addEventListener('click', fullscreenBtn);
 
   calculatePayback();
   calculateModalPayback();

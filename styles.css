@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — 17-SLIDE MASTER PRESENTATION DESIGN SYSTEM WITH SPACED HEADERS
+   CAFÉ DEN — 17-SLIDE MASTER PRESENTATION DESIGN SYSTEM WITH CIRCULAR FLYWHEEL
    ========================================================================== */
 
 :root {
@@ -144,6 +144,50 @@ body.editorial-deck-body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+/* Slide 03 Circular Flywheel Layout */
+.flywheel-grid-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.flywheel-visual-card {
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flywheel-svg {
+  width: 100%;
+  max-height: 290px;
+}
+
+.flywheel-details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.flywheel-detail-card {
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.flywheel-detail-card h4 {
+  font-size: 17px;
+  font-weight: 800;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.flywheel-detail-card p {
+  font-size: 12.5px;
+  line-height: 1.45;
 }
 
 /* Value Journey Flow & Pillars */
@@ -616,7 +660,7 @@ body.editorial-deck-body {
   .slide.active { display: flex !important; flex-direction: column !important; opacity: 1 !important; visibility: visible !important; }
   .hero-headline { font-size: 30px !important; }
   .slide-title { font-size: 20px !important; }
-  .hero-split-layout, .asymmetric-3col, .flywheel-pipeline, .aov-barbell-split, .product-media-gallery, .schematic-layout-grid, .groundwork-layout-with-media, .simulator-layout-2col, .grid-2x2-alloc, .blueprint-milestones-grid, .founder-asymmetric-with-media, .ramp-journey-timeline, .store-econ-flow-grid, .value-journey-flow, .unlock-5pillars-grid, .participation-layout-2col, .opportunity-split-layout { grid-template-columns: 1fr !important; flex-direction: column !important; }
+  .hero-split-layout, .asymmetric-3col, .flywheel-pipeline, .aov-barbell-split, .product-media-gallery, .schematic-layout-grid, .groundwork-layout-with-media, .simulator-layout-2col, .grid-2x2-alloc, .blueprint-milestones-grid, .founder-asymmetric-with-media, .ramp-journey-timeline, .store-econ-flow-grid, .value-journey-flow, .unlock-5pillars-grid, .participation-layout-2col, .opportunity-split-layout, .flywheel-grid-layout { grid-template-columns: 1fr !important; flex-direction: column !important; }
   .pipeline-arrow, .barbell-divider, .rj-arrow, .vj-arrow { transform: rotate(90deg); margin: 4px auto; }
   .grid-jumper { grid-template-columns: 1fr 1fr !important; }
 }
