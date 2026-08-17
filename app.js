@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — 17-SLIDE MASTER INVESTOR PRESENTATION ENGINE
+   CAFÉ DEN — 18-SLIDE MASTER INVESTOR PRESENTATION ENGINE
    ========================================================================== */
 
 function calculatePayback() {
@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "STORE #1 ECONOMICS",
     "REAL-TIME P&L SIMULATOR",
     "FROM LAUNCH TO PAYBACK (~12M)",
+    "WHY NOW, WHY CAFÉ DEN & RISKS",
     "THE INVESTMENT OPPORTUNITY",
     "WHAT THE CAPITAL PROVES",
     "FOUNDING INVESTOR PARTICIPATION",
