@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — 17-SLIDE MASTER PRESENTATION DESIGN SYSTEM WITH SLIDE 17 CENTER ALIGNMENT
+   CAFÉ DEN — 18-SLIDE MASTER PRESENTATION DESIGN SYSTEM
    ========================================================================== */
 
 :root {
@@ -656,7 +656,7 @@ body.editorial-deck-body {
 .simulator-layout-2col { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: flex-start; margin-bottom: 12px; }
 .sim-card { border-radius: 16px; padding: 18px; }
 .input-group { margin-bottom: 12px; }
-.input-label-row { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+.input-label-row { display: flex; justify-between; font-size: 12px; font-weight: 700; margin-bottom: 4px; }
 .num-highlight { font-family: var(--font-mono); font-weight: 800; }
 .controls-card input[type="range"] { width: 100%; accent-color: var(--brand-terracotta); }
 .outputs-card { display: flex; flex-direction: column; gap: 10px; }
@@ -677,15 +677,15 @@ body.editorial-deck-body {
 .alloc-card h4 { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
 .alloc-card p { font-size: 12.5px; line-height: 1.45; }
 
-/* Slide 16: Founder Profile */
+/* Slide 17: Founder Profile */
 .founder-asymmetric-with-media { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; }
 .founder-info-text h3 { font-size: 26px; font-weight: 800; }
 .f-role-title { display: block; font-size: 13px; font-weight: 800; margin-bottom: 12px; }
 .f-narrative-text { font-size: 13px; line-height: 1.55; margin-bottom: 16px; }
 .founder-strengths-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.founder-strengths-list li { font-size: 12.5px; display: flex; gap: 10px; align-items: center; }
+.founder-strengths-list li { font-size: 12.5px; display: flex; gap: 10px; align-items: flex-start; }
 
-/* Slide 17: Term Sheet */
+/* Slide 18: Term Sheet */
 .dark-term-sheet { background: var(--bg-mocha); border: 2px solid var(--brand-gold); border-radius: 18px; padding: 24px; max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
 .ts-line { display: flex; justify-content: space-between; font-size: 13.5px; color: var(--text-light-muted); border-bottom: 1px dashed var(--border-dark); padding-bottom: 8px; }
 
@@ -725,7 +725,7 @@ body.editorial-deck-body {
   .slide.active { display: flex !important; flex-direction: column !important; opacity: 1 !important; visibility: visible !important; }
   .hero-headline { font-size: 30px !important; }
   .slide-title { font-size: 20px !important; }
-  .hero-split-layout, .asymmetric-3col, .flywheel-pipeline, .aov-barbell-split, .product-media-gallery, .schematic-layout-grid, .groundwork-layout-with-media, .simulator-layout-2col, .grid-2x2-alloc, .blueprint-milestones-grid, .founder-asymmetric-with-media, .ramp-journey-timeline, .store-econ-flow-grid, .value-journey-flow, .unlock-5pillars-grid, .participation-layout-2col, .opportunity-split-layout, .flywheel-grid-layout, .slide5-split-layout, .product-2x2-grid { grid-template-columns: 1fr !important; flex-direction: column !important; }
+  .hero-split-layout, .asymmetric-3col, .flywheel-pipeline, .aov-barbell-split, .product-media-gallery, .schematic-layout-grid, .groundwork-layout-with-media, .simulator-layout-2col, .grid-2x2-alloc, .blueprint-milestones-grid, .founder-asymmetric-with-media, .ramp-journey-timeline, .store-econ-flow-grid, .value-journey-flow, .unlock-5pillars-grid, .participation-layout-2col, .opportunity-split-layout, .flywheel-grid-layout, .slide5-split-layout, .product-2x2-grid, .why-now-grid-3part { grid-template-columns: 1fr !important; flex-direction: column !important; }
   .pipeline-arrow, .barbell-divider, .rj-arrow, .vj-arrow { transform: rotate(90deg); margin: 4px auto; }
   .grid-jumper { grid-template-columns: 1fr 1fr !important; }
 }
