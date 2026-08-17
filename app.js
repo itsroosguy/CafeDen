@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (closeCalcModalBtn) {
     closeCalcModalBtn.addEventListener('click', () => {
-      if (calcModal) calcModal.remove('open');
+      if (calcModal) calcModal.classList.remove('open');
     });
   }
 
