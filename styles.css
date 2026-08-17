@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — 17-SLIDE MASTER PRESENTATION DESIGN SYSTEM WITH UNCONTAINED FLYWHEEL
+   CAFÉ DEN — 17-SLIDE MASTER PRESENTATION DESIGN SYSTEM WITH SLIDE 05 2x2 GRID
    ========================================================================== */
 
 :root {
@@ -191,6 +191,65 @@ body.editorial-deck-body {
 .flywheel-detail-card p {
   font-size: 12.5px;
   line-height: 1.45;
+}
+
+/* Slide 05: Split Layout (99 Card on Left, 2x2 Grid on Right) */
+.slide5-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.65fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.batch-99-side-card {
+  border: 2px solid var(--brand-gold);
+  border-radius: 18px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background: var(--bg-espresso);
+}
+
+.stat-giant-99 {
+  font-size: clamp(3.5rem, 6vw, 5.2rem);
+  font-weight: 900;
+  line-height: 0.95;
+  margin-bottom: 4px;
+}
+
+.stat-giant-title {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.product-2x2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.p-img-box-compact {
+  width: 100%;
+  height: 95px;
+  overflow: hidden;
+}
+
+.p-info-compact {
+  padding: 8px 10px;
+}
+
+.p-info-compact h4 {
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.p-info-compact p {
+  font-size: 10.5px;
+  line-height: 1.3;
 }
 
 /* Value Journey Flow & Pillars */
@@ -564,17 +623,9 @@ body.editorial-deck-body {
 .barbell-insight-bar { background: var(--bg-latte); border: 1px solid var(--border-light); border-radius: 12px; padding: 10px 16px; font-size: 12.5px; display: flex; gap: 10px; align-items: center; }
 
 /* Slide 05: Product Media Gallery */
-.dark-batch-hero { background: var(--bg-espresso); border: 2px solid var(--brand-gold); border-radius: 16px; padding: 12px 18px; text-align: center; margin-bottom: 14px; }
-.stat-giant { font-size: 28px; font-weight: 800; line-height: 1.1; }
-.stat-giant-lbl { font-size: 12px; font-weight: 700; }
-.product-media-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .product-gallery-card { border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
-.p-img-box { width: 100%; height: 120px; overflow: hidden; }
 .product-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.p-info { padding: 10px 12px; }
 .p-tag { font-family: var(--font-mono); font-size: 9px; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 4px; }
-.p-info h4 { font-size: 13.5px; font-weight: 800; margin-bottom: 2px; }
-.p-info p { font-size: 11px; line-height: 1.35; }
 
 /* Slide 06: Layout Schematic */
 .schematic-wrapper { width: 100%; }
@@ -663,7 +714,7 @@ body.editorial-deck-body {
   .slide.active { display: flex !important; flex-direction: column !important; opacity: 1 !important; visibility: visible !important; }
   .hero-headline { font-size: 30px !important; }
   .slide-title { font-size: 20px !important; }
-  .hero-split-layout, .asymmetric-3col, .flywheel-pipeline, .aov-barbell-split, .product-media-gallery, .schematic-layout-grid, .groundwork-layout-with-media, .simulator-layout-2col, .grid-2x2-alloc, .blueprint-milestones-grid, .founder-asymmetric-with-media, .ramp-journey-timeline, .store-econ-flow-grid, .value-journey-flow, .unlock-5pillars-grid, .participation-layout-2col, .opportunity-split-layout, .flywheel-grid-layout { grid-template-columns: 1fr !important; flex-direction: column !important; }
+  .hero-split-layout, .asymmetric-3col, .flywheel-pipeline, .aov-barbell-split, .product-media-gallery, .schematic-layout-grid, .groundwork-layout-with-media, .simulator-layout-2col, .grid-2x2-alloc, .blueprint-milestones-grid, .founder-asymmetric-with-media, .ramp-journey-timeline, .store-econ-flow-grid, .value-journey-flow, .unlock-5pillars-grid, .participation-layout-2col, .opportunity-split-layout, .flywheel-grid-layout, .slide5-split-layout, .product-2x2-grid { grid-template-columns: 1fr !important; flex-direction: column !important; }
   .pipeline-arrow, .barbell-divider, .rj-arrow, .vj-arrow { transform: rotate(90deg); margin: 4px auto; }
   .grid-jumper { grid-template-columns: 1fr 1fr !important; }
 }
