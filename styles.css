@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CAFÉ DEN — 17-SLIDE MASTER INVESTOR PRESENTATION DESIGN SYSTEM
+   CAFÉ DEN — 17-SLIDE MASTER PRESENTATION DESIGN SYSTEM WITH SPACED HEADERS
    ========================================================================== */
 
 :root {
@@ -402,13 +402,13 @@ body.editorial-deck-body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* Slide Themes */
+/* Slide Themes & SPACED SLIDE HEADERS */
 .slide {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  padding: 24px 36px;
+  padding: 38px 48px 32px 48px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px) scale(0.99);
@@ -426,8 +426,8 @@ body.editorial-deck-body {
 .theme-latte { background-color: var(--bg-latte) !important; color: var(--text-dark-primary) !important; }
 .theme-mocha { background-color: var(--bg-mocha) !important; color: var(--text-light-primary) !important; }
 
-.hero-headline { font-size: clamp(2.8rem, 4.8vw, 4rem); font-weight: 800; line-height: 1.08; margin-bottom: 10px; }
-.hero-subheading { font-size: 14.5px; line-height: 1.55; margin-bottom: 18px; }
+.hero-headline { font-size: clamp(2.8rem, 4.8vw, 4rem); font-weight: 800; line-height: 1.08; margin-bottom: 12px; }
+.hero-subheading { font-size: 14.5px; line-height: 1.55; margin-bottom: 20px; }
 
 /* Editorial Image Framing */
 .editorial-image-frame { position: relative; width: 100%; border-radius: 16px; overflow: hidden; }
@@ -436,9 +436,34 @@ body.editorial-deck-body {
 .editorial-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .image-caption-pill { position: absolute; bottom: 10px; left: 10px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: rgba(27, 18, 16, 0.85); color: var(--text-light-primary); border: 1px solid var(--border-dark); }
 
-.slide-header { margin-bottom: 10px; }
-.slide-title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; line-height: 1.15; }
-.slide-sub { font-size: 13px; margin-top: 2px; line-height: 1.45; }
+/* SLIDE HEADER & TYPOGRAPHY HYGIENE */
+.slide-header {
+  margin-bottom: 24px;
+}
+
+.micro-kicker {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.slide-title {
+  font-size: clamp(2.1rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.16;
+  margin-bottom: 8px;
+}
+
+.slide-sub {
+  font-size: 14.5px;
+  line-height: 1.55;
+  max-width: 860px;
+  margin-top: 4px;
+}
+
 .slide-body { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 
 /* Slide 02: 3-Col Asymmetric */
