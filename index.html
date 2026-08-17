@@ -119,44 +119,70 @@
       </div>
     </section>
 
-    <!-- SLIDE 03: THE OPERATING FLYWHEEL (Mood: Soft Latte #F3EDE4) -->
+    <!-- SLIDE 03: THE COMPLETE CIRCULAR FLYWHEEL (Mood: Soft Latte #F3EDE4) -->
     <section class="slide theme-latte" id="slide-3" data-slide="3">
       <div class="slide-header">
         <span class="micro-kicker text-terracotta">SLIDE /03 • OPERATING FLYWHEEL</span>
-        <h2 class="slide-title font-serif text-dark-primary">The Customer Acquisition Flywheel</h2>
-        <p class="slide-sub text-dark-muted">Connecting high-frequency morning entry hooks with high-margin fresh bakery and specialty drinks.</p>
+        <h2 class="slide-title font-serif text-dark-primary">The Complete Day-Part Flywheel</h2>
+        <p class="slide-sub text-dark-muted">From 7 AM morning coffee hooks to post-10 AM gourmet food items & signature drinks—engineered for multi-visit daily habit loops.</p>
       </div>
 
       <div class="slide-body">
-        <div class="flywheel-pipeline">
-          <div class="pipeline-step light-card">
-            <span class="p-step-num tag-pill">STEP 01</span>
-            <h4 class="text-dark-primary">Accessible Entry</h4>
-            <p class="text-dark-muted">₹89 Coffee / ₹99 ABC</p>
+        <div class="flywheel-grid-layout">
+          <!-- Clean Circular SVG Flywheel Diagram -->
+          <div class="flywheel-visual-card light-card">
+            <svg viewBox="0 0 500 320" class="flywheel-svg">
+              <!-- Outer Circular Track -->
+              <circle cx="250" cy="160" r="110" fill="none" stroke="#A35833" stroke-width="3" stroke-dasharray="8 6" opacity="0.4"/>
+              
+              <!-- Center Hub -->
+              <circle cx="250" cy="160" r="42" fill="#A35833"/>
+              <text x="250" y="156" text-anchor="middle" fill="#FDFBF7" font-size="11" font-weight="800">CAFÉ DEN</text>
+              <text x="250" y="170" text-anchor="middle" fill="#E8DEC8" font-size="9" font-weight="700">FLYWHEEL</text>
+              
+              <!-- Node 1: Top (Morning Entry) -->
+              <g transform="translate(250, 36)">
+                <rect x="-85" y="-18" width="170" height="36" rx="8" fill="#FBF8F5" stroke="#A35833" stroke-width="1.5"/>
+                <text x="0" y="-3" text-anchor="middle" fill="#A35833" font-size="9.5" font-weight="800">07:00 AM MORNING HOOK</text>
+                <text x="0" y="9" text-anchor="middle" fill="#6B5E55" font-size="8.5">₹89 Coffee & ₹99 Cold ABC</text>
+              </g>
+
+              <!-- Node 2: Right (Open Kitchen Aroma) -->
+              <g transform="translate(385, 160)">
+                <rect x="-70" y="-18" width="140" height="36" rx="8" fill="#FBF8F5" stroke="#231714" stroke-opacity="0.15" stroke-width="1.5"/>
+                <text x="0" y="-3" text-anchor="middle" fill="#231714" font-size="9.5" font-weight="800">VISUAL BAKERY</text>
+                <text x="0" y="9" text-anchor="middle" fill="#6B5E55" font-size="8.5">Fresh Aroma & Batch Drops</text>
+              </g>
+
+              <!-- Node 3: Bottom (Post-10 AM Crazy Food) -->
+              <g transform="translate(250, 284)">
+                <rect x="-95" y="-18" width="190" height="36" rx="8" fill="#E8DEC8" stroke="#A35833" stroke-width="2"/>
+                <text x="0" y="-3" text-anchor="middle" fill="#231714" font-size="9.5" font-weight="800">10:00 AM+ GOURMET FOOD</text>
+                <text x="0" y="9" text-anchor="middle" fill="#A35833" font-size="8.5">Croissant Burgers, Toasties & Ube</text>
+              </g>
+
+              <!-- Node 4: Left (Habit Loop) -->
+              <g transform="translate(115, 160)">
+                <rect x="-70" y="-18" width="140" height="36" rx="8" fill="#FBF8F5" stroke="#231714" stroke-opacity="0.15" stroke-width="1.5"/>
+                <text x="0" y="-3" text-anchor="middle" fill="#231714" font-size="9.5" font-weight="800">DAILY HABIT LOOP</text>
+                <text x="0" y="9" text-anchor="middle" fill="#6B5E55" font-size="8.5">Multi-Visit Repeat Loyalty</text>
+              </g>
+            </svg>
           </div>
 
-          <div class="pipeline-arrow text-terracotta"><i class="fa-solid fa-arrow-right"></i></div>
+          <!-- Two Highlighting Cards for Morning vs Post-10 AM Food Items -->
+          <div class="flywheel-details-column">
+            <div class="flywheel-detail-card light-card">
+              <span class="col-tag"><i class="fa-solid fa-sun text-terracotta"></i> 07:00 – 10:00 AM MORNING RUSH</span>
+              <h4 class="font-serif text-dark-primary">High-Frequency Entry Hooks</h4>
+              <p class="text-dark-muted">₹89 Specialty Espresso & ₹99 Cold-Pressed ABC juices capture fast morning footfall with sub-3-minute fulfillment speed.</p>
+            </div>
 
-          <div class="pipeline-step light-card">
-            <span class="p-step-num tag-pill">STEP 02</span>
-            <h4 class="text-dark-primary">Visual Open Kitchen</h4>
-            <p class="text-dark-muted">Glass Façade & Fresh Aroma</p>
-          </div>
-
-          <div class="pipeline-arrow text-terracotta"><i class="fa-solid fa-arrow-right"></i></div>
-
-          <div class="pipeline-step light-card">
-            <span class="p-step-num tag-pill">STEP 03</span>
-            <h4 class="text-dark-primary">All-Day Upsell</h4>
-            <p class="text-dark-muted">₹199 Ube & Fresh Bakes</p>
-          </div>
-
-          <div class="pipeline-arrow text-terracotta"><i class="fa-solid fa-arrow-right"></i></div>
-
-          <div class="pipeline-step step-highlight-light">
-            <span class="p-step-num tag-terracotta">RESULT</span>
-            <h4 class="text-dark-primary">Daily Habit Loop</h4>
-            <p class="text-dark-muted">Designed to Encourage Repeat Behaviour</p>
+            <div class="flywheel-detail-card card-accent-border">
+              <span class="col-tag tag-terracotta"><i class="fa-solid fa-utensils"></i> 10:00 AM ONWARD • SIGNATURE CAFE & FOOD</span>
+              <h4 class="font-serif text-dark-primary">Gourmet Food & All-Day Upsells</h4>
+              <p class="text-dark-muted">Freshly pressed Croissant Burgers, Artisanal Sourdough Toasties, Warm Pastry drops & ₹199 Ube Brews drive afternoon basket expansion to ₹250+.</p>
+            </div>
           </div>
         </div>
       </div>
