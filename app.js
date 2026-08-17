@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (closeCalcModalBtn) {
     closeCalcModalBtn.addEventListener('click', () => {
-      if (calcModal) calcModal.classList.remove('open');
+      if (calcModal) calcModal.remove('open');
     });
   }
 
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (fullscreenBtn) fullscreenBtn.addEventListener('click', fullscreenBtn);
+  if (fullscreenBtn) fullscreenBtn.addEventListener('click', toggleFullscreen);
 
   calculatePayback();
   calculateModalPayback();
