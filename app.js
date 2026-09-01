@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "FOUNDING INVESTOR PARTICIPATION",
     "USE OF FUNDS (₹30 LAKHS)",
     "FOUNDER PROFILE & VISION",
-    "FINAL TERM SHEET & MISSION"
+    "FINAL SEED ROUND TERM SHEET"
   ];
 
   if (dotsContainer) {
