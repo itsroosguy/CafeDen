@@ -113,9 +113,15 @@ body.editorial-deck-body {
 
 .hero-footer-stats {
   display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
   margin-top: 24px;
+}
+
+.hero-stats-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .hf-stat-chip {
