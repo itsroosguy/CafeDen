@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "THE DAILY F&B OPPORTUNITY",
     "THE COMPLETE DAY-PART FLYWHEEL",
     "AOV BARBELL ENGINE",
-    "PRODUCT ARCHITECTURE (99 UNITS)",
+    "PRODUCT STRATEGY & PRICING ADVANTAGE",
     "A FOCUSED 750 SQ. FT. FORMAT",
     "STORE FOOTPRINT & BLUEPRINT",
     "EARLY GROUNDWORK SIGNALS",
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeGridModal() { if (gridModal) gridModal.classList.remove('open'); }
 
   if (gridToggleBtn) gridToggleBtn.addEventListener('click', openGridModal);
-  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModalBtn);
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeGridModal);
 
   if (calcToggleBtn) {
     calcToggleBtn.addEventListener('click', () => {

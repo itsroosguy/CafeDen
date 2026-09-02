@@ -199,7 +199,7 @@ body.editorial-deck-body {
   line-height: 1.45;
 }
 
-/* Slide 05: Split Layout (99 Card on Left, 2x2 Grid on Right) */
+/* Slide 05: Split Layout (30-40% Price Feature Card on Left, 2x2 Grid on Right) */
 .slide5-split-layout {
   display: grid;
   grid-template-columns: 1fr 1.65fr;
