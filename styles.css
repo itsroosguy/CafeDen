@@ -662,7 +662,7 @@ body.editorial-deck-body {
 .simulator-layout-2col { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: flex-start; margin-bottom: 12px; }
 .sim-card { border-radius: 16px; padding: 18px; }
 .input-group { margin-bottom: 12px; }
-.input-label-row { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+.input-label-row { display: flex; justify-between; font-size: 12px; font-weight: 700; margin-bottom: 4px; }
 .num-highlight { font-family: var(--font-mono); font-weight: 800; }
 .controls-card input[type="range"] { width: 100%; accent-color: var(--brand-terracotta); }
 .outputs-card { display: flex; flex-direction: column; gap: 10px; }
