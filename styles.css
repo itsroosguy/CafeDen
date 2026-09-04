@@ -152,7 +152,7 @@ body.editorial-deck-body {
   gap: 12px;
 }
 
-/* Slide 03 Circular Flywheel Layout (UNCONTAINED & ENLARGED) */
+/* Slide 03 Circular Flywheel Layout */
 .flywheel-grid-layout {
   display: grid;
   grid-template-columns: 1.35fr 1fr;
@@ -199,7 +199,7 @@ body.editorial-deck-body {
   line-height: 1.45;
 }
 
-/* Slide 05: Split Layout (30-40% Price Feature Card on Left, 2x2 Grid on Right) */
+/* Slide 05: Split Layout */
 .slide5-split-layout {
   display: grid;
   grid-template-columns: 1fr 1.65fr;
@@ -539,7 +539,7 @@ body.editorial-deck-body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
-/* Slide Themes & SPACED SLIDE HEADERS (MOVED DOWN) */
+/* Slide Themes */
 .slide {
   position: absolute;
   inset: 0;
